@@ -1,0 +1,550 @@
+<html xmlns:v="urn:schemas-microsoft-com:vml"
+xmlns:o="urn:schemas-microsoft-com:office:office"
+xmlns:w="urn:schemas-microsoft-com:office:word"
+xmlns="http://www.w3.org/TR/REC-html40">
+
+<head>
+<meta http-equiv=Content-Type content="text/html; charset=windows-1252">
+<meta name=ProgId content=Word.Document>
+<meta name=Generator content="Microsoft Word 10">
+<meta name=Originator content="Microsoft Word 10">
+<link rel=File-List href="IAVBOCX_fichiers/filelist.xml">
+<title>Intelligence Artificielle en Visual Basic (IAVB)</title>
+<!--[if gte mso 9]><xml>
+ <o:DocumentProperties>
+  <o:Subject>Système expert simple en basic</o:Subject>
+  <o:Author>Patrice DARGENTON d'après un logiciel de Philippe LARVET</o:Author>
+  <o:Keywords>ChatBot, Robot de discussion, IA, VB, VB6, VB8, VB 2005, Mini système expert</o:Keywords>
+  <o:LastAuthor>?</o:LastAuthor>
+  <o:Revision>2</o:Revision>
+  <o:TotalTime>7</o:TotalTime>
+  <o:LastPrinted>2001-08-23T06:40:00Z</o:LastPrinted>
+  <o:Created>2017-05-28T08:59:00Z</o:Created>
+  <o:LastSaved>2017-05-28T08:59:00Z</o:LastSaved>
+  <o:Pages>3</o:Pages>
+  <o:Words>1056</o:Words>
+  <o:Characters>5814</o:Characters>
+  <o:Manager>Je l'avoue</o:Manager>
+  <o:Company>ORS Production</o:Company>
+  <o:Lines>48</o:Lines>
+  <o:Paragraphs>13</o:Paragraphs>
+  <o:CharactersWithSpaces>6857</o:CharactersWithSpaces>
+  <o:Version>10.6870</o:Version>
+ </o:DocumentProperties>
+</xml><![endif]--><!--[if gte mso 9]><xml>
+ <w:WordDocument>
+  <w:HyphenationZone>21</w:HyphenationZone>
+  <w:BrowserLevel>MicrosoftInternetExplorer4</w:BrowserLevel>
+ </w:WordDocument>
+</xml><![endif]-->
+<style>
+<!--
+ /* Font Definitions */
+ @font-face
+	{font-family:"Courrier new";
+	panose-1:0 0 0 0 0 0 0 0 0 0;
+	mso-font-alt:"Times New Roman";
+	mso-font-charset:0;
+	mso-generic-font-family:roman;
+	mso-font-format:other;
+	mso-font-pitch:auto;
+	mso-font-signature:0 0 0 0 0 0;}
+ /* Style Definitions */
+ p.MsoNormal, li.MsoNormal, div.MsoNormal
+	{mso-style-parent:"";
+	margin:0cm;
+	margin-bottom:.0001pt;
+	text-align:justify;
+	mso-pagination:widow-orphan;
+	font-size:14.0pt;
+	font-family:"Times New Roman";
+	mso-fareast-font-family:"Times New Roman";}
+h1
+	{mso-style-update:auto;
+	mso-style-next:Normal;
+	margin:0cm;
+	margin-bottom:.0001pt;
+	text-align:justify;
+	mso-pagination:widow-orphan;
+	page-break-after:avoid;
+	mso-outline-level:1;
+	font-size:16.0pt;
+	mso-bidi-font-size:14.0pt;
+	font-family:"Times New Roman";
+	mso-bidi-font-family:"Courier New";
+	mso-font-kerning:0pt;}
+h2
+	{mso-style-update:auto;
+	margin:0cm;
+	margin-bottom:.0001pt;
+	text-align:justify;
+	mso-pagination:widow-orphan;
+	mso-outline-level:2;
+	font-size:14.0pt;
+	mso-bidi-font-size:18.0pt;
+	font-family:"Times New Roman";
+	mso-bidi-font-family:Arial;
+	color:green;}
+p.MsoToc1, li.MsoToc1, div.MsoToc1
+	{mso-style-update:auto;
+	mso-style-noshow:yes;
+	mso-style-next:Normal;
+	margin:0cm;
+	margin-bottom:.0001pt;
+	text-align:justify;
+	mso-pagination:widow-orphan;
+	font-size:14.0pt;
+	font-family:"Times New Roman";
+	mso-fareast-font-family:"Times New Roman";}
+p.MsoToc2, li.MsoToc2, div.MsoToc2
+	{mso-style-update:auto;
+	mso-style-noshow:yes;
+	mso-style-next:Normal;
+	margin-top:0cm;
+	margin-right:0cm;
+	margin-bottom:0cm;
+	margin-left:12.0pt;
+	margin-bottom:.0001pt;
+	text-align:justify;
+	mso-pagination:widow-orphan;
+	font-size:10.0pt;
+	mso-bidi-font-size:14.0pt;
+	font-family:"Times New Roman";
+	mso-fareast-font-family:"Times New Roman";}
+p.MsoBodyText, li.MsoBodyText, div.MsoBodyText
+	{margin:0cm;
+	margin-bottom:.0001pt;
+	text-align:center;
+	mso-pagination:widow-orphan;
+	font-size:18.0pt;
+	mso-bidi-font-size:14.0pt;
+	font-family:"Times New Roman";
+	mso-fareast-font-family:"Times New Roman";}
+a:link, span.MsoHyperlink
+	{color:blue;
+	text-decoration:underline;
+	text-underline:single;}
+a:visited, span.MsoHyperlinkFollowed
+	{color:purple;
+	text-decoration:underline;
+	text-underline:single;}
+pre
+	{margin:0cm;
+	margin-bottom:.0001pt;
+	text-align:justify;
+	mso-pagination:widow-orphan;
+	font-size:7.0pt;
+	font-family:"Courrier new";
+	mso-fareast-font-family:"Times New Roman";
+	mso-bidi-font-family:"Courier New";
+	color:black;}
+span.c1
+	{mso-style-name:c1;
+	color:#3366CC;
+	font-weight:bold;}
+@page Section1
+	{size:595.3pt 841.9pt;
+	margin:42.55pt 42.55pt 42.55pt 42.55pt;
+	mso-header-margin:35.45pt;
+	mso-footer-margin:35.45pt;
+	mso-paper-source:0;}
+div.Section1
+	{page:Section1;}
+-->
+</style>
+<!--[if gte mso 10]>
+<style>
+ /* Style Definitions */
+ table.MsoNormalTable
+	{mso-style-name:"Tableau Normal";
+	mso-tstyle-rowband-size:0;
+	mso-tstyle-colband-size:0;
+	mso-style-noshow:yes;
+	mso-style-parent:"";
+	mso-padding-alt:0cm 5.4pt 0cm 5.4pt;
+	mso-para-margin:0cm;
+	mso-para-margin-bottom:.0001pt;
+	mso-pagination:widow-orphan;
+	font-size:10.0pt;
+	font-family:"Times New Roman";}
+</style>
+<![endif]--><!--[if gte mso 9]><xml>
+ <o:shapedefaults v:ext="edit" spidmax="2050">
+  <o:colormenu v:ext="edit" fillcolor="aqua"/>
+ </o:shapedefaults></xml><![endif]--><!--[if gte mso 9]><xml>
+ <o:shapelayout v:ext="edit">
+  <o:idmap v:ext="edit" data="1"/>
+ </o:shapelayout></xml><![endif]-->
+</head>
+
+<body bgcolor=aqua lang=FR link=blue vlink=purple style='tab-interval:35.4pt'>
+
+<div class=Section1>
+
+<p class=MsoNormal align=center style='text-align:center'><b style='mso-bidi-font-weight:
+normal'>Ocx IAVB<o:p></o:p></b></p>
+
+<p class=MsoNormal><o:p>&nbsp;</o:p></p>
+
+<p class=MsoToc1 style='tab-stops:right dotted 509.7pt'><!--[if supportFields]><span
+style='mso-element:field-begin'></span><span
+style='mso-spacerun:yes'> </span>TOC \o &quot;1-3&quot; \h \z \u <span
+style='mso-element:field-separator'></span><![endif]--><span
+class=MsoHyperlink><span style='mso-no-proof:yes'><a href="#_Toc483117430">Créer
+un vrai Ocx en DotNet<span style='color:windowtext;display:none;mso-hide:screen;
+text-decoration:none;text-underline:none'><span style='mso-tab-count:1 dotted'> </span></span><!--[if supportFields]><span
+style='color:windowtext;display:none;mso-hide:screen;text-decoration:none;
+text-underline:none'><span style='mso-element:field-begin'></span></span><span
+style='color:windowtext;display:none;mso-hide:screen;text-decoration:none;
+text-underline:none'> PAGEREF _Toc483117430 \h </span><span style='color:windowtext;
+display:none;mso-hide:screen;text-decoration:none;text-underline:none'><span
+style='mso-element:field-separator'></span></span><![endif]--><span
+style='color:windowtext;display:none;mso-hide:screen;text-decoration:none;
+text-underline:none'>1</span><span style='color:windowtext;display:none;
+mso-hide:screen;text-decoration:none;text-underline:none'><!--[if gte mso 9]><xml>
+ <w:data>08D0C9EA79F9BACE118C8200AA004BA90B02000000080000000E0000005F0054006F0063003400380033003100310037003400330030000000</w:data>
+</xml><![endif]--></span><!--[if supportFields]><span style='color:windowtext;
+display:none;mso-hide:screen;text-decoration:none;text-underline:none'><span
+style='mso-element:field-end'></span></span><![endif]--></a></span></span><span
+style='mso-no-proof:yes'><o:p></o:p></span></p>
+
+<p class=MsoToc2 style='tab-stops:right dotted 509.7pt'><span
+class=MsoHyperlink><span style='mso-no-proof:yes'><a href="#_Toc483117431">Utiliser
+le modèle &quot;Classe COM&quot; (template) pour VB 2008<span style='color:
+windowtext;display:none;mso-hide:screen;text-decoration:none;text-underline:
+none'><span style='mso-tab-count:1 dotted'>. </span></span><!--[if supportFields]><span
+style='color:windowtext;display:none;mso-hide:screen;text-decoration:none;
+text-underline:none'><span style='mso-element:field-begin'></span></span><span
+style='color:windowtext;display:none;mso-hide:screen;text-decoration:none;
+text-underline:none'> PAGEREF _Toc483117431 \h </span><span style='color:windowtext;
+display:none;mso-hide:screen;text-decoration:none;text-underline:none'><span
+style='mso-element:field-separator'></span></span><![endif]--><span
+style='color:windowtext;display:none;mso-hide:screen;text-decoration:none;
+text-underline:none'>1</span><span style='color:windowtext;display:none;
+mso-hide:screen;text-decoration:none;text-underline:none'><!--[if gte mso 9]><xml>
+ <w:data>08D0C9EA79F9BACE118C8200AA004BA90B02000000080000000E0000005F0054006F0063003400380033003100310037003400330031000000</w:data>
+</xml><![endif]--></span><!--[if supportFields]><span style='color:windowtext;
+display:none;mso-hide:screen;text-decoration:none;text-underline:none'><span
+style='mso-element:field-end'></span></span><![endif]--></a></span></span><span
+style='font-size:12.0pt;mso-bidi-font-size:14.0pt;mso-no-proof:yes'><o:p></o:p></span></p>
+
+<p class=MsoToc2 style='tab-stops:right dotted 509.7pt'><span
+class=MsoHyperlink><span style='mso-no-proof:yes'><a href="#_Toc483117432">Adapter
+votre projet pour en faire une dll ActiveX en DotNet<span style='color:windowtext;
+display:none;mso-hide:screen;text-decoration:none;text-underline:none'><span
+style='mso-tab-count:1 dotted'> </span></span><!--[if supportFields]><span
+style='color:windowtext;display:none;mso-hide:screen;text-decoration:none;
+text-underline:none'><span style='mso-element:field-begin'></span></span><span
+style='color:windowtext;display:none;mso-hide:screen;text-decoration:none;
+text-underline:none'> PAGEREF _Toc483117432 \h </span><span style='color:windowtext;
+display:none;mso-hide:screen;text-decoration:none;text-underline:none'><span
+style='mso-element:field-separator'></span></span><![endif]--><span
+style='color:windowtext;display:none;mso-hide:screen;text-decoration:none;
+text-underline:none'>1</span><span style='color:windowtext;display:none;
+mso-hide:screen;text-decoration:none;text-underline:none'><!--[if gte mso 9]><xml>
+ <w:data>08D0C9EA79F9BACE118C8200AA004BA90B02000000080000000E0000005F0054006F0063003400380033003100310037003400330032000000</w:data>
+</xml><![endif]--></span><!--[if supportFields]><span style='color:windowtext;
+display:none;mso-hide:screen;text-decoration:none;text-underline:none'><span
+style='mso-element:field-end'></span></span><![endif]--></a></span></span><span
+style='font-size:12.0pt;mso-bidi-font-size:14.0pt;mso-no-proof:yes'><o:p></o:p></span></p>
+
+<p class=MsoToc2 style='tab-stops:right dotted 509.7pt'><span
+class=MsoHyperlink><span style='mso-no-proof:yes'><a href="#_Toc483117433">Créer
+en VB6 un Ocx utilisant la dll ActiveX en DotNet<span style='color:windowtext;
+display:none;mso-hide:screen;text-decoration:none;text-underline:none'><span
+style='mso-tab-count:1 dotted'> </span></span><!--[if supportFields]><span
+style='color:windowtext;display:none;mso-hide:screen;text-decoration:none;
+text-underline:none'><span style='mso-element:field-begin'></span></span><span
+style='color:windowtext;display:none;mso-hide:screen;text-decoration:none;
+text-underline:none'> PAGEREF _Toc483117433 \h </span><span style='color:windowtext;
+display:none;mso-hide:screen;text-decoration:none;text-underline:none'><span
+style='mso-element:field-separator'></span></span><![endif]--><span
+style='color:windowtext;display:none;mso-hide:screen;text-decoration:none;
+text-underline:none'>2</span><span style='color:windowtext;display:none;
+mso-hide:screen;text-decoration:none;text-underline:none'><!--[if gte mso 9]><xml>
+ <w:data>08D0C9EA79F9BACE118C8200AA004BA90B02000000080000000E0000005F0054006F0063003400380033003100310037003400330033000000</w:data>
+</xml><![endif]--></span><!--[if supportFields]><span style='color:windowtext;
+display:none;mso-hide:screen;text-decoration:none;text-underline:none'><span
+style='mso-element:field-end'></span></span><![endif]--></a></span></span><span
+style='font-size:12.0pt;mso-bidi-font-size:14.0pt;mso-no-proof:yes'><o:p></o:p></span></p>
+
+<p class=MsoToc2 style='tab-stops:right dotted 509.7pt'><span
+class=MsoHyperlink><span style='mso-no-proof:yes'><a href="#_Toc483117434">Utiliser
+l'Ocx en VB6 : ClientVB6<span style='color:windowtext;display:none;mso-hide:
+screen;text-decoration:none;text-underline:none'><span style='mso-tab-count:
+1 dotted'>. </span></span><!--[if supportFields]><span style='color:windowtext;
+display:none;mso-hide:screen;text-decoration:none;text-underline:none'><span
+style='mso-element:field-begin'></span></span><span style='color:windowtext;
+display:none;mso-hide:screen;text-decoration:none;text-underline:none'> PAGEREF
+_Toc483117434 \h </span><span style='color:windowtext;display:none;mso-hide:
+screen;text-decoration:none;text-underline:none'><span style='mso-element:field-separator'></span></span><![endif]--><span
+style='color:windowtext;display:none;mso-hide:screen;text-decoration:none;
+text-underline:none'>2</span><span style='color:windowtext;display:none;
+mso-hide:screen;text-decoration:none;text-underline:none'><!--[if gte mso 9]><xml>
+ <w:data>08D0C9EA79F9BACE118C8200AA004BA90B02000000080000000E0000005F0054006F0063003400380033003100310037003400330034000000</w:data>
+</xml><![endif]--></span><!--[if supportFields]><span style='color:windowtext;
+display:none;mso-hide:screen;text-decoration:none;text-underline:none'><span
+style='mso-element:field-end'></span></span><![endif]--></a></span></span><span
+style='font-size:12.0pt;mso-bidi-font-size:14.0pt;mso-no-proof:yes'><o:p></o:p></span></p>
+
+<p class=MsoToc2 style='tab-stops:right dotted 509.7pt'><span
+class=MsoHyperlink><span style='mso-no-proof:yes'><a href="#_Toc483117435">Conclusion<span
+style='color:windowtext;display:none;mso-hide:screen;text-decoration:none;
+text-underline:none'><span style='mso-tab-count:1 dotted'>. </span></span><!--[if supportFields]><span
+style='color:windowtext;display:none;mso-hide:screen;text-decoration:none;
+text-underline:none'><span style='mso-element:field-begin'></span></span><span
+style='color:windowtext;display:none;mso-hide:screen;text-decoration:none;
+text-underline:none'> PAGEREF _Toc483117435 \h </span><span style='color:windowtext;
+display:none;mso-hide:screen;text-decoration:none;text-underline:none'><span
+style='mso-element:field-separator'></span></span><![endif]--><span
+style='color:windowtext;display:none;mso-hide:screen;text-decoration:none;
+text-underline:none'>3</span><span style='color:windowtext;display:none;
+mso-hide:screen;text-decoration:none;text-underline:none'><!--[if gte mso 9]><xml>
+ <w:data>08D0C9EA79F9BACE118C8200AA004BA90B02000000080000000E0000005F0054006F0063003400380033003100310037003400330035000000</w:data>
+</xml><![endif]--></span><!--[if supportFields]><span style='color:windowtext;
+display:none;mso-hide:screen;text-decoration:none;text-underline:none'><span
+style='mso-element:field-end'></span></span><![endif]--></a></span></span><span
+style='font-size:12.0pt;mso-bidi-font-size:14.0pt;mso-no-proof:yes'><o:p></o:p></span></p>
+
+<p class=MsoNormal><!--[if supportFields]><span style='mso-element:field-end'></span><![endif]--><o:p>&nbsp;</o:p></p>
+
+<h1><a name="_Toc483117430"></a><a name="_Toc247775019"><span style='mso-bookmark:
+_Toc483117430'>Créer un vrai Ocx en DotNet</span></a></h1>
+
+<p class=MsoNormal><o:p>&nbsp;</o:p></p>
+
+<p class=MsoNormal>A ma connaissance, il n'est pas possible de créer un vrai
+Ocx directement en DotNet : j'entends par &quot;vrai&quot; Ocx un contrôle
+ActiveX que l'on peut insérer partout, exactement comme ceux que l'on faisait
+par exemple en VB6. Par contre on peut créer une dll ActiveX en DotNet, qui ne
+pose pas de difficulté à être intégrée dans un projet VB6, mais guère plus :
+elle n'a pas d'interface utilisateur, et ne peut donc pas s'insérer dans
+l'ensemble des conteneurs ActiveX, qui sont innombrables. La solution est donc
+là : il suffit de faire un Ocx en VB6 qui utilise notre dll ActiveX en DotNet,
+c'est tout !</p>
+
+<p class=MsoNormal><o:p>&nbsp;</o:p></p>
+
+<p class=MsoNormal>Voici les étapes pour y arriver sans problèmes :</p>
+
+<p class=MsoNormal><o:p>&nbsp;</o:p></p>
+
+<h2><a name="_Toc483117431"></a><a name="_Toc247775020"><span style='mso-bookmark:
+_Toc483117431'>Utiliser le modèle &quot;Classe COM&quot; (template) pour VB
+2008</span></a></h2>
+
+<p class=MsoNormal>Il ne fait pas grand chose, mais permet de fabriquer des
+identifiants uniques (qu'il serait hasardeux de faire à la main, pour des
+questions d'unicité lorsque l'on distribue le composant sur toute la planète
+!).</p>
+
+<p class=MsoNormal>Le modèle &quot;Classe COM&quot; n'est pas installé par
+défaut avec Visual Basic 2008 Express, mais il est téléchargeable ici (cf.
+vbfusion05.exe, il est déjà inclus dans le zip IAVB)&nbsp;:</p>
+
+<p class=MsoNormal><a
+href="https://msdn.microsoft.com/fr-fr/library/ms973802.aspx">www.microsoft.com/france/msdn/vbasic/Appel-DotNET-Framework-a-partir-d-applications-Visual-Basic-6.mspx</a></p>
+
+<p class=MsoNormal>Copier le fichier \ModeleActiveX_VB2008\ComClass.zip</p>
+
+<p class=MsoNormal>dans le dossier : \Mes documents\Visual Studio
+2008\Templates\ItemTemplates\Visual Basic\</p>
+
+<p class=MsoNormal>Ensuite il suffit d'ajouter une classe de type &quot;Classe
+COM&quot; à votre projet pour récupérer les identifiants et la structure du
+code source (on peut ensuite supprimer cette classe).</p>
+
+<p class=MsoNormal><o:p>&nbsp;</o:p></p>
+
+<h2><a name="_Toc483117432"></a><a name="_Toc247775021"><span style='mso-bookmark:
+_Toc483117432'>Adapter votre projet pour en faire une dll ActiveX en DotNet</span></a></h2>
+
+<p class=MsoNormal>En regardant en détail le code source de la classe
+ComClass1.vb, vous avez le minimum des actions à faire pour transformer votre
+projet en dll ActiveX : il suffit alors d'ajouter des propriétés et fonctions
+publiques pour pouvoir les appeler de l'extérieur.</p>
+
+<p class=MsoNormal><o:p>&nbsp;</o:p></p>
+
+<p class=MsoNormal>Exemple :</p>
+
+<p class=MsoNormal><o:p>&nbsp;</o:p></p>
+
+<p class=MsoNormal><span style='color:blue;mso-no-proof:yes'>Public</span><span
+style='mso-no-proof:yes'> <span style='color:blue'>Function</span>
+strCommuniquer$(<span style='color:blue'>ByVal</span> strEntree$)<o:p></o:p></span></p>
+
+<p class=MsoNormal><span style='mso-no-proof:yes'><span
+style='mso-spacerun:yes'>    </span>strCommuniquer = <span style='color:#A31515'>&quot;&quot;<o:p></o:p></span></span></p>
+
+<p class=MsoNormal><span style='mso-no-proof:yes'><span
+style='mso-spacerun:yes'>    </span><span style='color:blue'>If</span> <span
+style='color:blue'>String</span>.IsNullOrEmpty(strEntree) <span
+style='color:blue'>Then</span> <span style='color:blue'>Exit</span> <span
+style='color:blue'>Function<o:p></o:p></span></span></p>
+
+<p class=MsoNormal><span style='mso-no-proof:yes'><span
+style='mso-spacerun:yes'>    </span>IAVBMain(strEntree)<o:p></o:p></span></p>
+
+<p class=MsoNormal><span style='mso-no-proof:yes'><span
+style='mso-spacerun:yes'>    </span><span style='color:blue'>If</span> <span
+style='color:blue'>String</span>.IsNullOrEmpty(<span style='color:blue'>Me</span>.m_sReponse)
+<span style='color:blue'>Then</span> <span style='color:blue'>Exit</span> <span
+style='color:blue'>Function<o:p></o:p></span></span></p>
+
+<p class=MsoNormal><span style='mso-no-proof:yes'><span
+style='mso-spacerun:yes'>    </span>strCommuniquer = <span style='color:blue'>Me</span>.m_sReponse<o:p></o:p></span></p>
+
+<p class=MsoNormal><span style='mso-no-proof:yes'>End Function</span></p>
+
+<p class=MsoNormal><o:p>&nbsp;</o:p></p>
+
+<p class=MsoNormal>Si on ne veut pas exposer une fonction publique via Com, on
+peut la masquer via un attribut&nbsp;:</p>
+
+<p class=MsoNormal><o:p>&nbsp;</o:p></p>
+
+<p class=MsoNormal><span style='mso-no-proof:yes'>' Masquer cette fonction à
+Com ActiveX car on exporte déjà strCommuniquer<o:p></o:p></span></p>
+
+<p class=MsoNormal><span style='mso-no-proof:yes'>&lt;Runtime.InteropServices.ComVisible(<span
+style='color:blue'>False</span>)&gt; _<o:p></o:p></span></p>
+
+<p class=MsoNormal><span style='color:blue;mso-no-proof:yes'>Public</span><span
+style='mso-no-proof:yes'> <span style='color:blue'>Sub</span> IAVBMain(<span
+style='color:blue'>ByVal</span> sEntree$)</span></p>
+
+<p class=MsoNormal><o:p>&nbsp;</o:p></p>
+
+<p class=MsoNormal>L'Ocx est une version simplifiée d'IAVB, elle n'implémente
+pas toutes les propriétés disponibles dans la région &quot;Interface&quot;.</p>
+
+<p class=MsoNormal><o:p>&nbsp;</o:p></p>
+
+<p class=MsoNormal>Dans AssemblyInfo.vb, il faut trois conditions : AssemblyFileVersion
+doit être renseigné, ComVisible doit être à True (ou sinon il doit y avoir au
+moins une fonction publique exposée à Com via l'attribut ComVisible), et le
+Guid doit être renseigné&nbsp;:</p>
+
+<p class=MsoNormal><o:p>&nbsp;</o:p></p>
+
+<p class=MsoNormal><span style='mso-no-proof:yes'>&lt;Assembly:
+AssemblyFileVersion(<span style='color:#A31515'>&quot;3.1.0.0&quot;</span>)&gt;</span></p>
+
+<p class=MsoNormal><span style='mso-no-proof:yes'>&lt;Assembly: ComVisible(<span
+style='color:blue'>True</span>)&gt;</span></p>
+
+<p class=MsoNormal><span style='mso-no-proof:yes'>&lt;Assembly:
+Guid(&quot;1304f12e-d6c0-44fd-b403-14e2bb503563&quot;)&gt;</span> (exemple de
+Guid)</p>
+
+<p class=MsoNormal><o:p>&nbsp;</o:p></p>
+
+<h2><a name="_Toc483117433"></a><a name="_Toc247775022"><span style='mso-bookmark:
+_Toc483117433'>Créer en VB6 un Ocx utilisant la dll ActiveX en DotNet</span></a></h2>
+
+<p class=MsoNormal>Pour pouvoir référencer la dll ActiveX en VB6, il faut la
+mettre dans le GAC. Pour cela, elle doit donc être signée : en VB 2008, il
+suffit simplement de cliquer sur l'onglet Signature du projet LibIAVB (Lib pour
+Librairie IAVB), et de créer une nouvelle signature, c'est tout.</p>
+
+<p class=MsoNormal><o:p>&nbsp;</o:p></p>
+
+<p class=MsoNormal><u>Note</u>&nbsp;: à ce stade on peut faire un projet client
+en DotNet pour tester la dll ActiveX, avec l'avantage du mode debug : si cela
+ne fonctionne plus après avoir modifié la dll, il suffit de recréer une
+nouvelle signature (et ne pas oublier non plus de définir comme projet de
+démarrage le projet client et non la dll. Exemple de disfonctionnement :
+plantage général, aucun point d'arrêt ne peut plus être atteint, ... c'est un
+peu le revers de la médaille d'une dll ActiveX).</p>
+
+<p class=MsoNormal><o:p>&nbsp;</o:p></p>
+
+<p class=MsoNormal>Une fois la dll signée et copiée dans le répertoire \VB6OCX,
+on peut lancer GAC.bat qui va se charger d'enregistrer la dll ActiveX dans le
+GAC, et de faire une tlb (Type LiBrary : librairie de type) : c'est cette tlb
+qu'il faut référencer dans le nouveau projet VB6 de type &quot;Contrôle
+ActiveX&quot;. Le code source de cet Ocx est très simple&nbsp;:</p>
+
+<p class=MsoNormal><o:p>&nbsp;</o:p></p>
+
+<pre><span style='font-size:10.0pt'>Option </span><span class=c1><span
+style='font-size:10.0pt'>Explicit<o:p></o:p></span></span></pre><pre><span
+class=c1><span style='font-size:10.0pt'><o:p>&nbsp;</o:p></span></span></pre><pre><span
+class=c1><span style='font-size:10.0pt'>Dim</span></span><span
+style='font-size:10.0pt'> iavb </span><span class=c1><span style='font-size:
+10.0pt'>As New</span></span><span style='font-size:10.0pt'> clsIAVB</span></pre><pre><span
+style='font-size:10.0pt'><o:p>&nbsp;</o:p></span></pre><pre><span class=c1><span
+style='font-size:10.0pt'>Private </span><a name=11></a>Sub</span><span
+style='font-size:10.0pt'> UserControl_Initialize()<o:p></o:p></span></pre><pre><span
+style='font-size:10.0pt'><span style='mso-spacerun:yes'>    </span>iavb.Initialiser<o:p></o:p></span></pre><pre><span
+class=c1><span style='font-size:10.0pt'>End Sub</span><o:p></o:p></span></pre><pre><span
+class=c1><span style='font-size:10.0pt'><o:p>&nbsp;</o:p></span></span></pre><pre><span
+class=c1><span style='font-size:10.0pt'>Public </span><a name=12></a>Function</span><span
+style='font-size:10.0pt'> strCommuniquer$(strEntree$)</span></pre><pre><span
+style='font-size:10.0pt'><span style='mso-spacerun:yes'>    </span>strCommuniquer = iavb.strCommuniquer(strEntree)<o:p></o:p></span></pre><pre><span
+class=c1><span style='font-size:10.0pt'>End Function</span><o:p></o:p></span></pre><pre><span
+class=c1><span style='font-size:10.0pt'><o:p>&nbsp;</o:p></span></span></pre><pre><span
+class=c1><span style='font-size:10.0pt'>Private </span><a name=13></a>Sub</span><span
+style='font-size:10.0pt'> cmdTest_Click()</span></pre><pre><span
+style='font-size:10.0pt'><span style='mso-spacerun:yes'>    </span>lblReponse.Caption = strCommuniquer(tbEntree.Text)<o:p></o:p></span></pre><pre><span
+class=c1><span style='font-size:10.0pt'>End Sub</span></span><span
+style='font-size:10.0pt'><o:p></o:p></span></pre>
+
+<p class=MsoNormal><o:p>&nbsp;</o:p></p>
+
+<p class=MsoNormal>Ici l'interface ne sert que pour tester l'Ocx : pour
+vérifier que le contrôle ActiveX est bien présent dans la liste des contrôles
+ActiveX avec interface, et qu'il fonctionne bien directement depuis
+l'interface. On peut cacher cette interface au profit de l'interface du projet
+final.</p>
+
+<p class=MsoNormal><o:p>&nbsp;</o:p></p>
+
+<p class=MsoNormal><u>Note</u> : pour le fichier GAC.bat j'ai inclus les
+utilitaires du framework DotNet (2.0.50727) dans le zip pour faciliter
+l'installation sous Windows XP (le cas échéant, remplacez-les si votre
+configuration est incompatible, les chemins sont précisés dans le fichier
+batch).</p>
+
+<p class=MsoNormal><o:p>&nbsp;</o:p></p>
+
+<h2><a name="_Toc483117434"></a><a name="_Toc247775023"><span style='mso-bookmark:
+_Toc483117434'>Utiliser l'Ocx en VB6 : ClientVB6</span></a></h2>
+
+<p class=MsoNormal>Enfin, pour tester l'Ocx, par exemple dans un projet client
+VB6, il suffit d'ajouter le composant via le menu Projets : Composant... : puis
+de sélectionner le composant &quot;Controle ActiveX pour le moteur IAVB en
+DotNet&quot; ou bien de parcourir le fichier IAVB.ocx, c'est équivalent.</p>
+
+<p class=MsoNormal>Il suffit ensuite de placer le composant ucIAVB (uc pour
+UserControl : contrôle utilisateur) sur une feuille VB6. On peut alors tester
+l'Ocx directement depuis son interface, ou bien alors via un textBoxEntree et
+un LabelReponse&nbsp;:</p>
+
+<p class=MsoNormal><o:p>&nbsp;</o:p></p>
+
+<p class=MsoNormal><span class=c1><span style='font-size:10.0pt'>Me</span></span>.lblReponse.Caption
+= <span class=c1><span style='font-size:10.0pt'>Me</span></span>.ucIAVB1.strCommuniquer(<span
+class=c1><span style='font-size:10.0pt'>Me</span></span>.tbQuestion.Text)<span
+style='font-family:"Courier New"'><o:p></o:p></span></p>
+
+<p class=MsoNormal><o:p>&nbsp;</o:p></p>
+
+<h2><a name="_Toc483117435"></a><a name="_Toc247775024"><span style='mso-bookmark:
+_Toc483117435'>Conclusion</span></a></h2>
+
+<p class=MsoNormal>Cet exemple est fourni a titre de démonstration : si vous
+voulez créer votre propre composant Ocx, refaite la procédure en entier, sans
+réutiliser les identifiants globaux, ni le fichier .snk, de façon à éviter la
+confusion entre vos développements et les miens, au cas où distribueriez votre
+composant (pour info. je n'utilise jamais de signature, et tous mes logiciels
+DotNet sont fournis avec le code source sur VBFrance, et je ne fait plus de VB6
+: on ne peut donc pas me rendre responsable d'un logiciel qui serait soi-disant
+signé par moi-même).</p>
+
+</div>
+
+</body>
+
+</html>

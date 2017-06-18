@@ -1,0 +1,3456 @@
+<html xmlns:v="urn:schemas-microsoft-com:vml"
+xmlns:o="urn:schemas-microsoft-com:office:office"
+xmlns:w="urn:schemas-microsoft-com:office:word"
+xmlns="http://www.w3.org/TR/REC-html40">
+
+<head>
+<meta http-equiv=Content-Type content="text/html; charset=windows-1252">
+<meta name=ProgId content=Word.Document>
+<meta name=Generator content="Microsoft Word 10">
+<meta name=Originator content="Microsoft Word 10">
+<link rel=File-List href="IAVB_fichiers/filelist.xml">
+<title>Intelligence Artificielle en Visual Basic (IAVB)</title>
+<!--[if gte mso 9]><xml>
+ <o:DocumentProperties>
+  <o:Subject>Système expert simple en basic</o:Subject>
+  <o:Author>Patrice DARGENTON d'après un logiciel de Philippe LARVET</o:Author>
+  <o:Keywords>ChatBot, Robot de discussion, IA, VB, VB6, VB8, VB 2005, Mini système expert</o:Keywords>
+  <o:LastAuthor>?</o:LastAuthor>
+  <o:Revision>2</o:Revision>
+  <o:TotalTime>163</o:TotalTime>
+  <o:LastPrinted>2001-08-23T06:40:00Z</o:LastPrinted>
+  <o:Created>2017-06-18T08:05:00Z</o:Created>
+  <o:LastSaved>2017-06-18T08:05:00Z</o:LastSaved>
+  <o:Pages>15</o:Pages>
+  <o:Words>5753</o:Words>
+  <o:Characters>31645</o:Characters>
+  <o:Manager>Je l'avoue</o:Manager>
+  <o:Company>ORS Production</o:Company>
+  <o:Lines>263</o:Lines>
+  <o:Paragraphs>74</o:Paragraphs>
+  <o:CharactersWithSpaces>37324</o:CharactersWithSpaces>
+  <o:Version>10.6870</o:Version>
+ </o:DocumentProperties>
+</xml><![endif]--><!--[if gte mso 9]><xml>
+ <w:WordDocument>
+  <w:HyphenationZone>21</w:HyphenationZone>
+  <w:BrowserLevel>MicrosoftInternetExplorer4</w:BrowserLevel>
+ </w:WordDocument>
+</xml><![endif]-->
+<style>
+<!--
+ /* Font Definitions */
+ @font-face
+	{font-family:"Courrier new";
+	panose-1:0 0 0 0 0 0 0 0 0 0;
+	mso-font-alt:"Times New Roman";
+	mso-font-charset:0;
+	mso-generic-font-family:roman;
+	mso-font-format:other;
+	mso-font-pitch:auto;
+	mso-font-signature:0 0 0 0 0 0;}
+ /* Style Definitions */
+ p.MsoNormal, li.MsoNormal, div.MsoNormal
+	{mso-style-update:auto;
+	mso-style-parent:"";
+	margin:0cm;
+	margin-bottom:.0001pt;
+	text-align:justify;
+	mso-pagination:widow-orphan;
+	font-size:12.0pt;
+	font-family:"Times New Roman";
+	mso-fareast-font-family:"Times New Roman";}
+h1
+	{mso-style-update:auto;
+	mso-style-next:Normal;
+	margin:0cm;
+	margin-bottom:.0001pt;
+	text-align:justify;
+	mso-pagination:widow-orphan;
+	page-break-after:avoid;
+	mso-outline-level:1;
+	font-size:16.0pt;
+	mso-bidi-font-size:12.0pt;
+	font-family:"Times New Roman";
+	mso-bidi-font-family:"Courier New";
+	mso-font-kerning:0pt;}
+h2
+	{mso-style-update:auto;
+	margin:0cm;
+	margin-bottom:.0001pt;
+	text-align:justify;
+	mso-pagination:widow-orphan;
+	mso-outline-level:2;
+	font-size:14.0pt;
+	mso-bidi-font-size:18.0pt;
+	font-family:"Times New Roman";
+	mso-bidi-font-family:Arial;
+	color:green;}
+h3
+	{mso-style-next:Normal;
+	margin-top:12.0pt;
+	margin-right:0cm;
+	margin-bottom:3.0pt;
+	margin-left:0cm;
+	text-align:justify;
+	mso-pagination:widow-orphan;
+	page-break-after:avoid;
+	mso-outline-level:3;
+	font-size:13.0pt;
+	font-family:"Times New Roman";
+	mso-bidi-font-family:Arial;}
+p.MsoToc1, li.MsoToc1, div.MsoToc1
+	{mso-style-update:auto;
+	mso-style-noshow:yes;
+	mso-style-next:Normal;
+	margin:0cm;
+	margin-bottom:.0001pt;
+	text-align:justify;
+	mso-pagination:widow-orphan;
+	font-size:12.0pt;
+	font-family:"Times New Roman";
+	mso-fareast-font-family:"Times New Roman";}
+p.MsoToc2, li.MsoToc2, div.MsoToc2
+	{mso-style-update:auto;
+	mso-style-noshow:yes;
+	mso-style-next:Normal;
+	margin-top:0cm;
+	margin-right:0cm;
+	margin-bottom:0cm;
+	margin-left:12.0pt;
+	margin-bottom:.0001pt;
+	text-align:justify;
+	mso-pagination:widow-orphan;
+	font-size:11.0pt;
+	mso-bidi-font-size:12.0pt;
+	font-family:"Times New Roman";
+	mso-fareast-font-family:"Times New Roman";}
+p.MsoToc3, li.MsoToc3, div.MsoToc3
+	{mso-style-update:auto;
+	mso-style-noshow:yes;
+	mso-style-next:Normal;
+	margin-top:0cm;
+	margin-right:0cm;
+	margin-bottom:0cm;
+	margin-left:24.0pt;
+	margin-bottom:.0001pt;
+	text-align:justify;
+	mso-pagination:widow-orphan;
+	font-size:10.0pt;
+	mso-bidi-font-size:12.0pt;
+	font-family:"Times New Roman";
+	mso-fareast-font-family:"Times New Roman";}
+p.MsoBodyText, li.MsoBodyText, div.MsoBodyText
+	{margin:0cm;
+	margin-bottom:.0001pt;
+	text-align:center;
+	mso-pagination:widow-orphan;
+	font-size:18.0pt;
+	mso-bidi-font-size:12.0pt;
+	font-family:"Times New Roman";
+	mso-fareast-font-family:"Times New Roman";}
+a:link, span.MsoHyperlink
+	{color:blue;
+	text-decoration:underline;
+	text-underline:single;}
+a:visited, span.MsoHyperlinkFollowed
+	{color:purple;
+	text-decoration:underline;
+	text-underline:single;}
+pre
+	{margin:0cm;
+	margin-bottom:.0001pt;
+	text-align:justify;
+	mso-pagination:widow-orphan;
+	font-size:7.0pt;
+	font-family:"Courrier new";
+	mso-fareast-font-family:"Times New Roman";
+	mso-bidi-font-family:"Courier New";
+	color:black;}
+span.c1
+	{mso-style-name:c1;
+	color:#3366CC;
+	font-weight:bold;}
+@page Section1
+	{size:595.3pt 841.9pt;
+	margin:42.55pt 42.55pt 42.55pt 42.55pt;
+	mso-header-margin:35.45pt;
+	mso-footer-margin:35.45pt;
+	mso-columns:2 even 35.45pt;
+	mso-paper-source:0;}
+div.Section1
+	{page:Section1;}
+@page Section2
+	{size:595.3pt 841.9pt;
+	margin:42.55pt 42.55pt 42.55pt 42.55pt;
+	mso-header-margin:35.45pt;
+	mso-footer-margin:35.45pt;
+	mso-paper-source:0;}
+div.Section2
+	{page:Section2;}
+-->
+</style>
+<!--[if gte mso 10]>
+<style>
+ /* Style Definitions */
+ table.MsoNormalTable
+	{mso-style-name:"Tableau Normal";
+	mso-tstyle-rowband-size:0;
+	mso-tstyle-colband-size:0;
+	mso-style-noshow:yes;
+	mso-style-parent:"";
+	mso-padding-alt:0cm 5.4pt 0cm 5.4pt;
+	mso-para-margin:0cm;
+	mso-para-margin-bottom:.0001pt;
+	mso-pagination:widow-orphan;
+	font-size:10.0pt;
+	font-family:"Times New Roman";}
+</style>
+<![endif]--><!--[if gte mso 9]><xml>
+ <o:shapedefaults v:ext="edit" spidmax="2050">
+  <o:colormenu v:ext="edit" fillcolor="aqua"/>
+ </o:shapedefaults></xml><![endif]--><!--[if gte mso 9]><xml>
+ <o:shapelayout v:ext="edit">
+  <o:idmap v:ext="edit" data="1"/>
+ </o:shapelayout></xml><![endif]-->
+</head>
+
+<body bgcolor=aqua lang=FR link=blue vlink=purple style='tab-interval:35.4pt'>
+
+<div class=Section1>
+
+<p class=MsoBodyText><span style='color:fuchsia'>Intelligence Artificielle <a
+href="#IAVB" title="Le code source est disponible !">Vraiment Basique</a> (<a
+href="http://patrice.dargenton.free.fr/ia/iavb/iavb.wma" title="Démo vocale !!!">IAVB</a>)<o:p></o:p></span></p>
+
+<p class=MsoNormal><span style='font-family:"Courier New"'><o:p>&nbsp;</o:p></span></p>
+
+<p class=MsoNormal><span style='font-family:"Courier New";color:blue'>TOUT
+STYLO EST BLEU<o:p></o:p></span></p>
+
+<p class=MsoNormal><b><span style='font-family:"Courier New";color:green'>**
+Compris.<o:p></o:p></span></b></p>
+
+<p class=MsoNormal><span style='font-family:"Courier New";color:blue'>FRANÇOIS POSSÈDE
+UN STYLO<o:p></o:p></span></p>
+
+<p class=MsoNormal><b><span style='font-family:"Courier New";color:green'>**
+Compris.<o:p></o:p></span></b></p>
+
+<p class=MsoNormal><span style='font-family:"Courier New";color:blue'>BLEU EST
+UNE COULEUR<o:p></o:p></span></p>
+
+<p class=MsoNormal><b><span style='font-family:"Courier New";color:green'>**
+Compris.<o:p></o:p></span></b></p>
+
+<p class=MsoNormal><span style='font-family:"Courier New";color:blue'>ROUGE EST
+UNE COULEUR<o:p></o:p></span></p>
+
+<p class=MsoNormal><b><span style='font-family:"Courier New";color:green'>**
+Compris.<o:p></o:p></span></b></p>
+
+<p class=MsoNormal><span style='font-family:"Courier New";color:blue'>TOUT
+STYLO EST EN PLASTIQUE<o:p></o:p></span></p>
+
+<p class=MsoNormal><b><span style='font-family:"Courier New";color:green'>**
+Compris.<o:p></o:p></span></b></p>
+
+<p class=MsoNormal><span style='font-family:"Courier New";color:blue'>LE
+PLASTIQUE EST UNE MATIÈRE<o:p></o:p></span></p>
+
+<p class=MsoNormal><b><span style='font-family:"Courier New";color:green'>**
+Compris.<o:p></o:p></span></b></p>
+
+<p class=MsoNormal><span style='font-family:"Courier New";color:blue'>FRANÇOIS
+POSSÈDE-T-IL UN STYLO ROUGE ?<o:p></o:p></span></p>
+
+<p class=MsoNormal><b><span style='font-family:"Courier New";color:green'>**
+Non.<o:p></o:p></span></b></p>
+
+<p class=MsoNormal><span style='font-family:"Courier New";color:blue'>QUELLE
+EST LA COULEUR DU STYLO DE FRANÇOIS ?<o:p></o:p></span></p>
+
+<p class=MsoNormal><b><span style='font-family:"Courier New";color:green'>BLEU<o:p></o:p></span></b></p>
+
+<p class=MsoNormal><span style='font-family:"Courier New";color:blue'>RAOUL A
+ACHETÉ UN STYLO ÉGALEMENT<o:p></o:p></span></p>
+
+<p class=MsoNormal><b><span style='font-family:"Courier New";color:green'>**
+Compris.<o:p></o:p></span></b></p>
+
+<p class=MsoNormal><span style='font-family:"Courier New";color:blue'>DE QUELLE
+COULEUR EST LE STYLO DE RAOUL ?<o:p></o:p></span></p>
+
+<p class=MsoNormal><b><span style='font-family:"Courier New";color:green'>BLEU<o:p></o:p></span></b></p>
+
+<p class=MsoNormal><span style='font-family:"Courier New";color:blue'>TOUT
+STYLO EST EN QUELLE MATIÈRE ?<o:p></o:p></span></p>
+
+<p class=MsoNormal><b><span style='font-family:"Courier New";color:green'>PLASTIQUE<o:p></o:p></span></b></p>
+
+<p class=MsoNormal><span style='font-family:"Courier New";color:blue'>EN QUELLE
+MATIÈRE EST TOUT STYLO ?<o:p></o:p></span></p>
+
+<p class=MsoNormal><b><span style='font-family:"Courier New";color:green'>PLASTIQUE<o:p></o:p></span></b></p>
+
+<p class=MsoNormal><span style='font-family:"Courier New"'>' Limitation
+actuelle du logiciel : réponse fausse :<o:p></o:p></span></p>
+
+<p class=MsoNormal><span style='font-family:"Courier New";color:blue'>FRANÇOIS POSSÈDE-T-IL
+UN STYLO BLEU ?<o:p></o:p></span></p>
+
+<p class=MsoNormal><b><span style='font-family:"Courier New";color:green'>**
+Non.<o:p></o:p></span></b></p>
+
+<p class=MsoNormal><span style='font-family:"Courier New";color:blue'>FRANÇOIS POSSÈDE-T-IL
+UN STYLO ?<o:p></o:p></span></p>
+
+<p class=MsoNormal><b><span style='font-family:"Courier New";color:green'>**
+Oui.<o:p></o:p></span></b></p>
+
+<p class=MsoNormal><span style='font-family:"Courier New";color:blue'>COULEUR
+STYLO FRANÇOIS ?<o:p></o:p></span></p>
+
+<p class=MsoNormal><b><span style='font-family:"Courier New";color:green'>BLEU<o:p></o:p></span></b></p>
+
+<p class=MsoNormal><span style='font-family:"Courier New";color:blue'>DE QUELLE
+COULEUR EST LE STYLO DE FRANÇOIS ?<o:p></o:p></span></p>
+
+<p class=MsoNormal><b><span style='font-family:"Courier New";color:green'>BLEU<o:p></o:p></span></b></p>
+
+<p class=MsoNormal><span style='font-family:"Courier New"'><o:p>&nbsp;</o:p></span></p>
+
+<p class=MsoNormal><span style='font-family:"Courier New";color:blue'>ANNIE EST
+UNE JOLIE FILLE<o:p></o:p></span></p>
+
+<p class=MsoNormal><b><span style='font-family:"Courier New";color:green'>**
+Compris.<o:p></o:p></span></b></p>
+
+<p class=MsoNormal><span style='font-family:"Courier New";color:blue'>ANNIE EST
+SAGE<o:p></o:p></span></p>
+
+<p class=MsoNormal><b><span style='font-family:"Courier New";color:green'>**
+Compris.<o:p></o:p></span></b></p>
+
+<p class=MsoNormal><span style='font-family:"Courier New";color:blue'>MINNA EST
+UNE FILLE ELLE AUSSI<o:p></o:p></span></p>
+
+<p class=MsoNormal><b><span style='font-family:"Courier New";color:green'>**
+Compris.<o:p></o:p></span></b></p>
+
+<p class=MsoNormal><span style='font-family:"Courier New";color:blue'>MINNA EST
+FOFOLLE<o:p></o:p></span></p>
+
+<p class=MsoNormal><b><span style='font-family:"Courier New";color:green'>**
+Compris.<o:p></o:p></span></b></p>
+
+<p class=MsoNormal><span style='font-family:"Courier New";color:blue'>QUELLE
+FILLE EST SAGE ?<o:p></o:p></span></p>
+
+<p class=MsoNormal><b><span style='font-family:"Courier New";color:green'>ANNIE<o:p></o:p></span></b></p>
+
+<p class=MsoNormal><span style='font-family:"Courier New";color:blue'>ET
+LAQUELLE EST FOFOLLE ?<o:p></o:p></span></p>
+
+<p class=MsoNormal><b><span style='font-family:"Courier New";color:green'>MINNA
+<o:p></o:p></span></b></p>
+
+<p class=MsoNormal><span style='font-family:"Courier New";color:blue'>JOLIE EST
+LE CONTRAIRE DE LAIDE<o:p></o:p></span></p>
+
+<p class=MsoNormal><b style='mso-bidi-font-weight:normal'><span
+style='font-family:"Courier New";color:green'>** Compris.</span></b><span
+style='font-family:"Courier New"'><o:p></o:p></span></p>
+
+<p class=MsoNormal><span style='font-family:"Courier New";color:blue'>EST-CE QU'ANNIE
+EST LAIDE ?<o:p></o:p></span></p>
+
+<p class=MsoNormal><b><span style='font-family:"Courier New";color:green'>JOLIE<o:p></o:p></span></b></p>
+
+<p class=MsoNormal><span style='font-family:"Courier New";color:blue'>ÇA
+SIGNIFIE-T-IL QU'ANNIE EST UNE JOLIE FILLE ?<o:p></o:p></span></p>
+
+<p class=MsoNormal><b><span style='font-family:"Courier New";color:green'>**
+Oui.<o:p></o:p></span></b></p>
+
+<p class=MsoNormal><span style='font-family:"Courier New"'><o:p>&nbsp;</o:p></span></p>
+
+<p class=MsoNormal><span style='font-family:"Courier New";color:blue'>JEAN
+REGARDE MARIE<o:p></o:p></span></p>
+
+<p class=MsoNormal><b style='mso-bidi-font-weight:normal'><span
+style='font-family:"Courier New";color:green'>** Compris.</span></b><span
+style='font-family:"Courier New"'><o:p></o:p></span></p>
+
+<p class=MsoNormal><span style='font-family:"Courier New";color:blue'>MARIE
+REGARDE HUGUES<o:p></o:p></span></p>
+
+<p class=MsoNormal><b style='mso-bidi-font-weight:normal'><span
+style='font-family:"Courier New";color:green'>** Compris.</span></b><span
+style='font-family:"Courier New"'><o:p></o:p></span></p>
+
+<p class=MsoNormal><span style='font-family:"Courier New";color:blue'>QUI MARIE
+REGARDE-T-ELLE ?<o:p></o:p></span></p>
+
+<p class=MsoNormal><b><span style='font-family:"Courier New";color:green'>HUGUES<o:p></o:p></span></b></p>
+
+<p class=MsoNormal><span style='font-family:"Courier New";color:blue'>MARIE
+REGARDE-T-ELLE JEAN ?<o:p></o:p></span></p>
+
+<p class=MsoNormal><b><span style='font-family:"Courier New";color:green'>**
+Non.<o:p></o:p></span></b></p>
+
+<p class=MsoNormal><span style='font-family:"Courier New";color:blue'>HUGUES
+EST LE FRÈRE D'HENRI<o:p></o:p></span></p>
+
+<p class=MsoNormal><b style='mso-bidi-font-weight:normal'><span
+style='font-family:"Courier New";color:green'>** Compris.</span></b><span
+style='font-family:"Courier New"'><o:p></o:p></span></p>
+
+<p class=MsoNormal><span style='font-family:"Courier New";color:blue'>HENRI EST
+LE FILS D'OCTAVE<o:p></o:p></span></p>
+
+<p class=MsoNormal><b style='mso-bidi-font-weight:normal'><span
+style='font-family:"Courier New";color:green'>** Compris.</span></b><span
+style='font-family:"Courier New"'><o:p></o:p></span></p>
+
+<p class=MsoNormal><span style='font-family:"Courier New";color:blue'>OCTAVE
+EST L'ONCLE D'ANATOLE<o:p></o:p></span></p>
+
+<p class=MsoNormal><b style='mso-bidi-font-weight:normal'><span
+style='font-family:"Courier New";color:green'>** Compris.</span></b><span
+style='font-family:"Courier New"'><o:p></o:p></span></p>
+
+<p class=MsoNormal><span style='font-family:"Courier New";color:blue'>QUI EST
+LE FILS DE L'ONCLE D'ANATOLE ?<o:p></o:p></span></p>
+
+<p class=MsoNormal><b><span style='font-family:"Courier New";color:green'>HENRI<o:p></o:p></span></b></p>
+
+<p class=MsoNormal><span style='font-family:"Courier New";color:blue'>ET QUI
+REGARDE LE FRÈRE DU FILS DE L'ONCLE D'ANATOLE ?<o:p></o:p></span></p>
+
+<p class=MsoNormal><b><span style='font-family:"Courier New";color:green'>MARIE<o:p></o:p></span></b></p>
+
+<p class=MsoNormal><span style='font-family:"Courier New"'><o:p>&nbsp;</o:p></span></p>
+
+<p class=MsoNormal><span style='font-family:"Courier New";color:blue'>L'ENTREPRISE
+A UN SIÈGE ET UNE ANNEXE<o:p></o:p></span></p>
+
+<p class=MsoNormal><b style='mso-bidi-font-weight:normal'><span
+style='font-family:"Courier New";color:green'>** Compris.</span></b><span
+style='font-family:"Courier New"'><o:p></o:p></span></p>
+
+<p class=MsoNormal><span style='font-family:"Courier New";color:blue'>M.BERTRAND
+EST RESPONSABLE DE L'ANNEXE<o:p></o:p></span></p>
+
+<p class=MsoNormal><b style='mso-bidi-font-weight:normal'><span
+style='font-family:"Courier New";color:green'>** Compris.</span></b><span
+style='font-family:"Courier New"'><o:p></o:p></span></p>
+
+<p class=MsoNormal><span style='font-family:"Courier New";color:blue'>L'ANNEXE
+A 15 SERVICES DIFFÉRENTS<o:p></o:p></span></p>
+
+<p class=MsoNormal><b style='mso-bidi-font-weight:normal'><span
+style='font-family:"Courier New";color:green'>** Compris.</span></b><span
+style='font-family:"Courier New"'><o:p></o:p></span></p>
+
+<p class=MsoNormal><span style='font-family:"Courier New";color:blue'>M.JACQUES
+EST RESPONSABLE DE LA SAISIE<o:p></o:p></span></p>
+
+<p class=MsoNormal><b style='mso-bidi-font-weight:normal'><span
+style='font-family:"Courier New";color:green'>** Compris.</span></b><span
+style='font-family:"Courier New"'><o:p></o:p></span></p>
+
+<p class=MsoNormal><span style='font-family:"Courier New";color:blue'>M.RENÉ
+EST LE CHEF DU SERVICE COMPTABILITÉ<o:p></o:p></span></p>
+
+<p class=MsoNormal><b style='mso-bidi-font-weight:normal'><span
+style='font-family:"Courier New";color:green'>** Compris.</span></b><span
+style='font-family:"Courier New"'><o:p></o:p></span></p>
+
+<p class=MsoNormal><span style='font-family:"Courier New";color:blue'>M.MARTIN
+EST UN AMI DE M.JACQUES<o:p></o:p></span></p>
+
+<p class=MsoNormal><b style='mso-bidi-font-weight:normal'><span
+style='font-family:"Courier New";color:green'>** Compris.</span></b><span
+style='font-family:"Courier New"'><o:p></o:p></span></p>
+
+<p class=MsoNormal><span style='font-family:"Courier New";color:blue'>M.DUBOIS
+EST CHEF DU SERVICE PHOTO<o:p></o:p></span></p>
+
+<p class=MsoNormal><b style='mso-bidi-font-weight:normal'><span
+style='font-family:"Courier New";color:green'>** Compris.</span></b><span
+style='font-family:"Courier New"'><o:p></o:p></span></p>
+
+<p class=MsoNormal><span style='font-family:"Courier New";color:blue'>LA SAISIE
+EST UN SERVICE DÉCENTRALISÉ<o:p></o:p></span></p>
+
+<p class=MsoNormal><b style='mso-bidi-font-weight:normal'><span
+style='font-family:"Courier New";color:green'>** Compris.</span></b><span
+style='font-family:"Courier New"'><o:p></o:p></span></p>
+
+<p class=MsoNormal><span style='font-family:"Courier New";color:blue'>RENAUD
+EST LE FILS DE M.BERTRAND<o:p></o:p></span></p>
+
+<p class=MsoNormal><b style='mso-bidi-font-weight:normal'><span
+style='font-family:"Courier New";color:green'>** Compris.</span></b><span
+style='font-family:"Courier New"'><o:p></o:p></span></p>
+
+<p class=MsoNormal><span style='font-family:"Courier New";color:blue'>DAMIEN
+EST LE FILS DE M.RENÉ<o:p></o:p></span></p>
+
+<p class=MsoNormal><b style='mso-bidi-font-weight:normal'><span
+style='font-family:"Courier New";color:green'>** Compris.</span></b><span
+style='font-family:"Courier New"'><o:p></o:p></span></p>
+
+<p class=MsoNormal><span style='font-family:"Courier New";color:blue'>CHEF DE
+SERVICE ?<o:p></o:p></span></p>
+
+<p class=MsoNormal><b><span style='font-family:"Courier New";color:green'>M.RENÉ
+<o:p></o:p></span></b></p>
+
+<p class=MsoNormal><b><span style='font-family:"Courier New";color:green'>M.DUBOIS
+<o:p></o:p></span></b></p>
+
+<p class=MsoNormal><span style='font-family:"Courier New";color:blue'>CHEF DE
+SERVICE PHOTO ?<o:p></o:p></span></p>
+
+<p class=MsoNormal><b><span style='font-family:"Courier New";color:green'>M.DUBOIS
+<o:p></o:p></span></b></p>
+
+<p class=MsoNormal><span style='font-family:"Courier New";color:blue'>SERVICE
+PHOTO ?<o:p></o:p></span></p>
+
+<p class=MsoNormal><b><span style='font-family:"Courier New";color:green'>M.DUBOIS
+EST CHEF <o:p></o:p></span></b></p>
+
+<p class=MsoNormal><span style='font-family:"Courier New";color:blue'>RESPONSABLE
+?<o:p></o:p></span></p>
+
+<p class=MsoNormal><b><span style='font-family:"Courier New";color:green'>M.BERTRAND
+EST RESPONSABLE DE L'ANNEXE<o:p></o:p></span></b></p>
+
+<p class=MsoNormal><b><span style='font-family:"Courier New";color:green'>M.JACQUES
+EST RESPONSABLE DE LA SAISIE<o:p></o:p></span></b></p>
+
+<p class=MsoNormal><span style='font-family:"Courier New";color:blue'>M.MARTIN
+EST L'AMI DE QUI ?<o:p></o:p></span></p>
+
+<p class=MsoNormal><b><span style='font-family:"Courier New";color:green'>DE
+M.JACQUES<o:p></o:p></span></b></p>
+
+<p class=MsoNormal><span style='font-family:"Courier New";color:blue'>QUI EST
+LE FILS DU RESPONSABLE DES 15 SERVICES ?<o:p></o:p></span></p>
+
+<p class=MsoNormal><b><span style='font-family:"Courier New";color:green'>RENAUD<o:p></o:p></span></b></p>
+
+<p class=MsoNormal><span style='font-family:"Courier New";color:blue'>QUI EST
+LE FILS D'UN CHEF DE SERVICE ?<o:p></o:p></span></p>
+
+<p class=MsoNormal><b><span style='font-family:"Courier New";color:green'>DAMIEN<o:p></o:p></span></b></p>
+
+<p class=MsoNormal><span style='font-family:"Courier New";color:blue'>QUI EST
+L'AMI DU RESPONSABLE D'UN SERVICE DÉCENTRALISÉ ?<o:p></o:p></span></p>
+
+<p class=MsoNormal><b><span style='font-family:"Courier New";color:green'>M.MARTIN<o:p></o:p></span></b></p>
+
+<p class=MsoNormal><span style='font-family:"Courier New"'><o:p>&nbsp;</o:p></span></p>
+
+<p class=MsoNormal><span style='font-family:"Courier New";color:blue'>TOUT
+HOMME EST MORTEL<o:p></o:p></span></p>
+
+<p class=MsoNormal><b style='mso-bidi-font-weight:normal'><span
+style='font-family:"Courier New";color:green'>** Compris.</span></b><span
+style='font-family:"Courier New"'><o:p></o:p></span></p>
+
+<p class=MsoNormal><span style='font-family:"Courier New";color:blue'>OR
+SOCRATE EST UN HOMME<o:p></o:p></span></p>
+
+<p class=MsoNormal><b style='mso-bidi-font-weight:normal'><span
+style='font-family:"Courier New";color:green'>** Compris.</span></b><span
+style='font-family:"Courier New"'><o:p></o:p></span></p>
+
+<p class=MsoNormal><span style='font-family:"Courier New";color:blue'>DONC ?<o:p></o:p></span></p>
+
+<p class=MsoNormal><b><span style='font-family:"Courier New";color:green'>DONC
+SOCRATE EST MORTEL<span style='mso-spacerun:yes'>  </span>&lt;HOMME&gt;<o:p></o:p></span></b></p>
+
+<p class=MsoNormal><span style='font-family:"Courier New"'><o:p>&nbsp;</o:p></span></p>
+
+<p class=MsoNormal><span style='font-family:"Courier New";color:blue'>TOUT
+HOMME EST BIPÈDE<o:p></o:p></span></p>
+
+<p class=MsoNormal><b style='mso-bidi-font-weight:normal'><span
+style='font-family:"Courier New";color:green'>** Compris.</span></b><span
+style='font-family:"Courier New"'><o:p></o:p></span></p>
+
+<p class=MsoNormal><span style='font-family:"Courier New";color:blue'>OR PAUL
+EST UN HOMME<o:p></o:p></span></p>
+
+<p class=MsoNormal><b style='mso-bidi-font-weight:normal'><span
+style='font-family:"Courier New";color:green'>** Compris.</span></b><span
+style='font-family:"Courier New"'><o:p></o:p></span></p>
+
+<p class=MsoNormal><span style='font-family:"Courier New";color:blue'>DONC ?<o:p></o:p></span></p>
+
+<p class=MsoNormal><b><span style='font-family:"Courier New";color:green'>DONC
+PAUL EST BIPÈDE<span style='mso-spacerun:yes'>  </span>&lt;HOMME&gt;<o:p></o:p></span></b></p>
+
+<p class=MsoNormal><span style='font-family:"Courier New";color:blue'>DONC ?<o:p></o:p></span></p>
+
+<p class=MsoNormal><b><span style='font-family:"Courier New";color:green'>OR
+PAUL EST UN HOMME :<o:p></o:p></span></b></p>
+
+<p class=MsoNormal><b><span style='font-family:"Courier New";color:green'>**
+Recherche approfondie...<o:p></o:p></span></b></p>
+
+<p class=MsoNormal><b><span style='font-family:"Courier New";color:green'>DONC
+PAUL EST BIPÈDE<span style='mso-spacerun:yes'>  </span>&lt;HOMME&gt;<o:p></o:p></span></b></p>
+
+<p class=MsoNormal><b><span style='font-family:"Courier New";color:green'>DONC
+PAUL EST COMME SOCRATE<span style='mso-spacerun:yes'>  </span>&lt;HOMME&gt;<o:p></o:p></span></b></p>
+
+<p class=MsoNormal><b><span style='font-family:"Courier New";color:green'>DONC
+PAUL EST MORTEL<span style='mso-spacerun:yes'>  </span>&lt;HOMME&gt;<o:p></o:p></span></b></p>
+
+<p class=MsoNormal><span style='font-family:"Courier New"'><o:p>&nbsp;</o:p></span></p>
+
+<p class=MsoNormal><span style='font-family:"Courier New";color:blue'>TOUT CE
+QUI EST RARE EST CHER<o:p></o:p></span></p>
+
+<p class=MsoNormal><b style='mso-bidi-font-weight:normal'><span
+style='font-family:"Courier New";color:green'>** Compris.</span></b><span
+style='font-family:"Courier New"'><o:p></o:p></span></p>
+
+<p class=MsoNormal><span style='font-family:"Courier New";color:blue'>UN CHEVAL
+BON.MARCHÉ EST RARE<o:p></o:p></span></p>
+
+<p class=MsoNormal><b style='mso-bidi-font-weight:normal'><span
+style='font-family:"Courier New";color:green'>** Compris.</span></b><span
+style='font-family:"Courier New"'><o:p></o:p></span></p>
+
+<p class=MsoNormal><span style='font-family:"Courier New";color:blue'>DONC ?<o:p></o:p></span></p>
+
+<p class=MsoNormal><b><span style='font-family:"Courier New";color:green'>DONC
+UN CHEVAL BON.MARCHÉ EST CHER<span style='mso-spacerun:yes'> 
+</span>&lt;RARE&gt;<o:p></o:p></span></b></p>
+
+<p class=MsoNormal><span style='font-family:"Courier New"'><o:p>&nbsp;</o:p></span></p>
+
+<p class=MsoNormal><span style='font-family:"Courier New";color:blue'>PLATON
+EST GREC<o:p></o:p></span></p>
+
+<p class=MsoNormal><b style='mso-bidi-font-weight:normal'><span
+style='font-family:"Courier New";color:green'>** Compris.</span></b><span
+style='font-family:"Courier New"'><o:p></o:p></span></p>
+
+<p class=MsoNormal><span style='font-family:"Courier New";color:blue'>OR PLATON
+EST PHILOSOPHE<o:p></o:p></span></p>
+
+<p class=MsoNormal><b style='mso-bidi-font-weight:normal'><span
+style='font-family:"Courier New";color:green'>** Compris.</span></b><span
+style='font-family:"Courier New"'><o:p></o:p></span></p>
+
+<p class=MsoNormal><span style='font-family:"Courier New";color:blue'>DONC ?<o:p></o:p></span></p>
+
+<p class=MsoNormal><b><span style='font-family:"Courier New";color:green'>DONC
+QUELQUE PHILOSOPHE EST GREC<span style='mso-spacerun:yes'> 
+</span>&lt;PLATON&gt;<o:p></o:p></span></b></p>
+
+<p class=MsoNormal><span style='font-family:"Courier New";color:blue'>QUEL
+PHILOSOPHE EST GREC ?<o:p></o:p></span></p>
+
+<p class=MsoNormal><b><span style='font-family:"Courier New";color:green'>PLATON<o:p></o:p></span></b></p>
+
+<p class=MsoNormal><span style='font-family:"Courier New";color:blue'>Y A-T-IL
+UN PHILOSOPHE GREC ?<o:p></o:p></span></p>
+
+<p class=MsoNormal><b><span style='font-family:"Courier New";color:green'>PLATON<o:p></o:p></span></b></p>
+
+<p class=MsoNormal><span style='font-family:"Courier New";color:blue'>QUI EST
+GREC ET PHILOSOPHE ?<o:p></o:p></span></p>
+
+<p class=MsoNormal><b><span style='font-family:"Courier New";color:green'>PLATON<o:p></o:p></span></b></p>
+
+<p class=MsoNormal><span style='font-family:"Courier New";color:blue'>PHILOSOPHE
+GREC ?<o:p></o:p></span></p>
+
+<p class=MsoNormal><b><span style='font-family:"Courier New";color:green'>PLATON<o:p></o:p></span></b></p>
+
+<p class=MsoNormal><span style='font-family:"Courier New";color:blue'>PLATON
+EST-IL GREC ?<o:p></o:p></span></p>
+
+<p class=MsoNormal><b><span style='font-family:"Courier New";color:green'>**
+Oui.<o:p></o:p></span></b></p>
+
+<p class=MsoNormal><span style='font-family:"Courier New"'><o:p>&nbsp;</o:p></span></p>
+
+<p class=MsoNormal><span style='font-family:"Courier New";color:blue'>LES
+SAVANTS SONT SOUVENT DISTRAITS<o:p></o:p></span></p>
+
+<p class=MsoNormal><b style='mso-bidi-font-weight:normal'><span
+style='font-family:"Courier New";color:green'>** Compris.</span></b><span
+style='font-family:"Courier New"'><o:p></o:p></span></p>
+
+<p class=MsoNormal><span style='font-family:"Courier New";color:blue'>OR TOUS
+LES SAVANTS SONT BAVARDS<o:p></o:p></span></p>
+
+<p class=MsoNormal><b style='mso-bidi-font-weight:normal'><span
+style='font-family:"Courier New";color:green'>** Compris.</span></b><span
+style='font-family:"Courier New"'><o:p></o:p></span></p>
+
+<p class=MsoNormal><span style='font-family:"Courier New";color:blue'>DONC ?<o:p></o:p></span></p>
+
+<p class=MsoNormal><b><span style='font-family:"Courier New";color:green'>DONC
+QUELQUES BAVARDS SONT SOUVENT DISTRAITS<span style='mso-spacerun:yes'> 
+</span>&lt;SAVANTS&gt;<o:p></o:p></span></b></p>
+
+<p class=MsoNormal><span style='font-family:"Courier New"'><o:p>&nbsp;</o:p></span></p>
+
+<p class=MsoNormal><span style='font-family:"Courier New";color:blue'>TOUS LES
+HOMMES SONT DES MORTELS<o:p></o:p></span></p>
+
+<p class=MsoNormal><b style='mso-bidi-font-weight:normal'><span
+style='font-family:"Courier New";color:green'>** Compris.</span></b><span
+style='font-family:"Courier New"'><o:p></o:p></span></p>
+
+<p class=MsoNormal><span style='font-family:"Courier New";color:blue'>OR DES
+HOMMES SONT JUSTES<o:p></o:p></span></p>
+
+<p class=MsoNormal><b style='mso-bidi-font-weight:normal'><span
+style='font-family:"Courier New";color:green'>** Compris.</span></b><span
+style='font-family:"Courier New"'><o:p></o:p></span></p>
+
+<p class=MsoNormal><span style='font-family:"Courier New";color:blue'>DONC ?<o:p></o:p></span></p>
+
+<p class=MsoNormal><b><span style='font-family:"Courier New";color:green'>DONC
+QUELQUES JUSTES SONT DES MORTELS<span style='mso-spacerun:yes'> 
+</span>&lt;HOMMES&gt;<o:p></o:p></span></b></p>
+
+<p class=MsoNormal><span style='font-family:"Courier New"'><o:p>&nbsp;</o:p></span></p>
+
+<p class=MsoNormal><span style='font-family:"Courier New";color:blue'>X1 = X2<o:p></o:p></span></p>
+
+<p class=MsoNormal><b style='mso-bidi-font-weight:normal'><span
+style='font-family:"Courier New";color:green'>** Compris.</span></b><span
+style='font-family:"Courier New"'><o:p></o:p></span></p>
+
+<p class=MsoNormal><span style='font-family:"Courier New";color:blue'>X2 = X3<o:p></o:p></span></p>
+
+<p class=MsoNormal><b style='mso-bidi-font-weight:normal'><span
+style='font-family:"Courier New";color:green'>** Compris.</span></b><span
+style='font-family:"Courier New"'><o:p></o:p></span></p>
+
+<p class=MsoNormal><span style='font-family:"Courier New";color:blue'>PAR QUOI
+X1 = X3 ?<o:p></o:p></span></p>
+
+<p class=MsoNormal><b><span style='font-family:"Courier New";color:green'>X2<o:p></o:p></span></b></p>
+
+<p class=MsoNormal><span style='font-family:"Courier New"'><o:p>&nbsp;</o:p></span></p>
+
+<p class=MsoNormal><span style='font-family:"Courier New";color:blue'>Y1 = F DE
+X<o:p></o:p></span></p>
+
+<p class=MsoNormal><b style='mso-bidi-font-weight:normal'><span
+style='font-family:"Courier New";color:green'>** Compris.</span></b><span
+style='font-family:"Courier New"'><o:p></o:p></span></p>
+
+<p class=MsoNormal><span style='font-family:"Courier New";color:blue'>F DE X ?<o:p></o:p></span></p>
+
+<p class=MsoNormal><b><span style='font-family:"Courier New";color:green'>Y1 <o:p></o:p></span></b></p>
+
+<p class=MsoNormal><span style='font-family:"Courier New";color:blue'>X = G DE T1<o:p></o:p></span></p>
+
+<p class=MsoNormal><b style='mso-bidi-font-weight:normal'><span
+style='font-family:"Courier New";color:green'>** Compris.</span></b><span
+style='font-family:"Courier New"'><o:p></o:p></span></p>
+
+<p class=MsoNormal><span style='font-family:"Courier New";color:blue'>V = K DE W<o:p></o:p></span></p>
+
+<p class=MsoNormal><b style='mso-bidi-font-weight:normal'><span
+style='font-family:"Courier New";color:green'>** Compris.</span></b><span
+style='font-family:"Courier New"'><o:p></o:p></span></p>
+
+<p class=MsoNormal><span style='font-family:"Courier New";color:blue'>T1 = H DE
+V<o:p></o:p></span></p>
+
+<p class=MsoNormal><b style='mso-bidi-font-weight:normal'><span
+style='font-family:"Courier New";color:green'>** Compris.</span></b><span
+style='font-family:"Courier New"'><o:p></o:p></span></p>
+
+<p class=MsoNormal><span style='font-family:"Courier New";color:blue'>F DE G DE
+H DE K DE W ?<o:p></o:p></span></p>
+
+<p class=MsoNormal><b><span style='font-family:"Courier New";color:green'>Y1<o:p></o:p></span></b></p>
+
+<p class=MsoNormal><span style='font-family:"Courier New";color:blue'>A QUOI
+EST = F DE G DE H DE K DE W ?<o:p></o:p></span></p>
+
+<p class=MsoNormal><b><span style='font-family:"Courier New";color:green'>Y1<o:p></o:p></span></b></p>
+
+<p class=MsoNormal><span style='font-family:"Courier New";color:blue'>F G H K W
+?<o:p></o:p></span></p>
+
+<p class=MsoNormal><b><span style='font-family:"Courier New";color:green'>Y1<o:p></o:p></span></b></p>
+
+<p class=MsoNormal><span style='font-family:"Courier New"'><o:p>&nbsp;</o:p></span></p>
+
+<p class=MsoNormal><span style='font-family:"Courier New";color:blue'>CHAT =
+ANIMAL<o:p></o:p></span></p>
+
+<p class=MsoNormal><b style='mso-bidi-font-weight:normal'><span
+style='font-family:"Courier New";color:green'>** Compris.</span></b><span
+style='font-family:"Courier New"'><o:p></o:p></span></p>
+
+<p class=MsoNormal><span style='font-family:"Courier New";color:blue'>CHAT =
+MANGEUR(SOURIS)<o:p></o:p></span></p>
+
+<p class=MsoNormal><b style='mso-bidi-font-weight:normal'><span
+style='font-family:"Courier New";color:green'>** Compris.</span></b><span
+style='font-family:"Courier New"'><o:p></o:p></span></p>
+
+<p class=MsoNormal><span style='font-family:"Courier New";color:blue'>TIGRE =
+ANIMAL<o:p></o:p></span></p>
+
+<p class=MsoNormal><b style='mso-bidi-font-weight:normal'><span
+style='font-family:"Courier New";color:green'>** Compris.</span></b><span
+style='font-family:"Courier New"'><o:p></o:p></span></p>
+
+<p class=MsoNormal><span style='font-family:"Courier New";color:blue'>TIGRE =
+MANGEUR(HOMME)<o:p></o:p></span></p>
+
+<p class=MsoNormal><b style='mso-bidi-font-weight:normal'><span
+style='font-family:"Courier New";color:green'>** Compris.</span></b><span
+style='font-family:"Courier New"'><o:p></o:p></span></p>
+
+<p class=MsoNormal><span style='font-family:"Courier New";color:blue'>ANIMAL
+MANGEUR ?<o:p></o:p></span></p>
+
+<p class=MsoNormal><b><span style='font-family:"Courier New";color:green'>CHAT<o:p></o:p></span></b></p>
+
+<p class=MsoNormal><b><span style='font-family:"Courier New";color:green'>TIGRE<o:p></o:p></span></b></p>
+
+<p class=MsoNormal><span style='font-family:"Courier New";color:blue'>MANGEUR
+D'HOMME = ?<o:p></o:p></span></p>
+
+<p class=MsoNormal><b><span style='font-family:"Courier New";color:green'>TIGRE
+<o:p></o:p></span></b></p>
+
+<p class=MsoNormal><span style='font-family:"Courier New";color:blue'>DONC ?<o:p></o:p></span></p>
+
+<p class=MsoNormal><b><span style='font-family:"Courier New";color:green'>DONC <span
+style='mso-spacerun:yes'> </span>MANGEUR(HOMME) = ANIMAL<span
+style='mso-spacerun:yes'>  </span>&lt;TIGRE&gt;<o:p></o:p></span></b></p>
+
+<p class=MsoNormal><span style='font-family:"Courier New";color:blue'>DONC ?<o:p></o:p></span></p>
+
+<p class=MsoNormal><b><span style='font-family:"Courier New";color:green'>TIGRE
+= MANGEUR(HOMME) :<o:p></o:p></span></b></p>
+
+<p class=MsoNormal><b><span style='font-family:"Courier New";color:green'>** Recherche
+approfondie...<o:p></o:p></span></b></p>
+
+<p class=MsoNormal><b><span style='font-family:"Courier New";color:green'>DONC <span
+style='mso-spacerun:yes'> </span>MANGEUR(HOMME) = ANIMAL<span
+style='mso-spacerun:yes'>  </span>&lt;TIGRE&gt;<o:p></o:p></span></b></p>
+
+<p class=MsoNormal><b><span style='font-family:"Courier New";color:green'>DONC
+TIGRE EST COMME CHAT<span style='mso-spacerun:yes'>  </span>&lt;MANGEUR&gt;<o:p></o:p></span></b></p>
+
+<p class=MsoNormal><b><span style='font-family:"Courier New";color:green'>DONC
+TIGRE = MANGEUR( PAUL )<span style='mso-spacerun:yes'>  </span>&lt;HOMME&gt;<o:p></o:p></span></b></p>
+
+<p class=MsoNormal><b><span style='font-family:"Courier New";color:green'>DONC
+TIGRE = MANGEUR( BIPÈDE )<span style='mso-spacerun:yes'>  </span>&lt;HOMME&gt;<o:p></o:p></span></b></p>
+
+<p class=MsoNormal><b><span style='font-family:"Courier New";color:green'>DONC
+TIGRE = MANGEUR( SOCRATE )<span style='mso-spacerun:yes'>  </span>&lt;HOMME&gt;<o:p></o:p></span></b></p>
+
+<p class=MsoNormal><b><span style='font-family:"Courier New";color:green'>DONC
+TIGRE = MANGEUR( MORTEL )<span style='mso-spacerun:yes'>  </span>&lt;HOMME&gt;<o:p></o:p></span></b></p>
+
+<p class=MsoNormal><span style='font-family:"Courier New";color:blue'>Y A-T-IL
+UN MANGEUR DE SOURIS ET D'HOMME ?<o:p></o:p></span></p>
+
+<p class=MsoNormal><b><span style='font-family:"Courier New";color:green'>**
+Non.<o:p></o:p></span></b></p>
+
+<p class=MsoNormal><span style='font-family:"Courier New";color:blue'>QUI EST
+MANGEUR D'HOMME ET DE SOURIS ?<o:p></o:p></span></p>
+
+<p class=MsoNormal><b><span style='font-family:"Courier New";color:green'>** Je
+l'ignore.<o:p></o:p></span></b></p>
+
+<p class=MsoNormal><span style='font-family:"Courier New"'><o:p>&nbsp;</o:p></span></p>
+
+<p class=MsoNormal><span style='font-family:"Courier New";color:blue'>ARTABAN =
+CHEVAL DE HENRI.4<o:p></o:p></span></p>
+
+<p class=MsoNormal><b style='mso-bidi-font-weight:normal'><span
+style='font-family:"Courier New";color:green'>** Compris.</span></b><span
+style='font-family:"Courier New"'><o:p></o:p></span></p>
+
+<p class=MsoNormal><span style='font-family:"Courier New";color:blue'>BLANC =
+COULEUR D'ARTABAN<o:p></o:p></span></p>
+
+<p class=MsoNormal><b style='mso-bidi-font-weight:normal'><span
+style='font-family:"Courier New";color:green'>** Compris.</span></b><span
+style='font-family:"Courier New"'><o:p></o:p></span></p>
+
+<p class=MsoNormal><span style='font-family:"Courier New";color:blue'>HENRI.4 =
+ROI DE NAVARRE<o:p></o:p></span></p>
+
+<p class=MsoNormal><b style='mso-bidi-font-weight:normal'><span
+style='font-family:"Courier New";color:green'>** Compris.</span></b><span
+style='font-family:"Courier New"'><o:p></o:p></span></p>
+
+<p class=MsoNormal><span style='font-family:"Courier New";color:blue'>LOUIS.14
+= ROI DE FRANCE<o:p></o:p></span></p>
+
+<p class=MsoNormal><b style='mso-bidi-font-weight:normal'><span
+style='font-family:"Courier New";color:green'>** Compris.</span></b><span
+style='font-family:"Courier New"'><o:p></o:p></span></p>
+
+<p class=MsoNormal><span style='font-family:"Courier New";color:blue'>COULEUR
+DU CHEVAL DU ROI DE NAVARRE ?<o:p></o:p></span></p>
+
+<p class=MsoNormal><b><span style='font-family:"Courier New";color:green'>BLANC<o:p></o:p></span></b></p>
+
+<p class=MsoNormal><span style='font-family:"Courier New";color:blue'>QUELLE
+EST LA COULEUR DU CHEVAL DU ROI DE NAVARRE ?<o:p></o:p></span></p>
+
+<p class=MsoNormal><b><span style='font-family:"Courier New";color:green'>BLANC<o:p></o:p></span></b></p>
+
+<p class=MsoNormal><span style='font-family:"Courier New";color:blue'>QUELLE
+EST LA COULEUR DU CHEVAL BLANC DU ROI DE NAVARRE ?<o:p></o:p></span></p>
+
+<p class=MsoNormal><b><span style='font-family:"Courier New";color:green'>** Je
+l'ignore.<o:p></o:p></span></b></p>
+
+<p class=MsoNormal><span style='font-family:"Courier New"'>' Faille :
+composition incomplète, mauvaise indirection :<o:p></o:p></span></p>
+
+<p class=MsoNormal><span style='font-family:"Courier New";color:blue'>QUELLE
+EST LA COULEUR DU CHEVAL DU ROI ?<o:p></o:p></span></p>
+
+<p class=MsoNormal><b><span style='font-family:"Courier New";color:green'>ARTABAN<o:p></o:p></span></b></p>
+
+<p class=MsoNormal><span style='font-family:"Courier New"'>' Bonne indirection
+:<o:p></o:p></span></p>
+
+<p class=MsoNormal><span style='font-family:"Courier New";color:blue'>QUEL ROI
+A UN CHEVAL ?<o:p></o:p></span></p>
+
+<p class=MsoNormal><b><span style='font-family:"Courier New";color:green'>HENRI.4<o:p></o:p></span></b></p>
+
+<p class=MsoNormal><span style='font-family:"Courier New"'>' Faille :<span
+style='mso-spacerun:yes'>  </span>mauvaise indirection :<o:p></o:p></span></p>
+
+<p class=MsoNormal><span style='font-family:"Courier New";color:blue'>CHEVAL DU
+ROI ?<o:p></o:p></span></p>
+
+<p class=MsoNormal><b><span style='font-family:"Courier New";color:green'>HENRI.4<o:p></o:p></span></b></p>
+
+<p class=MsoNormal><span style='font-family:"Courier New";color:blue'>CHEVAL DU
+ROI DE NAVARRE ?<o:p></o:p></span></p>
+
+<p class=MsoNormal><b><span style='font-family:"Courier New";color:green'>ARTABAN<o:p></o:p></span></b></p>
+
+<p class=MsoNormal><span style='font-family:"Courier New";color:blue'>CHEVAL DU
+ROI DE FRANCE ?<o:p></o:p></span></p>
+
+<p class=MsoNormal><b><span style='font-family:"Courier New";color:green'>HENRI.4<o:p></o:p></span></b></p>
+
+<p class=MsoNormal><span style='font-family:"Courier New"'><o:p>&nbsp;</o:p></span></p>
+
+<p class=MsoNormal><span style='font-family:"Courier New";color:blue'>LE CANARI
+EST UN OISEAU JAUNE<o:p></o:p></span></p>
+
+<p class=MsoNormal><b style='mso-bidi-font-weight:normal'><span
+style='font-family:"Courier New";color:green'>** Compris.</span></b><span
+style='font-family:"Courier New"'><o:p></o:p></span></p>
+
+<p class=MsoNormal><span style='font-family:"Courier New";color:blue'>JAUNE EST
+UNE COULEUR<o:p></o:p></span></p>
+
+<p class=MsoNormal><b style='mso-bidi-font-weight:normal'><span
+style='font-family:"Courier New";color:green'>** Compris.</span></b><span
+style='font-family:"Courier New"'><o:p></o:p></span></p>
+
+<p class=MsoNormal><span style='font-family:"Courier New";color:blue'>QUEL
+OISEAU EST JAUNE ?<o:p></o:p></span></p>
+
+<p class=MsoNormal><b><span style='font-family:"Courier New";color:green'>LE
+CANARI <o:p></o:p></span></b></p>
+
+<p class=MsoNormal><span style='font-family:"Courier New";color:blue'>QUEL EST
+L'OISEAU JAUNE ?<o:p></o:p></span></p>
+
+<p class=MsoNormal><b><span style='font-family:"Courier New";color:green'>LE
+CANARI <o:p></o:p></span></b></p>
+
+<p class=MsoNormal><span style='font-family:"Courier New";color:blue'>DE QUELLE
+COULEUR EST LE CANARI ?<o:p></o:p></span></p>
+
+<p class=MsoNormal><b><span style='font-family:"Courier New";color:green'>JAUNE<o:p></o:p></span></b></p>
+
+<p class=MsoNormal><span style='font-family:"Courier New";color:blue'>QUELLE
+EST LA COULEUR DU CANARI ?<o:p></o:p></span></p>
+
+<p class=MsoNormal><b><span style='font-family:"Courier New";color:green'>JAUNE<o:p></o:p></span></b></p>
+
+<p class=MsoNormal><span style='font-family:"Courier New";color:blue'>COULEUR
+CANARI ?<o:p></o:p></span></p>
+
+<p class=MsoNormal><b><span style='font-family:"Courier New";color:green'>JAUNE<o:p></o:p></span></b></p>
+
+<p class=MsoNormal><span style='font-family:"Courier New";color:blue'>COULEUR ?<o:p></o:p></span></p>
+
+<p class=MsoNormal><b><span style='font-family:"Courier New";color:green'>BLEU
+EST UNE COULEUR<o:p></o:p></span></b></p>
+
+<p class=MsoNormal><b><span style='font-family:"Courier New";color:green'>ROUGE
+EST UNE COULEUR<o:p></o:p></span></b></p>
+
+<p class=MsoNormal><b><span style='font-family:"Courier New";color:green'>BLANC
+= COULEUR D'ARTABAN<o:p></o:p></span></b></p>
+
+<p class=MsoNormal><b><span style='font-family:"Courier New";color:green'>JAUNE
+EST UNE COULEUR<o:p></o:p></span></b></p>
+
+<p class=MsoNormal><span style='font-family:"Courier New"'><o:p>&nbsp;</o:p></span></p>
+
+<p class=MsoNormal><span style='font-family:"Courier New";color:blue'>MARSEILLE
+EST LA VILLE PHOCÉENNE<o:p></o:p></span></p>
+
+<p class=MsoNormal><b style='mso-bidi-font-weight:normal'><span
+style='font-family:"Courier New";color:green'>** Compris.</span></b><span
+style='font-family:"Courier New"'><o:p></o:p></span></p>
+
+<p class=MsoNormal><span style='font-family:"Courier New";color:blue'>DEFERRE
+EST LE MAIRE DE MARSEILLE<o:p></o:p></span></p>
+
+<p class=MsoNormal><b style='mso-bidi-font-weight:normal'><span
+style='font-family:"Courier New";color:green'>** Compris.</span></b><span
+style='font-family:"Courier New"'><o:p></o:p></span></p>
+
+<p class=MsoNormal><span style='font-family:"Courier New";color:blue'>PHOCÉENNE
+SIGNIFIE ORIGINAIRE DE PHOCÉE<o:p></o:p></span></p>
+
+<p class=MsoNormal><b style='mso-bidi-font-weight:normal'><span
+style='font-family:"Courier New";color:green'>** Compris.</span></b><span
+style='font-family:"Courier New"'><o:p></o:p></span></p>
+
+<p class=MsoNormal><span style='font-family:"Courier New";color:blue'>LA PHOCÉE
+EST UNE PROVINCE GRECQUE<o:p></o:p></span></p>
+
+<p class=MsoNormal><b style='mso-bidi-font-weight:normal'><span
+style='font-family:"Courier New";color:green'>** Compris.</span></b><span
+style='font-family:"Courier New"'><o:p></o:p></span></p>
+
+<p class=MsoNormal><span style='font-family:"Courier New";color:blue'>GASTON
+EST LE PRÉNOM DE DEFERRE<o:p></o:p></span></p>
+
+<p class=MsoNormal><b style='mso-bidi-font-weight:normal'><span
+style='font-family:"Courier New";color:green'>** Compris.</span></b><span
+style='font-family:"Courier New"'><o:p></o:p></span></p>
+
+<p class=MsoNormal><span style='font-family:"Courier New";color:blue'>QUEL EST
+LE PRÉNOM DU MAIRE DE MARSEILLE ?<o:p></o:p></span></p>
+
+<p class=MsoNormal><b><span style='font-family:"Courier New";color:green'>GASTON<o:p></o:p></span></b></p>
+
+<p class=MsoNormal><span style='font-family:"Courier New";color:blue'>QUEL EST
+LE PRÉNOM DU MAIRE DE LA VILLE ORIGINAIRE D'UNE PROVINCE GRECQUE ?<o:p></o:p></span></p>
+
+<p class=MsoNormal><b><span style='font-family:"Courier New";color:green'>GASTON<o:p></o:p></span></b></p>
+
+<p class=MsoNormal><span style='font-family:"Courier New"'>' Test du système :
+composition de fonctions incomplète :<o:p></o:p></span></p>
+
+<p class=MsoNormal><span style='font-family:"Courier New";color:blue'>QUEL EST
+LE PRÉNOM DU MAIRE DE LA VILLE ORIGINAIRE D'UNE PROVINCE ?<o:p></o:p></span></p>
+
+<p class=MsoNormal><b><span style='font-family:"Courier New";color:green'>** Je
+l'ignore.<o:p></o:p></span></b></p>
+
+<p class=MsoNormal><span style='font-family:"Courier New"'>' Autres réponses
+souhaitées : GASTON EST LE PRÉNOM DU MAIRE DE LA VILLE ORIGINAIRE D'UNE
+PROVINCE PHOCÉENNE<o:p></o:p></span></p>
+
+<p class=MsoNormal><span style='font-family:"Courier New"'>' ou bien : D'UNE
+PROVINCE PHOCÉENNE ?<o:p></o:p></span></p>
+
+<p class=MsoNormal><span style='font-family:"Courier New"'>' ou bien : **
+heu... GASTON ?<o:p></o:p></span></p>
+
+<p class=MsoNormal><span style='font-family:"Courier New"'><o:p>&nbsp;</o:p></span></p>
+
+<p class=MsoNormal><span style='font-family:"Courier New";color:blue'>PAUL POSSÈDE
+UN PERROQUET BAVARD<o:p></o:p></span></p>
+
+<p class=MsoNormal><b style='mso-bidi-font-weight:normal'><span
+style='font-family:"Courier New";color:green'>** Compris.</span></b><span
+style='font-family:"Courier New"'><o:p></o:p></span></p>
+
+<p class=MsoNormal><span style='font-family:"Courier New";color:blue'>MULTICOLORE
+SIGNIFIE DE PLUSIEURS COULEURS<o:p></o:p></span></p>
+
+<p class=MsoNormal><b style='mso-bidi-font-weight:normal'><span
+style='font-family:"Courier New";color:green'>** Compris.</span></b><span
+style='font-family:"Courier New"'><o:p></o:p></span></p>
+
+<p class=MsoNormal><span style='font-family:"Courier New";color:blue'>UN
+PERROQUET EST UN ANIMAL MULTICOLORE<o:p></o:p></span></p>
+
+<p class=MsoNormal><b style='mso-bidi-font-weight:normal'><span
+style='font-family:"Courier New";color:green'>** Compris.</span></b><span
+style='font-family:"Courier New"'><o:p></o:p></span></p>
+
+<p class=MsoNormal><span style='font-family:"Courier New";color:blue'>QUI POSSÈDE
+UN ANIMAL DE PLUSIEURS COULEURS ?<o:p></o:p></span></p>
+
+<p class=MsoNormal><b><span style='font-family:"Courier New";color:green'>PAUL<o:p></o:p></span></b></p>
+
+<p class=MsoNormal><span style='font-family:"Courier New"'><o:p>&nbsp;</o:p></span></p>
+
+<p class=MsoNormal><span style='font-family:"Courier New";color:blue'>MARIE EST
+UNE JOLIE FILLE<o:p></o:p></span></p>
+
+<p class=MsoNormal><b style='mso-bidi-font-weight:normal'><span
+style='font-family:"Courier New";color:green'>** Compris.</span></b><span
+style='font-family:"Courier New"'><o:p></o:p></span></p>
+
+<p class=MsoNormal><span style='font-family:"Courier New";color:blue'>JOLIE EST
+LE CONTRAIRE DE LAIDE<o:p></o:p></span></p>
+
+<p class=MsoNormal><b><span style='font-family:"Courier New";color:green'>**
+Assertion déjà connue !<o:p></o:p></span></b></p>
+
+<p class=MsoNormal><span style='font-family:"Courier New";color:blue'>MARIE
+EST-ELLE LAIDE ?<o:p></o:p></span></p>
+
+<p class=MsoNormal><b><span style='font-family:"Courier New";color:green'>JOLIE<o:p></o:p></span></b></p>
+
+<p class=MsoNormal><span style='font-family:"Courier New";color:blue'>EST-CE
+QUE MARIE EST LAIDE ?<o:p></o:p></span></p>
+
+<p class=MsoNormal><b><span style='font-family:"Courier New";color:green'>JOLIE<o:p></o:p></span></b></p>
+
+<p class=MsoNormal><span style='font-family:"Courier New"'><o:p>&nbsp;</o:p></span></p>
+
+<p class=MsoNormal><span style='font-family:"Courier New";color:blue'>SABINE
+AIME JACQUES<o:p></o:p></span></p>
+
+<p class=MsoNormal><b style='mso-bidi-font-weight:normal'><span
+style='font-family:"Courier New";color:green'>** Compris.</span></b><span
+style='font-family:"Courier New"'><o:p></o:p></span></p>
+
+<p class=MsoNormal><span style='font-family:"Courier New";color:blue'>QUI AIME
+JACQUES ?<o:p></o:p></span></p>
+
+<p class=MsoNormal><b><span style='font-family:"Courier New";color:green'>SABINE
+<o:p></o:p></span></b></p>
+
+<p class=MsoNormal><span style='font-family:"Courier New";color:blue'>QUI AIME
+SABINE ?<o:p></o:p></span></p>
+
+<p class=MsoNormal><b><span style='font-family:"Courier New";color:green'>** Je
+l'ignore.<o:p></o:p></span></b></p>
+
+<p class=MsoNormal><span style='font-family:"Courier New";color:blue'>QUI
+JACQUES AIME-T-IL ?<o:p></o:p></span></p>
+
+<p class=MsoNormal><b><span style='font-family:"Courier New";color:green'>** Je
+l'ignore.<o:p></o:p></span></b></p>
+
+<p class=MsoNormal><span style='font-family:"Courier New"'>' Meilleure réponse
+: Je L'ignore :<o:p></o:p></span></p>
+
+<p class=MsoNormal><span style='font-family:"Courier New";color:blue'>JACQUES
+AIME-T-IL SABINE ?<o:p></o:p></span></p>
+
+<p class=MsoNormal><b><span style='font-family:"Courier New";color:green'>**
+Non.<o:p></o:p></span></b></p>
+
+<p class=MsoNormal><span style='font-family:"Courier New";color:blue'>SABINE
+AIME-T-ELLE JACQUES ?<o:p></o:p></span></p>
+
+<p class=MsoNormal><b><span style='font-family:"Courier New";color:green'>**
+Oui.<o:p></o:p></span></b></p>
+
+<p class=MsoNormal><span style='font-family:"Courier New"'><o:p>&nbsp;</o:p></span></p>
+
+<p class=MsoNormal><span style='font-family:"Courier New"'>' Capacités de la
+version modifiée :<o:p></o:p></span></p>
+
+<p class=MsoNormal><span style='font-family:"Courier New"'>' Ordre des termes :
+DONC TOUT CHEVAL EST HERBIVORE :<o:p></o:p></span></p>
+
+<p class=MsoNormal><span style='font-family:"Courier New";color:blue'>TOUT
+CHEVAL EST UN ÉQUIDÉ<o:p></o:p></span></p>
+
+<p class=MsoNormal><b style='mso-bidi-font-weight:normal'><span
+style='font-family:"Courier New";color:green'>** Compris.</span></b><span
+style='font-family:"Courier New"'><o:p></o:p></span></p>
+
+<p class=MsoNormal><span style='font-family:"Courier New";color:blue'>OR TOUT ÉQUIDÉ
+EST HERBIVORE<o:p></o:p></span></p>
+
+<p class=MsoNormal><b style='mso-bidi-font-weight:normal'><span
+style='font-family:"Courier New";color:green'>** Compris.</span></b><span
+style='font-family:"Courier New"'><o:p></o:p></span></p>
+
+<p class=MsoNormal><span style='font-family:"Courier New";color:blue'>DONC ?<o:p></o:p></span></p>
+
+<p class=MsoNormal><b><span style='font-family:"Courier New";color:green'>DONC
+TOUT CHEVAL EST HERBIVORE<span style='mso-spacerun:yes'>  </span>&lt;ÉQUIDÉ&gt;<o:p></o:p></span></b></p>
+
+<p class=MsoNormal><span style='font-family:"Courier New"'><o:p>&nbsp;</o:p></span></p>
+
+<p class=MsoNormal><span style='font-family:"Courier New"'>' Sens logique :
+DONC PAUL EST COMME TOUT HOMME :<o:p></o:p></span></p>
+
+<p class=MsoNormal><span style='font-family:"Courier New";color:blue'>TOUT
+HOMME EST BIPÈDE<o:p></o:p></span></p>
+
+<p class=MsoNormal><b><span style='font-family:"Courier New";color:green'>**
+Assertion déjà connue !<o:p></o:p></span></b></p>
+
+<p class=MsoNormal><span style='font-family:"Courier New";color:blue'>OR PAUL
+EST BIPÈDE<o:p></o:p></span></p>
+
+<p class=MsoNormal><b style='mso-bidi-font-weight:normal'><span
+style='font-family:"Courier New";color:green'>** Compris.</span></b><span
+style='font-family:"Courier New"'><o:p></o:p></span></p>
+
+<p class=MsoNormal><span style='font-family:"Courier New";color:blue'>DONC ?<o:p></o:p></span></p>
+
+<p class=MsoNormal><b><span style='font-family:"Courier New";color:green'>** Je
+ne peux rien conclure !<o:p></o:p></span></b></p>
+
+<p class=MsoNormal><span style='font-family:"Courier New";color:blue'>DONC ?<o:p></o:p></span></p>
+
+<p class=MsoNormal><b><span style='font-family:"Courier New";color:green'>OR
+PAUL EST BIPÈDE :<o:p></o:p></span></b></p>
+
+<p class=MsoNormal><b><span style='font-family:"Courier New";color:green'>**
+Recherche approfondie...<o:p></o:p></span></b></p>
+
+<p class=MsoNormal><b><span style='font-family:"Courier New";color:green'>DONC
+QUELQUE BIPÈDE POSSÈDE UN PERROQUET BAVARD<span style='mso-spacerun:yes'> 
+</span>&lt;PAUL&gt;<o:p></o:p></span></b></p>
+
+<p class=MsoNormal><b><span style='font-family:"Courier New";color:green'>DONC
+QUELQUE BIPÈDE EST UN HOMME<span style='mso-spacerun:yes'>  </span>&lt;PAUL&gt;<o:p></o:p></span></b></p>
+
+<p class=MsoNormal><b><span style='font-family:"Courier New";color:green'>DONC
+PAUL EST COMME TOUT HOMME<span style='mso-spacerun:yes'>  </span>&lt;BIPÈDE&gt;<o:p></o:p></span></b></p>
+
+<p class=MsoNormal><span style='font-family:"Courier New"'><o:p>&nbsp;</o:p></span></p>
+
+<p class=MsoNormal><span style='font-family:"Courier New"'>' Sens logique :
+ARISTOTE EST COMME TOUT HOMME :<o:p></o:p></span></p>
+
+<p class=MsoNormal><span style='font-family:"Courier New";color:blue'>TOUT
+HOMME EST RATIONNEL<o:p></o:p></span></p>
+
+<p class=MsoNormal><b style='mso-bidi-font-weight:normal'><span
+style='font-family:"Courier New";color:green'>** Compris.</span></b><span
+style='font-family:"Courier New"'><o:p></o:p></span></p>
+
+<p class=MsoNormal><span style='font-family:"Courier New";color:blue'>OR
+ARISTOTE EST RATIONNEL<o:p></o:p></span></p>
+
+<p class=MsoNormal><b style='mso-bidi-font-weight:normal'><span
+style='font-family:"Courier New";color:green'>** Compris.</span></b><span
+style='font-family:"Courier New"'><o:p></o:p></span></p>
+
+<p class=MsoNormal><span style='font-family:"Courier New";color:blue'>DONC ?<o:p></o:p></span></p>
+
+<p class=MsoNormal><b><span style='font-family:"Courier New";color:green'>DONC
+ARISTOTE EST COMME TOUT HOMME<span style='mso-spacerun:yes'> 
+</span>&lt;RATIONNEL&gt;<o:p></o:p></span></b></p>
+
+<p class=MsoNormal><span style='font-family:"Courier New";color:blue'>ARISTOTE ÉTAIT
+GREC<o:p></o:p></span></p>
+
+<p class=MsoNormal><b style='mso-bidi-font-weight:normal'><span
+style='font-family:"Courier New";color:green'>** Compris.</span></b><span
+style='font-family:"Courier New"'><o:p></o:p></span></p>
+
+<p class=MsoNormal><span style='font-family:"Courier New";color:blue'>ARISTOTE ÉTAIT
+PHILOSOPHE<o:p></o:p></span></p>
+
+<p class=MsoNormal><b style='mso-bidi-font-weight:normal'><span
+style='font-family:"Courier New";color:green'>** Compris.</span></b><span
+style='font-family:"Courier New"'><o:p></o:p></span></p>
+
+<p class=MsoNormal><span style='font-family:"Courier New";color:blue'>PHILOSOPHE
+GREC ?<o:p></o:p></span></p>
+
+<p class=MsoNormal><b><span style='font-family:"Courier New";color:green'>PLATON<o:p></o:p></span></b></p>
+
+<p class=MsoNormal><b><span style='font-family:"Courier New";color:green'>ARISTOTE<o:p></o:p></span></b></p>
+
+<p class=MsoNormal><span style='font-family:"Courier New"'><o:p>&nbsp;</o:p></span></p>
+
+<p class=MsoNormal><span style='font-family:"Courier New"'>' Syllogismes :
+ordre des assertions<o:p></o:p></span></p>
+
+<p class=MsoNormal><span style='font-family:"Courier New";color:blue'>OR
+SOCRATE EST UN HOMME<o:p></o:p></span></p>
+
+<p class=MsoNormal><b><span style='font-family:"Courier New";color:green'>**
+Assertion déjà connue !<o:p></o:p></span></b></p>
+
+<p class=MsoNormal><span style='font-family:"Courier New";color:blue'>TOUT
+HOMME EST MORTEL<o:p></o:p></span></p>
+
+<p class=MsoNormal><b><span style='font-family:"Courier New";color:green'>**
+Assertion déjà connue !<o:p></o:p></span></b></p>
+
+<p class=MsoNormal><span style='font-family:"Courier New";color:blue'>DONC ?<o:p></o:p></span></p>
+
+<p class=MsoNormal><b><span style='font-family:"Courier New";color:green'>** Je
+ne peux rien conclure !<o:p></o:p></span></b></p>
+
+<p class=MsoNormal><span style='font-family:"Courier New";color:blue'>DONC ?<o:p></o:p></span></p>
+
+<p class=MsoNormal><b><span style='font-family:"Courier New";color:green'>TOUT
+HOMME EST MORTEL :<o:p></o:p></span></b></p>
+
+<p class=MsoNormal><b><span style='font-family:"Courier New";color:green'>**
+Recherche approfondie...<o:p></o:p></span></b></p>
+
+<p class=MsoNormal><b><span style='font-family:"Courier New";color:green'>DONC
+SOCRATE EST MORTEL<span style='mso-spacerun:yes'>  </span>&lt;HOMME&gt;<o:p></o:p></span></b></p>
+
+<p class=MsoNormal><b><span style='font-family:"Courier New";color:green'>DONC
+QUELQUE MORTEL EST BIPÈDE<span style='mso-spacerun:yes'>  </span>&lt;HOMME&gt;<o:p></o:p></span></b></p>
+
+<p class=MsoNormal><b><span style='font-family:"Courier New";color:green'>DONC
+PAUL EST MORTEL<span style='mso-spacerun:yes'>  </span>&lt;HOMME&gt;<o:p></o:p></span></b></p>
+
+<p class=MsoNormal><b><span style='font-family:"Courier New";color:green'>DONC
+TIGRE = MANGEUR( MORTEL )<span style='mso-spacerun:yes'>  </span>&lt;HOMME&gt;<o:p></o:p></span></b></p>
+
+<p class=MsoNormal><b><span style='font-family:"Courier New";color:green'>DONC
+QUELQUE MORTEL EST RATIONNEL<span style='mso-spacerun:yes'> 
+</span>&lt;HOMME&gt;<o:p></o:p></span></b></p>
+
+<p class=MsoNormal><span style='font-family:"Courier New"'><o:p>&nbsp;</o:p></span></p>
+
+<p class=MsoNormal><span style='font-family:"Courier New"'>' Syllogismes :
+plusieurs à la fois<o:p></o:p></span></p>
+
+<p class=MsoNormal><span style='font-family:"Courier New";color:blue'>TOUT
+HOMME EST MORTEL<o:p></o:p></span></p>
+
+<p class=MsoNormal><b><span style='font-family:"Courier New";color:green'>**
+Assertion déjà connue !<o:p></o:p></span></b></p>
+
+<p class=MsoNormal><span style='font-family:"Courier New";color:blue'>TOUT
+HOMME EST BIPÈDE<o:p></o:p></span></p>
+
+<p class=MsoNormal><b><span style='font-family:"Courier New";color:green'>**
+Assertion déjà connue !<o:p></o:p></span></b></p>
+
+<p class=MsoNormal><span style='font-family:"Courier New";color:blue'>OR
+SOCRATE EST UN HOMME<o:p></o:p></span></p>
+
+<p class=MsoNormal><b><span style='font-family:"Courier New";color:green'>**
+Assertion déjà connue !<o:p></o:p></span></b></p>
+
+<p class=MsoNormal><span style='font-family:"Courier New";color:blue'>DONC ?<o:p></o:p></span></p>
+
+<p class=MsoNormal><b><span style='font-family:"Courier New";color:green'>DONC
+SOCRATE EST MORTEL<span style='mso-spacerun:yes'>  </span>&lt;HOMME&gt;<o:p></o:p></span></b></p>
+
+<p class=MsoNormal><span style='font-family:"Courier New";color:blue'>OR PAUL
+EST UN HOMME<o:p></o:p></span></p>
+
+<p class=MsoNormal><b><span style='font-family:"Courier New";color:green'>**
+Assertion déjà connue !<o:p></o:p></span></b></p>
+
+<p class=MsoNormal><span style='font-family:"Courier New";color:blue'>DONC ?<o:p></o:p></span></p>
+
+<p class=MsoNormal><b><span style='font-family:"Courier New";color:green'>DONC
+PAUL EST BIPÈDE<span style='mso-spacerun:yes'>  </span>&lt;HOMME&gt;<o:p></o:p></span></b></p>
+
+<p class=MsoNormal><span style='font-family:"Courier New";color:blue'>DONC ?<o:p></o:p></span></p>
+
+<p class=MsoNormal><b><span style='font-family:"Courier New";color:green'>OR
+PAUL EST UN HOMME :<o:p></o:p></span></b></p>
+
+<p class=MsoNormal><b><span style='font-family:"Courier New";color:green'>**
+Recherche approfondie...<o:p></o:p></span></b></p>
+
+<p class=MsoNormal><b><span style='font-family:"Courier New";color:green'>DONC
+PAUL EST BIPÈDE<span style='mso-spacerun:yes'>  </span>&lt;HOMME&gt;<o:p></o:p></span></b></p>
+
+<p class=MsoNormal><b><span style='font-family:"Courier New";color:green'>DONC
+PAUL EST COMME SOCRATE<span style='mso-spacerun:yes'>  </span>&lt;HOMME&gt;<o:p></o:p></span></b></p>
+
+<p class=MsoNormal><b><span style='font-family:"Courier New";color:green'>DONC
+PAUL EST MORTEL<span style='mso-spacerun:yes'>  </span>&lt;HOMME&gt;<o:p></o:p></span></b></p>
+
+<p class=MsoNormal><b><span style='font-family:"Courier New";color:green'>DONC
+TIGRE = MANGEUR( PAUL )<span style='mso-spacerun:yes'>  </span>&lt;HOMME&gt;<o:p></o:p></span></b></p>
+
+<p class=MsoNormal><b><span style='font-family:"Courier New";color:green'>DONC
+QUELQUE HOMME POSSÈDE UN PERROQUET BAVARD<span style='mso-spacerun:yes'> 
+</span>&lt;PAUL&gt;<o:p></o:p></span></b></p>
+
+<p class=MsoNormal><b><span style='font-family:"Courier New";color:green'>DONC
+QUELQUE HOMME EST BIPÈDE<span style='mso-spacerun:yes'>  </span>&lt;PAUL&gt;<o:p></o:p></span></b></p>
+
+<p class=MsoNormal><b><span style='font-family:"Courier New";color:green'>DONC
+PAUL EST RATIONNEL<span style='mso-spacerun:yes'>  </span>&lt;HOMME&gt;<o:p></o:p></span></b></p>
+
+<p class=MsoNormal><span style='font-family:"Courier New"'><o:p>&nbsp;</o:p></span></p>
+
+<p class=MsoNormal><span style='font-family:"Courier New";color:blue'>TOUT
+LOGICIEN EST INCOMPRIS<o:p></o:p></span></p>
+
+<p class=MsoNormal><b style='mso-bidi-font-weight:normal'><span
+style='font-family:"Courier New";color:green'>** Compris.</span></b><span
+style='font-family:"Courier New"'><o:p></o:p></span></p>
+
+<p class=MsoNormal><span style='font-family:"Courier New";color:blue'>OR TOUT
+HOMME SENSÉ EST LOGICIEN<o:p></o:p></span></p>
+
+<p class=MsoNormal><b style='mso-bidi-font-weight:normal'><span
+style='font-family:"Courier New";color:green'>** Compris.</span></b><span
+style='font-family:"Courier New"'><o:p></o:p></span></p>
+
+<p class=MsoNormal><span style='font-family:"Courier New";color:blue'>DONC ?<o:p></o:p></span></p>
+
+<p class=MsoNormal><b><span style='font-family:"Courier New";color:green'>DONC
+TOUT HOMME SENSÉ EST INCOMPRIS<span style='mso-spacerun:yes'> 
+</span>&lt;LOGICIEN&gt;<o:p></o:p></span></b></p>
+
+<p class=MsoNormal><span style='font-family:"Courier New"'><o:p>&nbsp;</o:p></span></p>
+
+<p class=MsoNormal><span style='font-family:"Courier New"'>' Syllogismes :
+syntaxe imparfaite (de la version modifiée)<o:p></o:p></span></p>
+
+<p class=MsoNormal><span style='font-family:"Courier New";color:blue'>LE LOUVRE
+EST BEAU<o:p></o:p></span></p>
+
+<p class=MsoNormal><b style='mso-bidi-font-weight:normal'><span
+style='font-family:"Courier New";color:green'>** Compris.</span></b><span
+style='font-family:"Courier New"'><o:p></o:p></span></p>
+
+<p class=MsoNormal><span style='font-family:"Courier New";color:blue'>OR J'AIME
+TOUT CE QUI EST BEAU<o:p></o:p></span></p>
+
+<p class=MsoNormal><b style='mso-bidi-font-weight:normal'><span
+style='font-family:"Courier New";color:green'>** Compris.</span></b><span
+style='font-family:"Courier New"'><o:p></o:p></span></p>
+
+<p class=MsoNormal><span style='font-family:"Courier New";color:blue'>DONC ?<o:p></o:p></span></p>
+
+<p class=MsoNormal><b><span style='font-family:"Courier New";color:green'>DONC
+J'AIME EST COMME LE LOUVRE<span style='mso-spacerun:yes'>  </span>&lt;BEAU&gt;<o:p></o:p></span></b></p>
+
+<p class=MsoNormal><o:p>&nbsp;</o:p></p>
+
+</div>
+
+<b><span style='font-size:16.0pt;mso-bidi-font-size:12.0pt;font-family:"Times New Roman";
+mso-fareast-font-family:"Times New Roman";mso-bidi-font-family:"Courier New";
+mso-ansi-language:FR;mso-fareast-language:FR;mso-bidi-language:AR-SA'><br
+clear=all style='page-break-before:always;mso-break-type:section-break'>
+</span></b>
+
+<div class=Section2>
+
+<p class=MsoNormal align=center style='text-align:center'><a name=IAVB></a><b
+style='mso-bidi-font-weight:normal'><span style='font-size:18.0pt'>Intelligence
+Artificielle Vraiment Basique (IAVB)<o:p></o:p></span></b></p>
+
+<p class=MsoNormal><o:p>&nbsp;</o:p></p>
+
+<p class=MsoNormal><a href="https://github.com/PatriceDargenton/IAVB">https://github.com/PatriceDargenton/IAVB</a></p>
+
+<p class=MsoNormal><u>Documentation</u> : <a
+href="http://patrice.dargenton.free.fr/ia/iavb/IAVB.html">IAVB.html</a></p>
+
+<p class=MsoNormal><u>Code source</u> : <a
+href="http://patrice.dargenton.free.fr/ia/iavb/IAVB.vbproj.html">IAVB.vbproj.html</a></p>
+
+<p class=MsoNormal>Par Patrice Dargenton : <a
+href="mailto:patrice.dargenton@free.fr">patrice.dargenton@free.fr</a></p>
+
+<p class=MsoNormal><a
+href="http://patrice.dargenton.free.fr/CodesSources/index.html">http://patrice.dargenton.free.fr/CodesSources/index.html</a></p>
+
+<p class=MsoNormal><o:p>&nbsp;</o:p></p>
+
+<p class=MsoNormal align=right style='text-align:right'><span style='color:
+olive'>Version 3.12 du 18/06/2017<o:p></o:p></span></p>
+
+<p class=MsoNormal><o:p>&nbsp;</o:p></p>
+
+<p class=MsoNormal>Le but de ce logiciel est ludique et pédagogique : Il montre
+qu'il est facile de faire un programme amusant et... laisse penser qu'il est
+quasi-impossible de faire un programme capable de mystifier (tromper) un humain
+dans un test de discussion en aveugle (test de Turing). L'avenir du traitement
+automatique du langage naturel est essentiellement l'interrogation de base de
+données (c'est le cas ici !), notamment les futurs moteurs de recherche du web,
+ainsi que les logiciels d'aide à la vérification (correcteur orthographique et
+grammatical) et à la traduction.</p>
+
+<p class=MsoNormal><o:p>&nbsp;</o:p></p>
+
+<p class=MsoNormal>IAVB est la transcription en Visual Basic d'un <a
+href="http://patrice.dargenton.free.fr/ia/iavb/1984/ArticleIAVB1984.html">logiciel
+paru</a> dans la revue MICRO-SYSTEMES en Décembre 1984, pages 195-202 :
+&quot;Mini-système expert pour Apple II&quot; par Philippe LARVET : Gestion
+d'une base de connaissances.</p>
+
+<p class=MsoNormal><o:p>&nbsp;</o:p></p>
+
+<p class=MsoNormal><b style='mso-bidi-font-weight:normal'><span
+style='font-size:16.0pt'>Table des matières<o:p></o:p></span></b></p>
+
+<p class=MsoToc1 style='tab-stops:right dotted 509.7pt'><!--[if supportFields]><span
+style='mso-element:field-begin'></span><span
+style='mso-spacerun:yes'> </span>TOC \o &quot;1-3&quot; \h \z \u <span
+style='mso-element:field-separator'></span><![endif]--><span
+class=MsoHyperlink><span style='mso-no-proof:yes'><a href="#_Toc485543025">Présentation
+des fonctionnalités du logiciel<span style='color:windowtext;display:none;
+mso-hide:screen;text-decoration:none;text-underline:none'><span
+style='mso-tab-count:1 dotted'> </span></span><!--[if supportFields]><span
+style='color:windowtext;display:none;mso-hide:screen;text-decoration:none;
+text-underline:none'><span style='mso-element:field-begin'></span></span><span
+style='color:windowtext;display:none;mso-hide:screen;text-decoration:none;
+text-underline:none'> PAGEREF _Toc485543025 \h </span><span style='color:windowtext;
+display:none;mso-hide:screen;text-decoration:none;text-underline:none'><span
+style='mso-element:field-separator'></span></span><![endif]--><span
+style='color:windowtext;display:none;mso-hide:screen;text-decoration:none;
+text-underline:none'>7</span><span style='color:windowtext;display:none;
+mso-hide:screen;text-decoration:none;text-underline:none'><!--[if gte mso 9]><xml>
+ <w:data>08D0C9EA79F9BACE118C8200AA004BA90B02000000080000000E0000005F0054006F0063003400380035003500340033003000320035000000</w:data>
+</xml><![endif]--></span><!--[if supportFields]><span style='color:windowtext;
+display:none;mso-hide:screen;text-decoration:none;text-underline:none'><span
+style='mso-element:field-end'></span></span><![endif]--></a></span></span><span
+style='mso-no-proof:yes'><o:p></o:p></span></p>
+
+<p class=MsoToc2 style='tab-stops:right dotted 509.7pt'><span
+class=MsoHyperlink><span style='mso-no-proof:yes'><a href="#_Toc485543026">Introduction<span
+style='color:windowtext;display:none;mso-hide:screen;text-decoration:none;
+text-underline:none'><span style='mso-tab-count:1 dotted'>. </span></span><!--[if supportFields]><span
+style='color:windowtext;display:none;mso-hide:screen;text-decoration:none;
+text-underline:none'><span style='mso-element:field-begin'></span></span><span
+style='color:windowtext;display:none;mso-hide:screen;text-decoration:none;
+text-underline:none'> PAGEREF _Toc485543026 \h </span><span style='color:windowtext;
+display:none;mso-hide:screen;text-decoration:none;text-underline:none'><span
+style='mso-element:field-separator'></span></span><![endif]--><span
+style='color:windowtext;display:none;mso-hide:screen;text-decoration:none;
+text-underline:none'>7</span><span style='color:windowtext;display:none;
+mso-hide:screen;text-decoration:none;text-underline:none'><!--[if gte mso 9]><xml>
+ <w:data>08D0C9EA79F9BACE118C8200AA004BA90B02000000080000000E0000005F0054006F0063003400380035003500340033003000320036000000</w:data>
+</xml><![endif]--></span><!--[if supportFields]><span style='color:windowtext;
+display:none;mso-hide:screen;text-decoration:none;text-underline:none'><span
+style='mso-element:field-end'></span></span><![endif]--></a></span></span><span
+style='font-size:12.0pt;mso-no-proof:yes'><o:p></o:p></span></p>
+
+<p class=MsoToc2 style='tab-stops:right dotted 509.7pt'><span
+class=MsoHyperlink><span style='mso-no-proof:yes'><a href="#_Toc485543027">Syllogisme<span
+style='color:windowtext;display:none;mso-hide:screen;text-decoration:none;
+text-underline:none'><span style='mso-tab-count:1 dotted'>. </span></span><!--[if supportFields]><span
+style='color:windowtext;display:none;mso-hide:screen;text-decoration:none;
+text-underline:none'><span style='mso-element:field-begin'></span></span><span
+style='color:windowtext;display:none;mso-hide:screen;text-decoration:none;
+text-underline:none'> PAGEREF _Toc485543027 \h </span><span style='color:windowtext;
+display:none;mso-hide:screen;text-decoration:none;text-underline:none'><span
+style='mso-element:field-separator'></span></span><![endif]--><span
+style='color:windowtext;display:none;mso-hide:screen;text-decoration:none;
+text-underline:none'>7</span><span style='color:windowtext;display:none;
+mso-hide:screen;text-decoration:none;text-underline:none'><!--[if gte mso 9]><xml>
+ <w:data>08D0C9EA79F9BACE118C8200AA004BA90B02000000080000000E0000005F0054006F0063003400380035003500340033003000320037000000</w:data>
+</xml><![endif]--></span><!--[if supportFields]><span style='color:windowtext;
+display:none;mso-hide:screen;text-decoration:none;text-underline:none'><span
+style='mso-element:field-end'></span></span><![endif]--></a></span></span><span
+style='font-size:12.0pt;mso-no-proof:yes'><o:p></o:p></span></p>
+
+<p class=MsoToc2 style='tab-stops:right dotted 509.7pt'><span
+class=MsoHyperlink><span style='mso-no-proof:yes'><a href="#_Toc485543028">Contrôle
+de l'existence des mots<span style='color:windowtext;display:none;mso-hide:
+screen;text-decoration:none;text-underline:none'><span style='mso-tab-count:
+1 dotted'>. </span></span><!--[if supportFields]><span style='color:windowtext;
+display:none;mso-hide:screen;text-decoration:none;text-underline:none'><span
+style='mso-element:field-begin'></span></span><span style='color:windowtext;
+display:none;mso-hide:screen;text-decoration:none;text-underline:none'> PAGEREF
+_Toc485543028 \h </span><span style='color:windowtext;display:none;mso-hide:
+screen;text-decoration:none;text-underline:none'><span style='mso-element:field-separator'></span></span><![endif]--><span
+style='color:windowtext;display:none;mso-hide:screen;text-decoration:none;
+text-underline:none'>7</span><span style='color:windowtext;display:none;
+mso-hide:screen;text-decoration:none;text-underline:none'><!--[if gte mso 9]><xml>
+ <w:data>08D0C9EA79F9BACE118C8200AA004BA90B02000000080000000E0000005F0054006F0063003400380035003500340033003000320038000000</w:data>
+</xml><![endif]--></span><!--[if supportFields]><span style='color:windowtext;
+display:none;mso-hide:screen;text-decoration:none;text-underline:none'><span
+style='mso-element:field-end'></span></span><![endif]--></a></span></span><span
+style='font-size:12.0pt;mso-no-proof:yes'><o:p></o:p></span></p>
+
+<p class=MsoToc2 style='tab-stops:right dotted 509.7pt'><span
+class=MsoHyperlink><span style='mso-no-proof:yes'><a href="#_Toc485543029">Relation
+horizontale<span style='color:windowtext;display:none;mso-hide:screen;
+text-decoration:none;text-underline:none'><span style='mso-tab-count:1 dotted'>. </span></span><!--[if supportFields]><span
+style='color:windowtext;display:none;mso-hide:screen;text-decoration:none;
+text-underline:none'><span style='mso-element:field-begin'></span></span><span
+style='color:windowtext;display:none;mso-hide:screen;text-decoration:none;
+text-underline:none'> PAGEREF _Toc485543029 \h </span><span style='color:windowtext;
+display:none;mso-hide:screen;text-decoration:none;text-underline:none'><span
+style='mso-element:field-separator'></span></span><![endif]--><span
+style='color:windowtext;display:none;mso-hide:screen;text-decoration:none;
+text-underline:none'>7</span><span style='color:windowtext;display:none;
+mso-hide:screen;text-decoration:none;text-underline:none'><!--[if gte mso 9]><xml>
+ <w:data>08D0C9EA79F9BACE118C8200AA004BA90B02000000080000000E0000005F0054006F0063003400380035003500340033003000320039000000</w:data>
+</xml><![endif]--></span><!--[if supportFields]><span style='color:windowtext;
+display:none;mso-hide:screen;text-decoration:none;text-underline:none'><span
+style='mso-element:field-end'></span></span><![endif]--></a></span></span><span
+style='font-size:12.0pt;mso-no-proof:yes'><o:p></o:p></span></p>
+
+<p class=MsoToc2 style='tab-stops:right dotted 509.7pt'><span
+class=MsoHyperlink><span style='mso-no-proof:yes'><a href="#_Toc485543030">Composition
+de fonction<span style='color:windowtext;display:none;mso-hide:screen;
+text-decoration:none;text-underline:none'><span style='mso-tab-count:1 dotted'>. </span></span><!--[if supportFields]><span
+style='color:windowtext;display:none;mso-hide:screen;text-decoration:none;
+text-underline:none'><span style='mso-element:field-begin'></span></span><span
+style='color:windowtext;display:none;mso-hide:screen;text-decoration:none;
+text-underline:none'> PAGEREF _Toc485543030 \h </span><span style='color:windowtext;
+display:none;mso-hide:screen;text-decoration:none;text-underline:none'><span
+style='mso-element:field-separator'></span></span><![endif]--><span
+style='color:windowtext;display:none;mso-hide:screen;text-decoration:none;
+text-underline:none'>7</span><span style='color:windowtext;display:none;
+mso-hide:screen;text-decoration:none;text-underline:none'><!--[if gte mso 9]><xml>
+ <w:data>08D0C9EA79F9BACE118C8200AA004BA90B02000000080000000E0000005F0054006F0063003400380035003500340033003000330030000000</w:data>
+</xml><![endif]--></span><!--[if supportFields]><span style='color:windowtext;
+display:none;mso-hide:screen;text-decoration:none;text-underline:none'><span
+style='mso-element:field-end'></span></span><![endif]--></a></span></span><span
+style='font-size:12.0pt;mso-no-proof:yes'><o:p></o:p></span></p>
+
+<p class=MsoToc2 style='tab-stops:right dotted 509.7pt'><span
+class=MsoHyperlink><span style='mso-no-proof:yes'><a href="#_Toc485543031">Indirection<span
+style='color:windowtext;display:none;mso-hide:screen;text-decoration:none;
+text-underline:none'><span style='mso-tab-count:1 dotted'>. </span></span><!--[if supportFields]><span
+style='color:windowtext;display:none;mso-hide:screen;text-decoration:none;
+text-underline:none'><span style='mso-element:field-begin'></span></span><span
+style='color:windowtext;display:none;mso-hide:screen;text-decoration:none;
+text-underline:none'> PAGEREF _Toc485543031 \h </span><span style='color:windowtext;
+display:none;mso-hide:screen;text-decoration:none;text-underline:none'><span
+style='mso-element:field-separator'></span></span><![endif]--><span
+style='color:windowtext;display:none;mso-hide:screen;text-decoration:none;
+text-underline:none'>8</span><span style='color:windowtext;display:none;
+mso-hide:screen;text-decoration:none;text-underline:none'><!--[if gte mso 9]><xml>
+ <w:data>08D0C9EA79F9BACE118C8200AA004BA90B02000000080000000E0000005F0054006F0063003400380035003500340033003000330031000000</w:data>
+</xml><![endif]--></span><!--[if supportFields]><span style='color:windowtext;
+display:none;mso-hide:screen;text-decoration:none;text-underline:none'><span
+style='mso-element:field-end'></span></span><![endif]--></a></span></span><span
+style='font-size:12.0pt;mso-no-proof:yes'><o:p></o:p></span></p>
+
+<p class=MsoToc1 style='tab-stops:right dotted 509.7pt'><span
+class=MsoHyperlink><span style='mso-no-proof:yes'><a href="#_Toc485543032">Limitations
+d'IAVB<span style='color:windowtext;display:none;mso-hide:screen;text-decoration:
+none;text-underline:none'><span style='mso-tab-count:1 dotted'>.. </span></span><!--[if supportFields]><span
+style='color:windowtext;display:none;mso-hide:screen;text-decoration:none;
+text-underline:none'><span style='mso-element:field-begin'></span></span><span
+style='color:windowtext;display:none;mso-hide:screen;text-decoration:none;
+text-underline:none'> PAGEREF _Toc485543032 \h </span><span style='color:windowtext;
+display:none;mso-hide:screen;text-decoration:none;text-underline:none'><span
+style='mso-element:field-separator'></span></span><![endif]--><span
+style='color:windowtext;display:none;mso-hide:screen;text-decoration:none;
+text-underline:none'>8</span><span style='color:windowtext;display:none;
+mso-hide:screen;text-decoration:none;text-underline:none'><!--[if gte mso 9]><xml>
+ <w:data>08D0C9EA79F9BACE118C8200AA004BA90B02000000080000000E0000005F0054006F0063003400380035003500340033003000330032000000</w:data>
+</xml><![endif]--></span><!--[if supportFields]><span style='color:windowtext;
+display:none;mso-hide:screen;text-decoration:none;text-underline:none'><span
+style='mso-element:field-end'></span></span><![endif]--></a></span></span><span
+style='mso-no-proof:yes'><o:p></o:p></span></p>
+
+<p class=MsoToc2 style='tab-stops:right dotted 509.7pt'><span
+class=MsoHyperlink><span style='mso-no-proof:yes'><a href="#_Toc485543033">Syntaxe
+approximative<span style='color:windowtext;display:none;mso-hide:screen;
+text-decoration:none;text-underline:none'><span style='mso-tab-count:1 dotted'>. </span></span><!--[if supportFields]><span
+style='color:windowtext;display:none;mso-hide:screen;text-decoration:none;
+text-underline:none'><span style='mso-element:field-begin'></span></span><span
+style='color:windowtext;display:none;mso-hide:screen;text-decoration:none;
+text-underline:none'> PAGEREF _Toc485543033 \h </span><span style='color:windowtext;
+display:none;mso-hide:screen;text-decoration:none;text-underline:none'><span
+style='mso-element:field-separator'></span></span><![endif]--><span
+style='color:windowtext;display:none;mso-hide:screen;text-decoration:none;
+text-underline:none'>8</span><span style='color:windowtext;display:none;
+mso-hide:screen;text-decoration:none;text-underline:none'><!--[if gte mso 9]><xml>
+ <w:data>08D0C9EA79F9BACE118C8200AA004BA90B02000000080000000E0000005F0054006F0063003400380035003500340033003000330033000000</w:data>
+</xml><![endif]--></span><!--[if supportFields]><span style='color:windowtext;
+display:none;mso-hide:screen;text-decoration:none;text-underline:none'><span
+style='mso-element:field-end'></span></span><![endif]--></a></span></span><span
+style='font-size:12.0pt;mso-no-proof:yes'><o:p></o:p></span></p>
+
+<p class=MsoToc2 style='tab-stops:right dotted 509.7pt'><span
+class=MsoHyperlink><span style='mso-no-proof:yes'><a href="#_Toc485543034">Relation
+horizontale avec indirection<span style='color:windowtext;display:none;
+mso-hide:screen;text-decoration:none;text-underline:none'><span
+style='mso-tab-count:1 dotted'>. </span></span><!--[if supportFields]><span
+style='color:windowtext;display:none;mso-hide:screen;text-decoration:none;
+text-underline:none'><span style='mso-element:field-begin'></span></span><span
+style='color:windowtext;display:none;mso-hide:screen;text-decoration:none;
+text-underline:none'> PAGEREF _Toc485543034 \h </span><span style='color:windowtext;
+display:none;mso-hide:screen;text-decoration:none;text-underline:none'><span
+style='mso-element:field-separator'></span></span><![endif]--><span
+style='color:windowtext;display:none;mso-hide:screen;text-decoration:none;
+text-underline:none'>8</span><span style='color:windowtext;display:none;
+mso-hide:screen;text-decoration:none;text-underline:none'><!--[if gte mso 9]><xml>
+ <w:data>08D0C9EA79F9BACE118C8200AA004BA90B02000000080000000E0000005F0054006F0063003400380035003500340033003000330034000000</w:data>
+</xml><![endif]--></span><!--[if supportFields]><span style='color:windowtext;
+display:none;mso-hide:screen;text-decoration:none;text-underline:none'><span
+style='mso-element:field-end'></span></span><![endif]--></a></span></span><span
+style='font-size:12.0pt;mso-no-proof:yes'><o:p></o:p></span></p>
+
+<p class=MsoToc2 style='tab-stops:right dotted 509.7pt'><span
+class=MsoHyperlink><span style='mso-no-proof:yes'><a href="#_Toc485543035">Indirection
+et syntaxe<span style='color:windowtext;display:none;mso-hide:screen;
+text-decoration:none;text-underline:none'><span style='mso-tab-count:1 dotted'>. </span></span><!--[if supportFields]><span
+style='color:windowtext;display:none;mso-hide:screen;text-decoration:none;
+text-underline:none'><span style='mso-element:field-begin'></span></span><span
+style='color:windowtext;display:none;mso-hide:screen;text-decoration:none;
+text-underline:none'> PAGEREF _Toc485543035 \h </span><span style='color:windowtext;
+display:none;mso-hide:screen;text-decoration:none;text-underline:none'><span
+style='mso-element:field-separator'></span></span><![endif]--><span
+style='color:windowtext;display:none;mso-hide:screen;text-decoration:none;
+text-underline:none'>8</span><span style='color:windowtext;display:none;
+mso-hide:screen;text-decoration:none;text-underline:none'><!--[if gte mso 9]><xml>
+ <w:data>08D0C9EA79F9BACE118C8200AA004BA90B02000000080000000E0000005F0054006F0063003400380035003500340033003000330035000000</w:data>
+</xml><![endif]--></span><!--[if supportFields]><span style='color:windowtext;
+display:none;mso-hide:screen;text-decoration:none;text-underline:none'><span
+style='mso-element:field-end'></span></span><![endif]--></a></span></span><span
+style='font-size:12.0pt;mso-no-proof:yes'><o:p></o:p></span></p>
+
+<p class=MsoToc2 style='tab-stops:right dotted 509.7pt'><span
+class=MsoHyperlink><span style='mso-no-proof:yes'><a href="#_Toc485543036">Limitation
+en cas d'échec de la composition de fonction<span style='color:windowtext;
+display:none;mso-hide:screen;text-decoration:none;text-underline:none'><span
+style='mso-tab-count:1 dotted'>. </span></span><!--[if supportFields]><span
+style='color:windowtext;display:none;mso-hide:screen;text-decoration:none;
+text-underline:none'><span style='mso-element:field-begin'></span></span><span
+style='color:windowtext;display:none;mso-hide:screen;text-decoration:none;
+text-underline:none'> PAGEREF _Toc485543036 \h </span><span style='color:windowtext;
+display:none;mso-hide:screen;text-decoration:none;text-underline:none'><span
+style='mso-element:field-separator'></span></span><![endif]--><span
+style='color:windowtext;display:none;mso-hide:screen;text-decoration:none;
+text-underline:none'>9</span><span style='color:windowtext;display:none;
+mso-hide:screen;text-decoration:none;text-underline:none'><!--[if gte mso 9]><xml>
+ <w:data>08D0C9EA79F9BACE118C8200AA004BA90B02000000080000000E0000005F0054006F0063003400380035003500340033003000330036000000</w:data>
+</xml><![endif]--></span><!--[if supportFields]><span style='color:windowtext;
+display:none;mso-hide:screen;text-decoration:none;text-underline:none'><span
+style='mso-element:field-end'></span></span><![endif]--></a></span></span><span
+style='font-size:12.0pt;mso-no-proof:yes'><o:p></o:p></span></p>
+
+<p class=MsoToc2 style='tab-stops:right dotted 509.7pt'><span
+class=MsoHyperlink><span style='mso-no-proof:yes'><a href="#_Toc485543037">Logique
+inversée<span style='color:windowtext;display:none;mso-hide:screen;text-decoration:
+none;text-underline:none'><span style='mso-tab-count:1 dotted'>. </span></span><!--[if supportFields]><span
+style='color:windowtext;display:none;mso-hide:screen;text-decoration:none;
+text-underline:none'><span style='mso-element:field-begin'></span></span><span
+style='color:windowtext;display:none;mso-hide:screen;text-decoration:none;
+text-underline:none'> PAGEREF _Toc485543037 \h </span><span style='color:windowtext;
+display:none;mso-hide:screen;text-decoration:none;text-underline:none'><span
+style='mso-element:field-separator'></span></span><![endif]--><span
+style='color:windowtext;display:none;mso-hide:screen;text-decoration:none;
+text-underline:none'>9</span><span style='color:windowtext;display:none;
+mso-hide:screen;text-decoration:none;text-underline:none'><!--[if gte mso 9]><xml>
+ <w:data>08D0C9EA79F9BACE118C8200AA004BA90B02000000080000000E0000005F0054006F0063003400380035003500340033003000330037000000</w:data>
+</xml><![endif]--></span><!--[if supportFields]><span style='color:windowtext;
+display:none;mso-hide:screen;text-decoration:none;text-underline:none'><span
+style='mso-element:field-end'></span></span><![endif]--></a></span></span><span
+style='font-size:12.0pt;mso-no-proof:yes'><o:p></o:p></span></p>
+
+<p class=MsoToc2 style='tab-stops:right dotted 509.7pt'><span
+class=MsoHyperlink><span style='mso-no-proof:yes'><a href="#_Toc485543038">Syllogisme
+et mot double<span style='color:windowtext;display:none;mso-hide:screen;
+text-decoration:none;text-underline:none'><span style='mso-tab-count:1 dotted'>. </span></span><!--[if supportFields]><span
+style='color:windowtext;display:none;mso-hide:screen;text-decoration:none;
+text-underline:none'><span style='mso-element:field-begin'></span></span><span
+style='color:windowtext;display:none;mso-hide:screen;text-decoration:none;
+text-underline:none'> PAGEREF _Toc485543038 \h </span><span style='color:windowtext;
+display:none;mso-hide:screen;text-decoration:none;text-underline:none'><span
+style='mso-element:field-separator'></span></span><![endif]--><span
+style='color:windowtext;display:none;mso-hide:screen;text-decoration:none;
+text-underline:none'>9</span><span style='color:windowtext;display:none;
+mso-hide:screen;text-decoration:none;text-underline:none'><!--[if gte mso 9]><xml>
+ <w:data>08D0C9EA79F9BACE118C8200AA004BA90B02000000080000000E0000005F0054006F0063003400380035003500340033003000330038000000</w:data>
+</xml><![endif]--></span><!--[if supportFields]><span style='color:windowtext;
+display:none;mso-hide:screen;text-decoration:none;text-underline:none'><span
+style='mso-element:field-end'></span></span><![endif]--></a></span></span><span
+style='font-size:12.0pt;mso-no-proof:yes'><o:p></o:p></span></p>
+
+<p class=MsoToc1 style='tab-stops:right dotted 509.7pt'><span
+class=MsoHyperlink><span style='mso-no-proof:yes'><a href="#_Toc485543039">Versions<span
+style='color:windowtext;display:none;mso-hide:screen;text-decoration:none;
+text-underline:none'><span style='mso-tab-count:1 dotted'>. </span></span><!--[if supportFields]><span
+style='color:windowtext;display:none;mso-hide:screen;text-decoration:none;
+text-underline:none'><span style='mso-element:field-begin'></span></span><span
+style='color:windowtext;display:none;mso-hide:screen;text-decoration:none;
+text-underline:none'> PAGEREF _Toc485543039 \h </span><span style='color:windowtext;
+display:none;mso-hide:screen;text-decoration:none;text-underline:none'><span
+style='mso-element:field-separator'></span></span><![endif]--><span
+style='color:windowtext;display:none;mso-hide:screen;text-decoration:none;
+text-underline:none'>9</span><span style='color:windowtext;display:none;
+mso-hide:screen;text-decoration:none;text-underline:none'><!--[if gte mso 9]><xml>
+ <w:data>08D0C9EA79F9BACE118C8200AA004BA90B02000000080000000E0000005F0054006F0063003400380035003500340033003000330039000000</w:data>
+</xml><![endif]--></span><!--[if supportFields]><span style='color:windowtext;
+display:none;mso-hide:screen;text-decoration:none;text-underline:none'><span
+style='mso-element:field-end'></span></span><![endif]--></a></span></span><span
+style='mso-no-proof:yes'><o:p></o:p></span></p>
+
+<p class=MsoToc2 style='tab-stops:right dotted 509.7pt'><span
+class=MsoHyperlink><span style='mso-no-proof:yes'><a href="#_Toc485543040">Visual
+Basic .Net<span style='color:windowtext;display:none;mso-hide:screen;
+text-decoration:none;text-underline:none'><span style='mso-tab-count:1 dotted'> </span></span><!--[if supportFields]><span
+style='color:windowtext;display:none;mso-hide:screen;text-decoration:none;
+text-underline:none'><span style='mso-element:field-begin'></span></span><span
+style='color:windowtext;display:none;mso-hide:screen;text-decoration:none;
+text-underline:none'> PAGEREF _Toc485543040 \h </span><span style='color:windowtext;
+display:none;mso-hide:screen;text-decoration:none;text-underline:none'><span
+style='mso-element:field-separator'></span></span><![endif]--><span
+style='color:windowtext;display:none;mso-hide:screen;text-decoration:none;
+text-underline:none'>9</span><span style='color:windowtext;display:none;
+mso-hide:screen;text-decoration:none;text-underline:none'><!--[if gte mso 9]><xml>
+ <w:data>08D0C9EA79F9BACE118C8200AA004BA90B02000000080000000E0000005F0054006F0063003400380035003500340033003000340030000000</w:data>
+</xml><![endif]--></span><!--[if supportFields]><span style='color:windowtext;
+display:none;mso-hide:screen;text-decoration:none;text-underline:none'><span
+style='mso-element:field-end'></span></span><![endif]--></a></span></span><span
+style='font-size:12.0pt;mso-no-proof:yes'><o:p></o:p></span></p>
+
+<p class=MsoToc2 style='tab-stops:right dotted 509.7pt'><span
+class=MsoHyperlink><span style='mso-no-proof:yes'><a href="#_Toc485543041">VB6<span
+style='color:windowtext;display:none;mso-hide:screen;text-decoration:none;
+text-underline:none'><span style='mso-tab-count:1 dotted'>. </span></span><!--[if supportFields]><span
+style='color:windowtext;display:none;mso-hide:screen;text-decoration:none;
+text-underline:none'><span style='mso-element:field-begin'></span></span><span
+style='color:windowtext;display:none;mso-hide:screen;text-decoration:none;
+text-underline:none'> PAGEREF _Toc485543041 \h </span><span style='color:windowtext;
+display:none;mso-hide:screen;text-decoration:none;text-underline:none'><span
+style='mso-element:field-separator'></span></span><![endif]--><span
+style='color:windowtext;display:none;mso-hide:screen;text-decoration:none;
+text-underline:none'>9</span><span style='color:windowtext;display:none;
+mso-hide:screen;text-decoration:none;text-underline:none'><!--[if gte mso 9]><xml>
+ <w:data>08D0C9EA79F9BACE118C8200AA004BA90B02000000080000000E0000005F0054006F0063003400380035003500340033003000340031000000</w:data>
+</xml><![endif]--></span><!--[if supportFields]><span style='color:windowtext;
+display:none;mso-hide:screen;text-decoration:none;text-underline:none'><span
+style='mso-element:field-end'></span></span><![endif]--></a></span></span><span
+style='font-size:12.0pt;mso-no-proof:yes'><o:p></o:p></span></p>
+
+<p class=MsoToc2 style='tab-stops:right dotted 509.7pt'><span
+class=MsoHyperlink><span style='mso-no-proof:yes'><a href="#_Toc485543042">VBA
+Word<span style='color:windowtext;display:none;mso-hide:screen;text-decoration:
+none;text-underline:none'><span style='mso-tab-count:1 dotted'>. </span></span><!--[if supportFields]><span
+style='color:windowtext;display:none;mso-hide:screen;text-decoration:none;
+text-underline:none'><span style='mso-element:field-begin'></span></span><span
+style='color:windowtext;display:none;mso-hide:screen;text-decoration:none;
+text-underline:none'> PAGEREF _Toc485543042 \h </span><span style='color:windowtext;
+display:none;mso-hide:screen;text-decoration:none;text-underline:none'><span
+style='mso-element:field-separator'></span></span><![endif]--><span
+style='color:windowtext;display:none;mso-hide:screen;text-decoration:none;
+text-underline:none'>10</span><span style='color:windowtext;display:none;
+mso-hide:screen;text-decoration:none;text-underline:none'><!--[if gte mso 9]><xml>
+ <w:data>08D0C9EA79F9BACE118C8200AA004BA90B02000000080000000E0000005F0054006F0063003400380035003500340033003000340032000000</w:data>
+</xml><![endif]--></span><!--[if supportFields]><span style='color:windowtext;
+display:none;mso-hide:screen;text-decoration:none;text-underline:none'><span
+style='mso-element:field-end'></span></span><![endif]--></a></span></span><span
+style='font-size:12.0pt;mso-no-proof:yes'><o:p></o:p></span></p>
+
+<p class=MsoToc2 style='tab-stops:right dotted 509.7pt'><span
+class=MsoHyperlink><span style='mso-no-proof:yes'><a href="#_Toc485543043">CSharp
+(C#)<span style='color:windowtext;display:none;mso-hide:screen;text-decoration:
+none;text-underline:none'><span style='mso-tab-count:1 dotted'> </span></span><!--[if supportFields]><span
+style='color:windowtext;display:none;mso-hide:screen;text-decoration:none;
+text-underline:none'><span style='mso-element:field-begin'></span></span><span
+style='color:windowtext;display:none;mso-hide:screen;text-decoration:none;
+text-underline:none'> PAGEREF _Toc485543043 \h </span><span style='color:windowtext;
+display:none;mso-hide:screen;text-decoration:none;text-underline:none'><span
+style='mso-element:field-separator'></span></span><![endif]--><span
+style='color:windowtext;display:none;mso-hide:screen;text-decoration:none;
+text-underline:none'>10</span><span style='color:windowtext;display:none;
+mso-hide:screen;text-decoration:none;text-underline:none'><!--[if gte mso 9]><xml>
+ <w:data>08D0C9EA79F9BACE118C8200AA004BA90B02000000080000000E0000005F0054006F0063003400380035003500340033003000340033000000</w:data>
+</xml><![endif]--></span><!--[if supportFields]><span style='color:windowtext;
+display:none;mso-hide:screen;text-decoration:none;text-underline:none'><span
+style='mso-element:field-end'></span></span><![endif]--></a></span></span><span
+style='font-size:12.0pt;mso-no-proof:yes'><o:p></o:p></span></p>
+
+<p class=MsoToc3 style='tab-stops:right dotted 509.7pt'><span
+class=MsoHyperlink><span style='mso-no-proof:yes'><a href="#_Toc485543044">WinForm<span
+style='color:windowtext;display:none;mso-hide:screen;text-decoration:none;
+text-underline:none'><span style='mso-tab-count:1 dotted'>.. </span></span><!--[if supportFields]><span
+style='color:windowtext;display:none;mso-hide:screen;text-decoration:none;
+text-underline:none'><span style='mso-element:field-begin'></span></span><span
+style='color:windowtext;display:none;mso-hide:screen;text-decoration:none;
+text-underline:none'> PAGEREF _Toc485543044 \h </span><span style='color:windowtext;
+display:none;mso-hide:screen;text-decoration:none;text-underline:none'><span
+style='mso-element:field-separator'></span></span><![endif]--><span
+style='color:windowtext;display:none;mso-hide:screen;text-decoration:none;
+text-underline:none'>10</span><span style='color:windowtext;display:none;
+mso-hide:screen;text-decoration:none;text-underline:none'><!--[if gte mso 9]><xml>
+ <w:data>08D0C9EA79F9BACE118C8200AA004BA90B02000000080000000E0000005F0054006F0063003400380035003500340033003000340034000000</w:data>
+</xml><![endif]--></span><!--[if supportFields]><span style='color:windowtext;
+display:none;mso-hide:screen;text-decoration:none;text-underline:none'><span
+style='mso-element:field-end'></span></span><![endif]--></a></span></span><span
+style='font-size:12.0pt;mso-no-proof:yes'><o:p></o:p></span></p>
+
+<p class=MsoToc3 style='tab-stops:right dotted 509.7pt'><span
+class=MsoHyperlink><span style='mso-no-proof:yes'><a href="#_Toc485543045">WPF<span
+style='color:windowtext;display:none;mso-hide:screen;text-decoration:none;
+text-underline:none'><span style='mso-tab-count:1 dotted'>. </span></span><!--[if supportFields]><span
+style='color:windowtext;display:none;mso-hide:screen;text-decoration:none;
+text-underline:none'><span style='mso-element:field-begin'></span></span><span
+style='color:windowtext;display:none;mso-hide:screen;text-decoration:none;
+text-underline:none'> PAGEREF _Toc485543045 \h </span><span style='color:windowtext;
+display:none;mso-hide:screen;text-decoration:none;text-underline:none'><span
+style='mso-element:field-separator'></span></span><![endif]--><span
+style='color:windowtext;display:none;mso-hide:screen;text-decoration:none;
+text-underline:none'>10</span><span style='color:windowtext;display:none;
+mso-hide:screen;text-decoration:none;text-underline:none'><!--[if gte mso 9]><xml>
+ <w:data>08D0C9EA79F9BACE118C8200AA004BA90B02000000080000000E0000005F0054006F0063003400380035003500340033003000340035000000</w:data>
+</xml><![endif]--></span><!--[if supportFields]><span style='color:windowtext;
+display:none;mso-hide:screen;text-decoration:none;text-underline:none'><span
+style='mso-element:field-end'></span></span><![endif]--></a></span></span><span
+style='font-size:12.0pt;mso-no-proof:yes'><o:p></o:p></span></p>
+
+<p class=MsoToc3 style='tab-stops:right dotted 509.7pt'><span
+class=MsoHyperlink><span style='mso-no-proof:yes'><a href="#_Toc485543046">C#/XAML
+for HTML5<span style='color:windowtext;display:none;mso-hide:screen;text-decoration:
+none;text-underline:none'><span style='mso-tab-count:1 dotted'>. </span></span><!--[if supportFields]><span
+style='color:windowtext;display:none;mso-hide:screen;text-decoration:none;
+text-underline:none'><span style='mso-element:field-begin'></span></span><span
+style='color:windowtext;display:none;mso-hide:screen;text-decoration:none;
+text-underline:none'> PAGEREF _Toc485543046 \h </span><span style='color:windowtext;
+display:none;mso-hide:screen;text-decoration:none;text-underline:none'><span
+style='mso-element:field-separator'></span></span><![endif]--><span
+style='color:windowtext;display:none;mso-hide:screen;text-decoration:none;
+text-underline:none'>10</span><span style='color:windowtext;display:none;
+mso-hide:screen;text-decoration:none;text-underline:none'><!--[if gte mso 9]><xml>
+ <w:data>08D0C9EA79F9BACE118C8200AA004BA90B02000000080000000E0000005F0054006F0063003400380035003500340033003000340036000000</w:data>
+</xml><![endif]--></span><!--[if supportFields]><span style='color:windowtext;
+display:none;mso-hide:screen;text-decoration:none;text-underline:none'><span
+style='mso-element:field-end'></span></span><![endif]--></a></span></span><span
+style='font-size:12.0pt;mso-no-proof:yes'><o:p></o:p></span></p>
+
+<p class=MsoToc1 style='tab-stops:right dotted 509.7pt'><span
+class=MsoHyperlink><span style='mso-no-proof:yes'><a href="#_Toc485543047">Projets<span
+style='color:windowtext;display:none;mso-hide:screen;text-decoration:none;
+text-underline:none'><span style='mso-tab-count:1 dotted'>. </span></span><!--[if supportFields]><span
+style='color:windowtext;display:none;mso-hide:screen;text-decoration:none;
+text-underline:none'><span style='mso-element:field-begin'></span></span><span
+style='color:windowtext;display:none;mso-hide:screen;text-decoration:none;
+text-underline:none'> PAGEREF _Toc485543047 \h </span><span style='color:windowtext;
+display:none;mso-hide:screen;text-decoration:none;text-underline:none'><span
+style='mso-element:field-separator'></span></span><![endif]--><span
+style='color:windowtext;display:none;mso-hide:screen;text-decoration:none;
+text-underline:none'>10</span><span style='color:windowtext;display:none;
+mso-hide:screen;text-decoration:none;text-underline:none'><!--[if gte mso 9]><xml>
+ <w:data>08D0C9EA79F9BACE118C8200AA004BA90B02000000080000000E0000005F0054006F0063003400380035003500340033003000340037000000</w:data>
+</xml><![endif]--></span><!--[if supportFields]><span style='color:windowtext;
+display:none;mso-hide:screen;text-decoration:none;text-underline:none'><span
+style='mso-element:field-end'></span></span><![endif]--></a></span></span><span
+style='mso-no-proof:yes'><o:p></o:p></span></p>
+
+<p class=MsoToc1 style='tab-stops:right dotted 509.7pt'><span
+class=MsoHyperlink><span style='mso-no-proof:yes'><a href="#_Toc485543048">Composants
+requis pour la synthèse vocale avec MS-Agent<span style='color:windowtext;
+display:none;mso-hide:screen;text-decoration:none;text-underline:none'><span
+style='mso-tab-count:1 dotted'> </span></span><!--[if supportFields]><span
+style='color:windowtext;display:none;mso-hide:screen;text-decoration:none;
+text-underline:none'><span style='mso-element:field-begin'></span></span><span
+style='color:windowtext;display:none;mso-hide:screen;text-decoration:none;
+text-underline:none'> PAGEREF _Toc485543048 \h </span><span style='color:windowtext;
+display:none;mso-hide:screen;text-decoration:none;text-underline:none'><span
+style='mso-element:field-separator'></span></span><![endif]--><span
+style='color:windowtext;display:none;mso-hide:screen;text-decoration:none;
+text-underline:none'>10</span><span style='color:windowtext;display:none;
+mso-hide:screen;text-decoration:none;text-underline:none'><!--[if gte mso 9]><xml>
+ <w:data>08D0C9EA79F9BACE118C8200AA004BA90B02000000080000000E0000005F0054006F0063003400380035003500340033003000340038000000</w:data>
+</xml><![endif]--></span><!--[if supportFields]><span style='color:windowtext;
+display:none;mso-hide:screen;text-decoration:none;text-underline:none'><span
+style='mso-element:field-end'></span></span><![endif]--></a></span></span><span
+style='mso-no-proof:yes'><o:p></o:p></span></p>
+
+<p class=MsoToc2 style='tab-stops:right dotted 509.7pt'><span
+class=MsoHyperlink><span style='mso-no-proof:yes'><a href="#_Toc485543049">Agents
+Microsoft<span style='color:windowtext;display:none;mso-hide:screen;text-decoration:
+none;text-underline:none'><span style='mso-tab-count:1 dotted'> </span></span><!--[if supportFields]><span
+style='color:windowtext;display:none;mso-hide:screen;text-decoration:none;
+text-underline:none'><span style='mso-element:field-begin'></span></span><span
+style='color:windowtext;display:none;mso-hide:screen;text-decoration:none;
+text-underline:none'> PAGEREF _Toc485543049 \h </span><span style='color:windowtext;
+display:none;mso-hide:screen;text-decoration:none;text-underline:none'><span
+style='mso-element:field-separator'></span></span><![endif]--><span
+style='color:windowtext;display:none;mso-hide:screen;text-decoration:none;
+text-underline:none'>11</span><span style='color:windowtext;display:none;
+mso-hide:screen;text-decoration:none;text-underline:none'><!--[if gte mso 9]><xml>
+ <w:data>08D0C9EA79F9BACE118C8200AA004BA90B02000000080000000E0000005F0054006F0063003400380035003500340033003000340039000000</w:data>
+</xml><![endif]--></span><!--[if supportFields]><span style='color:windowtext;
+display:none;mso-hide:screen;text-decoration:none;text-underline:none'><span
+style='mso-element:field-end'></span></span><![endif]--></a></span></span><span
+style='font-size:12.0pt;mso-no-proof:yes'><o:p></o:p></span></p>
+
+<p class=MsoToc2 style='tab-stops:right dotted 509.7pt'><span
+class=MsoHyperlink><span style='mso-no-proof:yes'><a href="#_Toc485543050">Synthèse
+vocale avec MS-Agent<span style='color:windowtext;display:none;mso-hide:screen;
+text-decoration:none;text-underline:none'><span style='mso-tab-count:1 dotted'> </span></span><!--[if supportFields]><span
+style='color:windowtext;display:none;mso-hide:screen;text-decoration:none;
+text-underline:none'><span style='mso-element:field-begin'></span></span><span
+style='color:windowtext;display:none;mso-hide:screen;text-decoration:none;
+text-underline:none'> PAGEREF _Toc485543050 \h </span><span style='color:windowtext;
+display:none;mso-hide:screen;text-decoration:none;text-underline:none'><span
+style='mso-element:field-separator'></span></span><![endif]--><span
+style='color:windowtext;display:none;mso-hide:screen;text-decoration:none;
+text-underline:none'>11</span><span style='color:windowtext;display:none;
+mso-hide:screen;text-decoration:none;text-underline:none'><!--[if gte mso 9]><xml>
+ <w:data>08D0C9EA79F9BACE118C8200AA004BA90B02000000080000000E0000005F0054006F0063003400380035003500340033003000350030000000</w:data>
+</xml><![endif]--></span><!--[if supportFields]><span style='color:windowtext;
+display:none;mso-hide:screen;text-decoration:none;text-underline:none'><span
+style='mso-element:field-end'></span></span><![endif]--></a></span></span><span
+style='font-size:12.0pt;mso-no-proof:yes'><o:p></o:p></span></p>
+
+<p class=MsoToc1 style='tab-stops:right dotted 509.7pt'><span
+class=MsoHyperlink><span style='mso-no-proof:yes'><a href="#_Toc485543051">Composant
+IAVB ocx<span style='color:windowtext;display:none;mso-hide:screen;text-decoration:
+none;text-underline:none'><span style='mso-tab-count:1 dotted'>. </span></span><!--[if supportFields]><span
+style='color:windowtext;display:none;mso-hide:screen;text-decoration:none;
+text-underline:none'><span style='mso-element:field-begin'></span></span><span
+style='color:windowtext;display:none;mso-hide:screen;text-decoration:none;
+text-underline:none'> PAGEREF _Toc485543051 \h </span><span style='color:windowtext;
+display:none;mso-hide:screen;text-decoration:none;text-underline:none'><span
+style='mso-element:field-separator'></span></span><![endif]--><span
+style='color:windowtext;display:none;mso-hide:screen;text-decoration:none;
+text-underline:none'>11</span><span style='color:windowtext;display:none;
+mso-hide:screen;text-decoration:none;text-underline:none'><!--[if gte mso 9]><xml>
+ <w:data>08D0C9EA79F9BACE118C8200AA004BA90B02000000080000000E0000005F0054006F0063003400380035003500340033003000350031000000</w:data>
+</xml><![endif]--></span><!--[if supportFields]><span style='color:windowtext;
+display:none;mso-hide:screen;text-decoration:none;text-underline:none'><span
+style='mso-element:field-end'></span></span><![endif]--></a></span></span><span
+style='mso-no-proof:yes'><o:p></o:p></span></p>
+
+<p class=MsoToc1 style='tab-stops:right dotted 509.7pt'><span
+class=MsoHyperlink><span style='mso-no-proof:yes'><a href="#_Toc485543052">Historique
+des versions<span style='color:windowtext;display:none;mso-hide:screen;
+text-decoration:none;text-underline:none'><span style='mso-tab-count:1 dotted'>. </span></span><!--[if supportFields]><span
+style='color:windowtext;display:none;mso-hide:screen;text-decoration:none;
+text-underline:none'><span style='mso-element:field-begin'></span></span><span
+style='color:windowtext;display:none;mso-hide:screen;text-decoration:none;
+text-underline:none'> PAGEREF _Toc485543052 \h </span><span style='color:windowtext;
+display:none;mso-hide:screen;text-decoration:none;text-underline:none'><span
+style='mso-element:field-separator'></span></span><![endif]--><span
+style='color:windowtext;display:none;mso-hide:screen;text-decoration:none;
+text-underline:none'>11</span><span style='color:windowtext;display:none;
+mso-hide:screen;text-decoration:none;text-underline:none'><!--[if gte mso 9]><xml>
+ <w:data>08D0C9EA79F9BACE118C8200AA004BA90B02000000080000000E0000005F0054006F0063003400380035003500340033003000350032000000</w:data>
+</xml><![endif]--></span><!--[if supportFields]><span style='color:windowtext;
+display:none;mso-hide:screen;text-decoration:none;text-underline:none'><span
+style='mso-element:field-end'></span></span><![endif]--></a></span></span><span
+style='mso-no-proof:yes'><o:p></o:p></span></p>
+
+<p class=MsoToc2 style='tab-stops:right dotted 509.7pt'><span
+class=MsoHyperlink><span style='mso-no-proof:yes'><a href="#_Toc485543053">Version
+3.12 du 18/06/2017<span style='color:windowtext;display:none;mso-hide:screen;
+text-decoration:none;text-underline:none'><span style='mso-tab-count:1 dotted'>. </span></span><!--[if supportFields]><span
+style='color:windowtext;display:none;mso-hide:screen;text-decoration:none;
+text-underline:none'><span style='mso-element:field-begin'></span></span><span
+style='color:windowtext;display:none;mso-hide:screen;text-decoration:none;
+text-underline:none'> PAGEREF _Toc485543053 \h </span><span style='color:windowtext;
+display:none;mso-hide:screen;text-decoration:none;text-underline:none'><span
+style='mso-element:field-separator'></span></span><![endif]--><span
+style='color:windowtext;display:none;mso-hide:screen;text-decoration:none;
+text-underline:none'>11</span><span style='color:windowtext;display:none;
+mso-hide:screen;text-decoration:none;text-underline:none'><!--[if gte mso 9]><xml>
+ <w:data>08D0C9EA79F9BACE118C8200AA004BA90B02000000080000000E0000005F0054006F0063003400380035003500340033003000350033000000</w:data>
+</xml><![endif]--></span><!--[if supportFields]><span style='color:windowtext;
+display:none;mso-hide:screen;text-decoration:none;text-underline:none'><span
+style='mso-element:field-end'></span></span><![endif]--></a></span></span><span
+style='font-size:12.0pt;mso-no-proof:yes'><o:p></o:p></span></p>
+
+<p class=MsoToc2 style='tab-stops:right dotted 509.7pt'><span
+class=MsoHyperlink><span style='mso-no-proof:yes'><a href="#_Toc485543054">Version
+3.11 du 15/09/2013<span style='color:windowtext;display:none;mso-hide:screen;
+text-decoration:none;text-underline:none'><span style='mso-tab-count:1 dotted'>. </span></span><!--[if supportFields]><span
+style='color:windowtext;display:none;mso-hide:screen;text-decoration:none;
+text-underline:none'><span style='mso-element:field-begin'></span></span><span
+style='color:windowtext;display:none;mso-hide:screen;text-decoration:none;
+text-underline:none'> PAGEREF _Toc485543054 \h </span><span style='color:windowtext;
+display:none;mso-hide:screen;text-decoration:none;text-underline:none'><span
+style='mso-element:field-separator'></span></span><![endif]--><span
+style='color:windowtext;display:none;mso-hide:screen;text-decoration:none;
+text-underline:none'>12</span><span style='color:windowtext;display:none;
+mso-hide:screen;text-decoration:none;text-underline:none'><!--[if gte mso 9]><xml>
+ <w:data>08D0C9EA79F9BACE118C8200AA004BA90B02000000080000000E0000005F0054006F0063003400380035003500340033003000350034000000</w:data>
+</xml><![endif]--></span><!--[if supportFields]><span style='color:windowtext;
+display:none;mso-hide:screen;text-decoration:none;text-underline:none'><span
+style='mso-element:field-end'></span></span><![endif]--></a></span></span><span
+style='font-size:12.0pt;mso-no-proof:yes'><o:p></o:p></span></p>
+
+<p class=MsoToc2 style='tab-stops:right dotted 509.7pt'><span
+class=MsoHyperlink><span style='mso-no-proof:yes'><a href="#_Toc485543055">Version
+3.10 du 06/12/2009<span style='color:windowtext;display:none;mso-hide:screen;
+text-decoration:none;text-underline:none'><span style='mso-tab-count:1 dotted'>. </span></span><!--[if supportFields]><span
+style='color:windowtext;display:none;mso-hide:screen;text-decoration:none;
+text-underline:none'><span style='mso-element:field-begin'></span></span><span
+style='color:windowtext;display:none;mso-hide:screen;text-decoration:none;
+text-underline:none'> PAGEREF _Toc485543055 \h </span><span style='color:windowtext;
+display:none;mso-hide:screen;text-decoration:none;text-underline:none'><span
+style='mso-element:field-separator'></span></span><![endif]--><span
+style='color:windowtext;display:none;mso-hide:screen;text-decoration:none;
+text-underline:none'>12</span><span style='color:windowtext;display:none;
+mso-hide:screen;text-decoration:none;text-underline:none'><!--[if gte mso 9]><xml>
+ <w:data>08D0C9EA79F9BACE118C8200AA004BA90B02000000080000000E0000005F0054006F0063003400380035003500340033003000350035000000</w:data>
+</xml><![endif]--></span><!--[if supportFields]><span style='color:windowtext;
+display:none;mso-hide:screen;text-decoration:none;text-underline:none'><span
+style='mso-element:field-end'></span></span><![endif]--></a></span></span><span
+style='font-size:12.0pt;mso-no-proof:yes'><o:p></o:p></span></p>
+
+<p class=MsoToc2 style='tab-stops:right dotted 509.7pt'><span
+class=MsoHyperlink><span style='mso-no-proof:yes'><a href="#_Toc485543056">Version
+3.01 du 02/09/2007<span style='color:windowtext;display:none;mso-hide:screen;
+text-decoration:none;text-underline:none'><span style='mso-tab-count:1 dotted'>. </span></span><!--[if supportFields]><span
+style='color:windowtext;display:none;mso-hide:screen;text-decoration:none;
+text-underline:none'><span style='mso-element:field-begin'></span></span><span
+style='color:windowtext;display:none;mso-hide:screen;text-decoration:none;
+text-underline:none'> PAGEREF _Toc485543056 \h </span><span style='color:windowtext;
+display:none;mso-hide:screen;text-decoration:none;text-underline:none'><span
+style='mso-element:field-separator'></span></span><![endif]--><span
+style='color:windowtext;display:none;mso-hide:screen;text-decoration:none;
+text-underline:none'>12</span><span style='color:windowtext;display:none;
+mso-hide:screen;text-decoration:none;text-underline:none'><!--[if gte mso 9]><xml>
+ <w:data>08D0C9EA79F9BACE118C8200AA004BA90B02000000080000000E0000005F0054006F0063003400380035003500340033003000350036000000</w:data>
+</xml><![endif]--></span><!--[if supportFields]><span style='color:windowtext;
+display:none;mso-hide:screen;text-decoration:none;text-underline:none'><span
+style='mso-element:field-end'></span></span><![endif]--></a></span></span><span
+style='font-size:12.0pt;mso-no-proof:yes'><o:p></o:p></span></p>
+
+<p class=MsoToc2 style='tab-stops:right dotted 509.7pt'><span
+class=MsoHyperlink><span style='mso-no-proof:yes'><a href="#_Toc485543057">Version
+2.11 en VB6 et VBA du 18/06/2017<span style='color:windowtext;display:none;
+mso-hide:screen;text-decoration:none;text-underline:none'><span
+style='mso-tab-count:1 dotted'>. </span></span><!--[if supportFields]><span
+style='color:windowtext;display:none;mso-hide:screen;text-decoration:none;
+text-underline:none'><span style='mso-element:field-begin'></span></span><span
+style='color:windowtext;display:none;mso-hide:screen;text-decoration:none;
+text-underline:none'> PAGEREF _Toc485543057 \h </span><span style='color:windowtext;
+display:none;mso-hide:screen;text-decoration:none;text-underline:none'><span
+style='mso-element:field-separator'></span></span><![endif]--><span
+style='color:windowtext;display:none;mso-hide:screen;text-decoration:none;
+text-underline:none'>12</span><span style='color:windowtext;display:none;
+mso-hide:screen;text-decoration:none;text-underline:none'><!--[if gte mso 9]><xml>
+ <w:data>08D0C9EA79F9BACE118C8200AA004BA90B02000000080000000E0000005F0054006F0063003400380035003500340033003000350037000000</w:data>
+</xml><![endif]--></span><!--[if supportFields]><span style='color:windowtext;
+display:none;mso-hide:screen;text-decoration:none;text-underline:none'><span
+style='mso-element:field-end'></span></span><![endif]--></a></span></span><span
+style='font-size:12.0pt;mso-no-proof:yes'><o:p></o:p></span></p>
+
+<p class=MsoToc2 style='tab-stops:right dotted 509.7pt'><span
+class=MsoHyperlink><span style='mso-no-proof:yes'><a href="#_Toc485543058">Version
+2.10 en VB6 du 02/09/2007<span style='color:windowtext;display:none;mso-hide:
+screen;text-decoration:none;text-underline:none'><span style='mso-tab-count:
+1 dotted'>. </span></span><!--[if supportFields]><span style='color:windowtext;
+display:none;mso-hide:screen;text-decoration:none;text-underline:none'><span
+style='mso-element:field-begin'></span></span><span style='color:windowtext;
+display:none;mso-hide:screen;text-decoration:none;text-underline:none'> PAGEREF
+_Toc485543058 \h </span><span style='color:windowtext;display:none;mso-hide:
+screen;text-decoration:none;text-underline:none'><span style='mso-element:field-separator'></span></span><![endif]--><span
+style='color:windowtext;display:none;mso-hide:screen;text-decoration:none;
+text-underline:none'>12</span><span style='color:windowtext;display:none;
+mso-hide:screen;text-decoration:none;text-underline:none'><!--[if gte mso 9]><xml>
+ <w:data>08D0C9EA79F9BACE118C8200AA004BA90B02000000080000000E0000005F0054006F0063003400380035003500340033003000350038000000</w:data>
+</xml><![endif]--></span><!--[if supportFields]><span style='color:windowtext;
+display:none;mso-hide:screen;text-decoration:none;text-underline:none'><span
+style='mso-element:field-end'></span></span><![endif]--></a></span></span><span
+style='font-size:12.0pt;mso-no-proof:yes'><o:p></o:p></span></p>
+
+<p class=MsoToc2 style='tab-stops:right dotted 509.7pt'><span
+class=MsoHyperlink><span style='mso-no-proof:yes'><a href="#_Toc485543059">Version
+2 du 07/09/2001<span style='color:windowtext;display:none;mso-hide:screen;
+text-decoration:none;text-underline:none'><span style='mso-tab-count:1 dotted'>. </span></span><!--[if supportFields]><span
+style='color:windowtext;display:none;mso-hide:screen;text-decoration:none;
+text-underline:none'><span style='mso-element:field-begin'></span></span><span
+style='color:windowtext;display:none;mso-hide:screen;text-decoration:none;
+text-underline:none'> PAGEREF _Toc485543059 \h </span><span style='color:windowtext;
+display:none;mso-hide:screen;text-decoration:none;text-underline:none'><span
+style='mso-element:field-separator'></span></span><![endif]--><span
+style='color:windowtext;display:none;mso-hide:screen;text-decoration:none;
+text-underline:none'>12</span><span style='color:windowtext;display:none;
+mso-hide:screen;text-decoration:none;text-underline:none'><!--[if gte mso 9]><xml>
+ <w:data>08D0C9EA79F9BACE118C8200AA004BA90B02000000080000000E0000005F0054006F0063003400380035003500340033003000350039000000</w:data>
+</xml><![endif]--></span><!--[if supportFields]><span style='color:windowtext;
+display:none;mso-hide:screen;text-decoration:none;text-underline:none'><span
+style='mso-element:field-end'></span></span><![endif]--></a></span></span><span
+style='font-size:12.0pt;mso-no-proof:yes'><o:p></o:p></span></p>
+
+<p class=MsoToc2 style='tab-stops:right dotted 509.7pt'><span
+class=MsoHyperlink><span style='mso-no-proof:yes'><a href="#_Toc485543060">Version
+1.01 du 23/08/2001<span style='color:windowtext;display:none;mso-hide:screen;
+text-decoration:none;text-underline:none'><span style='mso-tab-count:1 dotted'>. </span></span><!--[if supportFields]><span
+style='color:windowtext;display:none;mso-hide:screen;text-decoration:none;
+text-underline:none'><span style='mso-element:field-begin'></span></span><span
+style='color:windowtext;display:none;mso-hide:screen;text-decoration:none;
+text-underline:none'> PAGEREF _Toc485543060 \h </span><span style='color:windowtext;
+display:none;mso-hide:screen;text-decoration:none;text-underline:none'><span
+style='mso-element:field-separator'></span></span><![endif]--><span
+style='color:windowtext;display:none;mso-hide:screen;text-decoration:none;
+text-underline:none'>12</span><span style='color:windowtext;display:none;
+mso-hide:screen;text-decoration:none;text-underline:none'><!--[if gte mso 9]><xml>
+ <w:data>08D0C9EA79F9BACE118C8200AA004BA90B02000000080000000E0000005F0054006F0063003400380035003500340033003000360030000000</w:data>
+</xml><![endif]--></span><!--[if supportFields]><span style='color:windowtext;
+display:none;mso-hide:screen;text-decoration:none;text-underline:none'><span
+style='mso-element:field-end'></span></span><![endif]--></a></span></span><span
+style='font-size:12.0pt;mso-no-proof:yes'><o:p></o:p></span></p>
+
+<p class=MsoToc2 style='tab-stops:right dotted 509.7pt'><span
+class=MsoHyperlink><span style='mso-no-proof:yes'><a href="#_Toc485543061">Liste
+des nouveautés par rapport à la version originale de 1984<span
+style='color:windowtext;display:none;mso-hide:screen;text-decoration:none;
+text-underline:none'><span style='mso-tab-count:1 dotted'>. </span></span><!--[if supportFields]><span
+style='color:windowtext;display:none;mso-hide:screen;text-decoration:none;
+text-underline:none'><span style='mso-element:field-begin'></span></span><span
+style='color:windowtext;display:none;mso-hide:screen;text-decoration:none;
+text-underline:none'> PAGEREF _Toc485543061 \h </span><span style='color:windowtext;
+display:none;mso-hide:screen;text-decoration:none;text-underline:none'><span
+style='mso-element:field-separator'></span></span><![endif]--><span
+style='color:windowtext;display:none;mso-hide:screen;text-decoration:none;
+text-underline:none'>13</span><span style='color:windowtext;display:none;
+mso-hide:screen;text-decoration:none;text-underline:none'><!--[if gte mso 9]><xml>
+ <w:data>08D0C9EA79F9BACE118C8200AA004BA90B02000000080000000E0000005F0054006F0063003400380035003500340033003000360031000000</w:data>
+</xml><![endif]--></span><!--[if supportFields]><span style='color:windowtext;
+display:none;mso-hide:screen;text-decoration:none;text-underline:none'><span
+style='mso-element:field-end'></span></span><![endif]--></a></span></span><span
+style='font-size:12.0pt;mso-no-proof:yes'><o:p></o:p></span></p>
+
+<p class=MsoToc2 style='tab-stops:right dotted 509.7pt'><span
+class=MsoHyperlink><span style='mso-no-proof:yes'><a href="#_Toc485543062">Version
+1.0b en VBA du 18/06/2017<span style='color:windowtext;display:none;mso-hide:
+screen;text-decoration:none;text-underline:none'><span style='mso-tab-count:
+1 dotted'>. </span></span><!--[if supportFields]><span style='color:windowtext;
+display:none;mso-hide:screen;text-decoration:none;text-underline:none'><span
+style='mso-element:field-begin'></span></span><span style='color:windowtext;
+display:none;mso-hide:screen;text-decoration:none;text-underline:none'> PAGEREF
+_Toc485543062 \h </span><span style='color:windowtext;display:none;mso-hide:
+screen;text-decoration:none;text-underline:none'><span style='mso-element:field-separator'></span></span><![endif]--><span
+style='color:windowtext;display:none;mso-hide:screen;text-decoration:none;
+text-underline:none'>13</span><span style='color:windowtext;display:none;
+mso-hide:screen;text-decoration:none;text-underline:none'><!--[if gte mso 9]><xml>
+ <w:data>08D0C9EA79F9BACE118C8200AA004BA90B02000000080000000E0000005F0054006F0063003400380035003500340033003000360032000000</w:data>
+</xml><![endif]--></span><!--[if supportFields]><span style='color:windowtext;
+display:none;mso-hide:screen;text-decoration:none;text-underline:none'><span
+style='mso-element:field-end'></span></span><![endif]--></a></span></span><span
+style='font-size:12.0pt;mso-no-proof:yes'><o:p></o:p></span></p>
+
+<p class=MsoToc2 style='tab-stops:right dotted 509.7pt'><span
+class=MsoHyperlink><span style='mso-no-proof:yes'><a href="#_Toc485543063">Version
+originale 1.0 du 23/08/2001<span style='color:windowtext;display:none;
+mso-hide:screen;text-decoration:none;text-underline:none'><span
+style='mso-tab-count:1 dotted'>. </span></span><!--[if supportFields]><span
+style='color:windowtext;display:none;mso-hide:screen;text-decoration:none;
+text-underline:none'><span style='mso-element:field-begin'></span></span><span
+style='color:windowtext;display:none;mso-hide:screen;text-decoration:none;
+text-underline:none'> PAGEREF _Toc485543063 \h </span><span style='color:windowtext;
+display:none;mso-hide:screen;text-decoration:none;text-underline:none'><span
+style='mso-element:field-separator'></span></span><![endif]--><span
+style='color:windowtext;display:none;mso-hide:screen;text-decoration:none;
+text-underline:none'>13</span><span style='color:windowtext;display:none;
+mso-hide:screen;text-decoration:none;text-underline:none'><!--[if gte mso 9]><xml>
+ <w:data>08D0C9EA79F9BACE118C8200AA004BA90B02000000080000000E0000005F0054006F0063003400380035003500340033003000360033000000</w:data>
+</xml><![endif]--></span><!--[if supportFields]><span style='color:windowtext;
+display:none;mso-hide:screen;text-decoration:none;text-underline:none'><span
+style='mso-element:field-end'></span></span><![endif]--></a></span></span><span
+style='font-size:12.0pt;mso-no-proof:yes'><o:p></o:p></span></p>
+
+<p class=MsoToc1 style='tab-stops:right dotted 509.7pt'><span
+class=MsoHyperlink><span style='mso-no-proof:yes'><a href="#_Toc485543064">Liens<span
+style='color:windowtext;display:none;mso-hide:screen;text-decoration:none;
+text-underline:none'><span style='mso-tab-count:1 dotted'>. </span></span><!--[if supportFields]><span
+style='color:windowtext;display:none;mso-hide:screen;text-decoration:none;
+text-underline:none'><span style='mso-element:field-begin'></span></span><span
+style='color:windowtext;display:none;mso-hide:screen;text-decoration:none;
+text-underline:none'> PAGEREF _Toc485543064 \h </span><span style='color:windowtext;
+display:none;mso-hide:screen;text-decoration:none;text-underline:none'><span
+style='mso-element:field-separator'></span></span><![endif]--><span
+style='color:windowtext;display:none;mso-hide:screen;text-decoration:none;
+text-underline:none'>13</span><span style='color:windowtext;display:none;
+mso-hide:screen;text-decoration:none;text-underline:none'><!--[if gte mso 9]><xml>
+ <w:data>08D0C9EA79F9BACE118C8200AA004BA90B02000000080000000E0000005F0054006F0063003400380035003500340033003000360034000000</w:data>
+</xml><![endif]--></span><!--[if supportFields]><span style='color:windowtext;
+display:none;mso-hide:screen;text-decoration:none;text-underline:none'><span
+style='mso-element:field-end'></span></span><![endif]--></a></span></span><span
+style='mso-no-proof:yes'><o:p></o:p></span></p>
+
+<p class=MsoToc2 style='tab-stops:right dotted 509.7pt'><span
+class=MsoHyperlink><span style='mso-no-proof:yes'><a href="#_Toc485543065">Chatbot
+(Robot de discussion)<span style='color:windowtext;display:none;mso-hide:screen;
+text-decoration:none;text-underline:none'><span style='mso-tab-count:1 dotted'> </span></span><!--[if supportFields]><span
+style='color:windowtext;display:none;mso-hide:screen;text-decoration:none;
+text-underline:none'><span style='mso-element:field-begin'></span></span><span
+style='color:windowtext;display:none;mso-hide:screen;text-decoration:none;
+text-underline:none'> PAGEREF _Toc485543065 \h </span><span style='color:windowtext;
+display:none;mso-hide:screen;text-decoration:none;text-underline:none'><span
+style='mso-element:field-separator'></span></span><![endif]--><span
+style='color:windowtext;display:none;mso-hide:screen;text-decoration:none;
+text-underline:none'>14</span><span style='color:windowtext;display:none;
+mso-hide:screen;text-decoration:none;text-underline:none'><!--[if gte mso 9]><xml>
+ <w:data>08D0C9EA79F9BACE118C8200AA004BA90B02000000080000000E0000005F0054006F0063003400380035003500340033003000360035000000</w:data>
+</xml><![endif]--></span><!--[if supportFields]><span style='color:windowtext;
+display:none;mso-hide:screen;text-decoration:none;text-underline:none'><span
+style='mso-element:field-end'></span></span><![endif]--></a></span></span><span
+style='font-size:12.0pt;mso-no-proof:yes'><o:p></o:p></span></p>
+
+<p class=MsoToc2 style='tab-stops:right dotted 509.7pt'><span
+class=MsoHyperlink><span style='mso-no-proof:yes'><a href="#_Toc485543066">MS-Agent<span
+style='color:windowtext;display:none;mso-hide:screen;text-decoration:none;
+text-underline:none'><span style='mso-tab-count:1 dotted'> </span></span><!--[if supportFields]><span
+style='color:windowtext;display:none;mso-hide:screen;text-decoration:none;
+text-underline:none'><span style='mso-element:field-begin'></span></span><span
+style='color:windowtext;display:none;mso-hide:screen;text-decoration:none;
+text-underline:none'> PAGEREF _Toc485543066 \h </span><span style='color:windowtext;
+display:none;mso-hide:screen;text-decoration:none;text-underline:none'><span
+style='mso-element:field-separator'></span></span><![endif]--><span
+style='color:windowtext;display:none;mso-hide:screen;text-decoration:none;
+text-underline:none'>14</span><span style='color:windowtext;display:none;
+mso-hide:screen;text-decoration:none;text-underline:none'><!--[if gte mso 9]><xml>
+ <w:data>08D0C9EA79F9BACE118C8200AA004BA90B02000000080000000E0000005F0054006F0063003400380035003500340033003000360036000000</w:data>
+</xml><![endif]--></span><!--[if supportFields]><span style='color:windowtext;
+display:none;mso-hide:screen;text-decoration:none;text-underline:none'><span
+style='mso-element:field-end'></span></span><![endif]--></a></span></span><span
+style='font-size:12.0pt;mso-no-proof:yes'><o:p></o:p></span></p>
+
+<p class=MsoToc2 style='tab-stops:right dotted 509.7pt'><span
+class=MsoHyperlink><span style='mso-no-proof:yes'><a href="#_Toc485543067">Synthèse
+vocale<span style='color:windowtext;display:none;mso-hide:screen;text-decoration:
+none;text-underline:none'><span style='mso-tab-count:1 dotted'>. </span></span><!--[if supportFields]><span
+style='color:windowtext;display:none;mso-hide:screen;text-decoration:none;
+text-underline:none'><span style='mso-element:field-begin'></span></span><span
+style='color:windowtext;display:none;mso-hide:screen;text-decoration:none;
+text-underline:none'> PAGEREF _Toc485543067 \h </span><span style='color:windowtext;
+display:none;mso-hide:screen;text-decoration:none;text-underline:none'><span
+style='mso-element:field-separator'></span></span><![endif]--><span
+style='color:windowtext;display:none;mso-hide:screen;text-decoration:none;
+text-underline:none'>14</span><span style='color:windowtext;display:none;
+mso-hide:screen;text-decoration:none;text-underline:none'><!--[if gte mso 9]><xml>
+ <w:data>08D0C9EA79F9BACE118C8200AA004BA90B02000000080000000E0000005F0054006F0063003400380035003500340033003000360037000000</w:data>
+</xml><![endif]--></span><!--[if supportFields]><span style='color:windowtext;
+display:none;mso-hide:screen;text-decoration:none;text-underline:none'><span
+style='mso-element:field-end'></span></span><![endif]--></a></span></span><span
+style='font-size:12.0pt;mso-no-proof:yes'><o:p></o:p></span></p>
+
+<p class=MsoToc2 style='tab-stops:right dotted 509.7pt'><span
+class=MsoHyperlink><span style='mso-no-proof:yes'><a href="#_Toc485543068">Divers<span
+style='color:windowtext;display:none;mso-hide:screen;text-decoration:none;
+text-underline:none'><span style='mso-tab-count:1 dotted'>. </span></span><!--[if supportFields]><span
+style='color:windowtext;display:none;mso-hide:screen;text-decoration:none;
+text-underline:none'><span style='mso-element:field-begin'></span></span><span
+style='color:windowtext;display:none;mso-hide:screen;text-decoration:none;
+text-underline:none'> PAGEREF _Toc485543068 \h </span><span style='color:windowtext;
+display:none;mso-hide:screen;text-decoration:none;text-underline:none'><span
+style='mso-element:field-separator'></span></span><![endif]--><span
+style='color:windowtext;display:none;mso-hide:screen;text-decoration:none;
+text-underline:none'>15</span><span style='color:windowtext;display:none;
+mso-hide:screen;text-decoration:none;text-underline:none'><!--[if gte mso 9]><xml>
+ <w:data>08D0C9EA79F9BACE118C8200AA004BA90B02000000080000000E0000005F0054006F0063003400380035003500340033003000360038000000</w:data>
+</xml><![endif]--></span><!--[if supportFields]><span style='color:windowtext;
+display:none;mso-hide:screen;text-decoration:none;text-underline:none'><span
+style='mso-element:field-end'></span></span><![endif]--></a></span></span><span
+style='font-size:12.0pt;mso-no-proof:yes'><o:p></o:p></span></p>
+
+<p class=MsoNormal><!--[if supportFields]><span style='mso-element:field-end'></span><![endif]--><o:p>&nbsp;</o:p></p>
+
+<p class=MsoNormal><o:p>&nbsp;</o:p></p>
+
+<h1><a name="_Toc485543025">Présentation des fonctionnalités du logiciel</a></h1>
+
+<p class=MsoNormal><o:p>&nbsp;</o:p></p>
+
+<h2><a name="_Toc485543026">Introduction</a></h2>
+
+<p class=MsoNormal>Le logiciel gère une base d'assertion du type Sujet - Verbe
+- Complément (dans cet ordre !) en éliminant les mots non signifiants figurant
+dans sa liste.</p>
+
+<p class=MsoNormal><o:p>&nbsp;</o:p></p>
+
+<p class=MsoNormal>Pour plus de détails sur chacune de ces fonctionnalités,
+consultez les <a
+href="http://patrice.dargenton.free.fr/ia/iavb/IAVB.vbproj.html">fonctions</a>
+correspondantes.</p>
+
+<p class=MsoNormal><o:p>&nbsp;</o:p></p>
+
+<p class=MsoNormal>Les principales fonctions sont les suivantes :</p>
+
+<p class=MsoNormal><o:p>&nbsp;</o:p></p>
+
+<h2><a name="_Toc485543027">Syllogisme</a></h2>
+
+<p class=MsoNormal>-&nbsp;<a href="http://fr.wikipedia.org/wiki/Syllogisme">Syllogisme</a>
+(<a href="https://fr.wikipedia.org/wiki/Modus_ponens">Modus ponens</a>): cette
+fonction est lancée directement par la question &quot;DONC ?&quot;&nbsp;:</p>
+
+<p class=MsoNormal><span style='mso-spacerun:yes'>  </span>TOUT HOMME EST
+MORTEL</p>
+
+<p class=MsoNormal><span style='mso-spacerun:yes'>  </span>OR SOCRATE EST UN
+HOMME</p>
+
+<p class=MsoNormal><span style='mso-spacerun:yes'>  </span>DONC ?</p>
+
+<p class=MsoNormal><span style='mso-spacerun:yes'>  </span>DONC SOCRATE EST
+MORTEL</p>
+
+<p class=MsoNormal><o:p>&nbsp;</o:p></p>
+
+<h2><a name="_Toc485543028">Contrôle de l'existence des mots</a></h2>
+
+<p class=MsoNormal>-&nbsp;ControleExistenceMots : cette fonction traite les
+questions d'un seul mot signifiant, en trouvant les assertions contenant ce
+mot&nbsp;:</p>
+
+<p class=MsoNormal><span style='mso-spacerun:yes'>  </span>RESPONSABLE ?</p>
+
+<p class=MsoNormal><span style='mso-spacerun:yes'>  </span>M.BERTRAND EST
+RESPONSABLE DE L'ANNEXE</p>
+
+<p class=MsoNormal><span style='mso-spacerun:yes'>  </span>M.JACQUES EST
+RESPONSABLE DE LA SAISIE</p>
+
+<p class=MsoNormal><o:p>&nbsp;</o:p></p>
+
+<h2><a name="_Toc485543029">Relation horizontale</a></h2>
+
+<p class=MsoNormal>-&nbsp;bRelationHorizontale : cette fonction traite les
+questions dont le nombre de mots est &lt;= NbMotsBCMax (4 mots par défaut par
+assertion stockée dans la base de connaissance) : la fonction retrouve, le cas
+échéant, l'assertion contenant les mots de la question dans le bon ordre&nbsp;:</p>
+
+<p class=MsoNormal><span style='mso-spacerun:yes'>  </span>M.RENÉ EST LE CHEF
+DU SERVICE COMPTABILITÉ<span style='mso-spacerun:yes'>  </span>(4 mots)</p>
+
+<p class=MsoNormal><span style='mso-spacerun:yes'>  </span>M.DUBOIS EST CHEF DU
+SERVICE PHOTO<span style='mso-spacerun:yes'>  </span>(4 mots)</p>
+
+<p class=MsoNormal><span style='mso-spacerun:yes'>  </span>CHEF DE SERVICE
+?<span style='mso-spacerun:yes'>  </span>(2 mots)</p>
+
+<p class=MsoNormal><span style='mso-spacerun:yes'>  </span>M.RENÉ</p>
+
+<p class=MsoNormal><span style='mso-spacerun:yes'>  </span>M.DUBOIS</p>
+
+<p class=MsoNormal><o:p>&nbsp;</o:p></p>
+
+<h2><a name="_Toc485543030">Composition de fonction</a></h2>
+
+<p class=MsoNormal>-&nbsp;bComposFonction&nbsp;: cette fonction traite des
+compositions de fonction (relations verticales sur des assertions de 3 mots
+exactement) du type&nbsp;:</p>
+
+<p class=MsoNormal><span style='mso-spacerun:yes'>  </span>ARTABAN = CHEVAL(HENRI.4)</p>
+
+<p class=MsoNormal><span style='mso-spacerun:yes'>  </span>BLANC = COULEUR(ARTABAN)</p>
+
+<p class=MsoNormal><span style='mso-spacerun:yes'>  </span>HENRI.4 =
+ROI(NAVARRE)</p>
+
+<p class=MsoNormal><span style='mso-spacerun:yes'> 
+</span>COULEUR(CHEVAL(ROI(NAVARRE))) ? : BLANC</p>
+
+<p class=MsoNormal><o:p>&nbsp;</o:p></p>
+
+<h2><a name="_Toc485543031">Indirection</a></h2>
+
+<p class=MsoNormal>-&nbsp;bIndirection&nbsp;: cette fonction relie des
+assertions (2 ou 3 mots) par des mots pivots en chaîne (mais pas imbriqués
+comme dans les compositions de fonction)&nbsp;:</p>
+
+<p class=MsoNormal><span style='mso-spacerun:yes'>  </span>TOUT STYLO EST
+BLEU<span style='mso-spacerun:yes'>  </span>(2 mots)</p>
+
+<p class=MsoNormal><span style='mso-spacerun:yes'>  </span>FRANÇOIS POSSÈDE UN
+STYLO<span style='mso-spacerun:yes'>  </span>(3 mots)</p>
+
+<p class=MsoNormal><span style='mso-spacerun:yes'>  </span>BLEU EST UNE
+COULEUR<span style='mso-spacerun:yes'>  </span>(2 mots)</p>
+
+<p class=MsoNormal><span style='mso-spacerun:yes'>  </span>QUELLE EST LA
+COULEUR DU STYLO DE FRANÇOIS ? : BLEU</p>
+
+<p class=MsoNormal><o:p>&nbsp;</o:p></p>
+
+<p class=MsoNormal><o:p>&nbsp;</o:p></p>
+
+<h1><a name="_Toc485543032">Limitations d'IAVB</a></h1>
+
+<p class=MsoNormal><o:p>&nbsp;</o:p></p>
+
+<h2><a name="_Toc485543033">Syntaxe approximative</a></h2>
+
+<p class=MsoNormal><span style='mso-spacerun:yes'>  </span>TOUT STYLO EST BLEU</p>
+
+<p class=MsoNormal><span style='mso-spacerun:yes'>  </span>FRANÇOIS POSSÈDE UN
+STYLO</p>
+
+<p class=MsoNormal><span style='mso-spacerun:yes'>  </span>DONC ?</p>
+
+<p class=MsoNormal><span style='mso-spacerun:yes'>  </span>DONC FRANÇOIS POSSÈDE
+EST BLEU<span style='mso-spacerun:yes'>  </span>&lt;STYLO&gt;</p>
+
+<p class=MsoNormal>Meilleure syntaxe à produire : DONC CE QUE FRANÇOIS POSSÈDE
+EST BLEU<span style='mso-spacerun:yes'>  </span>&lt;STYLO&gt;</p>
+
+<p class=MsoNormal><o:p>&nbsp;</o:p></p>
+
+<p class=MsoNormal><span style='mso-spacerun:yes'>  </span>TOUT STYLO EST BLEU</p>
+
+<p class=MsoNormal><span style='mso-spacerun:yes'>  </span>FRANÇOIS POSSÈDE UN
+STYLO</p>
+
+<p class=MsoNormal><span style='mso-spacerun:yes'>  </span>BLEU EST UNE COULEUR</p>
+
+<p class=MsoNormal><span style='mso-spacerun:yes'>  </span>DONC ?</p>
+
+<p class=MsoNormal><span style='mso-spacerun:yes'>  </span>** Je ne peux rien
+conclure !</p>
+
+<p class=MsoNormal><span style='mso-spacerun:yes'>  </span>DONC ?</p>
+
+<p class=MsoNormal><span style='mso-spacerun:yes'>  </span>BLEU EST UNE COULEUR
+:</p>
+
+<p class=MsoNormal><span style='mso-spacerun:yes'>  </span>** Recherche
+approfondie...</p>
+
+<p class=MsoNormal><span style='mso-spacerun:yes'>  </span>DONC TOUT STYLO EST
+UNE COULEUR<span style='mso-spacerun:yes'>  </span>&lt;BLEU&gt;</p>
+
+<p class=MsoNormal>Meilleure syntaxe à produire : DONC TOUT STYLO EST D'UNE
+COULEUR<span style='mso-spacerun:yes'>  </span>&lt;BLEU&gt;</p>
+
+<p class=MsoNormal><o:p>&nbsp;</o:p></p>
+
+<h2><a name="_Toc485543034">Relation horizontale avec indirection</a></h2>
+
+<p class=MsoNormal>Relation horizontale avec une indirection&nbsp;: IAVB ne
+sait pas faire&nbsp;!</p>
+
+<p class=MsoNormal><span style='mso-spacerun:yes'>  </span>TOUT STYLO EST BLEU</p>
+
+<p class=MsoNormal><span style='mso-spacerun:yes'>  </span>FRANÇOIS POSSÈDE UN
+STYLO</p>
+
+<p class=MsoNormal><span style='mso-spacerun:yes'>  </span>BLEU EST UNE COULEUR</p>
+
+<p class=MsoNormal><span style='mso-spacerun:yes'>  </span>FRANÇOIS POSSÈDE-T-IL
+UN STYLO BLEU ? : ** Non. : réponse fausse, pourtant&nbsp;:</p>
+
+<p class=MsoNormal><span style='mso-spacerun:yes'>  </span>COULEUR STYLO FRANÇOIS
+? : BLEU</p>
+
+<p class=MsoNormal><span style='mso-spacerun:yes'>  </span>FRANÇOIS POSSÈDE-T-IL
+UN STYLO ? : ** Oui.</p>
+
+<p class=MsoNormal>Les fonctions bRelationHorizontale et bIndirection sont
+dissociées, elles ne peuvent pas coopérer en l'état actuel du logiciel.</p>
+
+<p class=MsoNormal><o:p>&nbsp;</o:p></p>
+
+<h2><a name="_Toc485543035">Indirection et syntaxe</a></h2>
+
+<p class=MsoNormal>L'indirection dépend de la syntaxe (des mots non-signifiants
+de la question&nbsp;!)&nbsp;:</p>
+
+<p class=MsoNormal><span style='mso-spacerun:yes'>  </span>ARTABAN = CHEVAL(HENRI.4)
+; HENRI.4 = ROI(NAVARRE)</p>
+
+<p class=MsoNormal><span style='mso-spacerun:yes'>  </span>*&nbsp;<u>Bonne
+indirection</u>&nbsp;:</p>
+
+<p class=MsoNormal><span style='mso-spacerun:yes'>    </span>QUEL ROI A UN
+CHEVAL ? : HENRI.4</p>
+
+<p class=MsoNormal><span style='mso-spacerun:yes'>  </span>*&nbsp;<u>Mauvaise
+indirection</u> car composition de fonction incomplète&nbsp;:</p>
+
+<p class=MsoNormal><span style='mso-spacerun:yes'>    </span>CHEVAL DU ROI ? : HENRI.4</p>
+
+<p class=MsoNormal><span style='mso-spacerun:yes'>    </span>(peut-être
+faudrait-il tenir compte de l'ordre des mots de la question ?)</p>
+
+<p class=MsoNormal><span style='mso-spacerun:yes'>  </span>*&nbsp;<u>Mais bonne
+composition de fonction</u>&nbsp;:</p>
+
+<p class=MsoNormal><span style='mso-spacerun:yes'>   
+</span>CHEVAL(ROI(NAVARRE)) ? : ARTABAN<span style='mso-spacerun:yes'> 
+</span>ou bien&nbsp;:</p>
+
+<p class=MsoNormal><span style='mso-spacerun:yes'>    </span>CHEVAL DU ROI DE
+NAVARRE ? : ARTABAN</p>
+
+<p class=MsoNormal><span style='mso-spacerun:yes'>  </span>*&nbsp;<u>Seules les
+assertions</u> contenant le mot 1 ou 2 de la question sont recherchées, le mot
+3 de la question n'est pas pris en compte&nbsp;:</p>
+
+<p class=MsoNormal><span style='mso-spacerun:yes'>    </span>CHEVAL DU ROI DE
+FRANCE ? donne encore HENRI.4 si LOUIS.14 = ROI(FRANCE)</p>
+
+<p class=MsoNormal><span style='mso-spacerun:yes'>  </span>*&nbsp;<u>Erreur de
+saisie</u>&nbsp;: si on oublie le signe ?, et qu'on saisit&nbsp;:</p>
+
+<p class=MsoNormal><span style='mso-spacerun:yes'>   
+</span>CHEVAL(ROI(NAVARRE)) : Compris, si après on saisit&nbsp;:</p>
+
+<p class=MsoNormal><span style='mso-spacerun:yes'>   
+</span>CHEVAL(ROI(NAVARRE)) ? : Oui !</p>
+
+<p class=MsoNormal>Compte tenu de ces remarques, l'indirection est le point
+faible de ce logiciel.</p>
+
+<p class=MsoNormal><o:p>&nbsp;</o:p></p>
+
+<h2><a name="_Toc485543036">Limitation en cas d'échec de la composition de
+fonction</a></h2>
+
+<p class=MsoNormal>De manière plus générale, en cas d'échec de la composition
+de fonction, le logiciel ne sait pas rattraper l'erreur&nbsp;:</p>
+
+<p class=MsoNormal><span style='mso-spacerun:yes'>  </span>*&nbsp;<u>Si on
+enlève la dernière imbrication</u>, la réponse est incorrecte&nbsp;:</p>
+
+<p class=MsoNormal><span style='mso-spacerun:yes'>    </span>QUELLE EST LA
+COULEUR DU CHEVAL DU ROI DE NAVARRE ? : BLANC</p>
+
+<p class=MsoNormal><span style='mso-spacerun:yes'>    </span>QUELLE EST LA
+COULEUR DU CHEVAL DU ROI ? : ARTABAN</p>
+
+<p class=MsoNormal><span style='mso-spacerun:yes'>    </span>IAVB devrait
+répondre : DU ROI DE NAVARRE ?</p>
+
+<p class=MsoNormal><span style='mso-spacerun:yes'>    </span>en trouvant que
+seul NAVARRE coïncide dans la base pour ROI, ou sinon répondre &quot;Je
+l'ignore&quot; (même pour les phrases courtes).</p>
+
+<p class=MsoNormal><o:p>&nbsp;</o:p></p>
+
+<p class=MsoNormal><span style='mso-spacerun:yes'>  </span>*&nbsp;<u>En
+limitant l'indirection sur les questions simples</u> (prm.iNbMotsEntree &lt;=
+3), le même problème est corrigé avec une composition de fonction de plus de 3
+mots lorsqu'au lieu de : D'UNE PROVINCE GRECQUE on pose&nbsp;:</p>
+
+<p class=MsoNormal><span style='mso-spacerun:yes'>    </span>QUEL EST LE PRÉNOM
+DU MAIRE DE LA VILLE ORIGINAIRE D'UNE PROVINCE ?</p>
+
+<p class=MsoNormal><span style='mso-spacerun:yes'>    </span>** Je l'ignore.</p>
+
+<p class=MsoNormal>Il est difficile de chercher des compositions de fonction
+incomplètes car on commence justement à les réduire par le bout qui manque,
+l'espace de recherche est donc maximal.</p>
+
+<p class=MsoNormal><o:p>&nbsp;</o:p></p>
+
+<h2><a name="_Toc485543037">Logique inversée</a></h2>
+
+<p class=MsoNormal>Au lieu de répondre Non, il y a une réponse plus logique à
+donner&nbsp;:</p>
+
+<p class=MsoNormal><span style='mso-spacerun:yes'>  </span>SABINE AIME JACQUES</p>
+
+<p class=MsoNormal><span style='mso-spacerun:yes'>  </span>JACQUES AIME-T-IL
+SABINE ? : ** Non. : meilleure réponse : ** Je l'ignore.</p>
+
+<p class=MsoNormal>La relation horizontale doit respecter l'ordre :
+Sujet/Verbe/Complément.</p>
+
+<p class=MsoNormal><o:p>&nbsp;</o:p></p>
+
+<h2><a name="_Toc485543038">Syllogisme et mot double</a></h2>
+
+<p class=MsoNormal>Les mots doubles perturbent la syntaxe des
+syllogismes&nbsp;:</p>
+
+<p class=MsoNormal><span style='mso-spacerun:yes'>  </span>*&nbsp;<u>Ordre à
+respecter pour les syllogismes</u>&nbsp;:</p>
+
+<p class=MsoNormal><span style='mso-spacerun:yes'>    </span>OR TOUT HOMME SENSÉ
+EST LOGICIEN</p>
+
+<p class=MsoNormal><span style='mso-spacerun:yes'>    </span>TOUT LOGICIEN EST
+INCOMPRIS</p>
+
+<p class=MsoNormal><span style='mso-spacerun:yes'>   </span><span
+style='mso-spacerun:yes'> </span>DONC OR TOUT HOMME SENSÉ EST INCOMPRIS<span
+style='mso-spacerun:yes'>  </span>&lt;LOGICIEN&gt;</p>
+
+<p class=MsoNormal><span style='mso-spacerun:yes'>    </span>(compléter le
+traitement déjà commencé pour les mots simples ?)</p>
+
+<p class=MsoNormal><span style='mso-spacerun:yes'>  </span>*&nbsp;<u>Recherche
+approfondie des syllogismes</u>&nbsp;:</p>
+
+<p class=MsoNormal><span style='mso-spacerun:yes'>    </span>DONC SENSÉ EST
+LOGICIEN EST COMME PAUL<span style='mso-spacerun:yes'>  </span>&lt;HOMME&gt;</p>
+
+<p class=MsoNormal><span style='mso-spacerun:yes'>    </span>(rechercher la
+présence simultanée de EST ou SONT dans les 2 termes formant la conclusion ?)</p>
+
+<p class=MsoNormal><span style='mso-spacerun:yes'>  </span>*&nbsp;<u>Syntaxe
+avec les fonctions</u>&nbsp;:</p>
+
+<p class=MsoNormal><span style='mso-spacerun:yes'>    </span>DONC TIGRE =
+MANGEUR( SENSÉ EST LOGICIEN<span style='mso-spacerun:yes'> 
+</span>&lt;HOMME&gt;</p>
+
+<p class=MsoNormal><span style='mso-spacerun:yes'>    </span>iPosFinMot1 =
+HOMME au lieu de SENSÉ pour TOUT HOMME SENSÉ.</p>
+
+<p class=MsoNormal><span style='mso-spacerun:yes'>    </span>(compléter le
+traitement ?)</p>
+
+<p class=MsoNormal><o:p>&nbsp;</o:p></p>
+
+<p class=MsoNormal><o:p>&nbsp;</o:p></p>
+
+<h1><a name="_Toc485543039">Versions</a></h1>
+
+<p class=MsoNormal><o:p>&nbsp;</o:p></p>
+
+<h2><a name="_Toc485543040">Visual Basic .Net</a></h2>
+
+<p class=MsoNormal>-&nbsp;C'est la version la plus complète.</p>
+
+<p class=MsoNormal><o:p>&nbsp;</o:p></p>
+
+<h2><a name="_Toc485543041">VB6</a></h2>
+
+<p class=MsoNormal>-&nbsp;Cette version n'inclut pas la synthèse vocale sous
+Windows 10, ni le mode automatique, ni les tests unitaires.</p>
+
+<p class=MsoNormal><o:p>&nbsp;</o:p></p>
+
+<h2><a name="_Toc485543042">VBA Word</a></h2>
+
+<p class=MsoNormal>-&nbsp;Version identique à la version VB6, le code source
+est partagé, via la compilation conditionnelle (bVersionVBA).</p>
+
+<p class=MsoNormal><o:p>&nbsp;</o:p></p>
+
+<h2><a name="_Toc485543043">CSharp (C#)</a></h2>
+
+<p class=MsoNormal><o:p>&nbsp;</o:p></p>
+
+<p class=MsoNormal>-&nbsp;Ce moteur IAVB en C# est utilisé en commun par trois
+projets avec trois technologies distinctes&nbsp;:</p>
+
+<h3><a name="_Toc485543044">WinForm</a></h3>
+
+<p class=MsoNormal>-&nbsp;La version WinForm en C# est équivalente à la version
+WinForm en VB .Net (sauf MS-Agent, qui n'est pas géré ici, et il n'y a pas de
+mode automatique).</p>
+
+<p class=MsoNormal><o:p>&nbsp;</o:p></p>
+
+<h3><a name="_Toc485543045">WPF</a></h3>
+
+<p class=MsoNormal>-&nbsp;La version WPF en C# est équivalente à la version
+WinForm en C#.</p>
+
+<p class=MsoNormal><o:p>&nbsp;</o:p></p>
+
+<h3><a name="_Toc485543046">C#/XAML for HTML5</a></h3>
+
+<p class=MsoNormal>-&nbsp;La version C#Html est équivalente aux versions
+WinForm et WPF en C# (il manque juste la gestion de la touche Entrée au clavier
+sur les commandes, et la copie dans le presse-papier), mais la définition de
+l'interface est assez sommaire, car la conception est plus difficile qu'en WPF
+(c'est une technologie en version beta encore)&nbsp;;</p>
+
+<p class=MsoNormal>-&nbsp;Je n'ai pas réussi à programmer l'équivalent de
+l'instruction&nbsp;:</p>
+
+<p class=MsoNormal>listBox.ScrollIntoView(listBox.SelectedItem); // N'existe
+pas en C#HTML5<o:p></o:p></p>
+
+<p class=MsoNormal>Du coup, j'ai ajouté les éléments en tête de liste, ce qui
+est moins joli. Si je trouve une solution à ce problème, il suffira de
+désactiver le booléen bAjoutListeDebut&nbsp;;<o:p></o:p></p>
+
+<p class=MsoNormal>-&nbsp;L'avantage de cette version, c'est qu'on peut la
+tester en ligne (en gros, cela consiste à compiler un sous-ensemble des dll
+dotnet en javascript&nbsp;!), ou bien sur des appareils mobiles&nbsp;: <a
+href="http://patrice.dargenton.free.fr/ia/iavb/CSharpHTML5/">http://patrice.dargenton.free.fr/ia/iavb/CSharpHTML5/</a></p>
+
+<p class=MsoNormal>Il y a un bug spécifique dans ce cas d'exécution seulement
+(ne se produit pas dans l'émulateur)&nbsp;: le texte sélectionné est celui en
+fin de liste et non en début de liste, malgré la constante bAjoutListeDebut&nbsp;;</p>
+
+<p class=MsoNormal>-&nbsp;Site web pour en savoir plus sur cette techno&nbsp;: <a
+href="http://www.cshtml5.com/">www.cshtml5.com</a></p>
+
+<p class=MsoNormal>-&nbsp;Limitations and workarounds&nbsp;: <a
+href="http://www.cshtml5.com/links/limitations.aspx">www.cshtml5.com/links/limitations.aspx</a></p>
+
+<p class=MsoNormal><o:p>&nbsp;</o:p></p>
+
+<p class=MsoNormal><o:p>&nbsp;</o:p></p>
+
+<h1><a name="_Toc485543047">Projets</a></h1>
+
+<p class=MsoNormal><o:p>&nbsp;</o:p></p>
+
+<p class=MsoNormal>-&nbsp;Commencer une version en anglais, faire deux moteurs
+dans le logiciel, une pour chaque langue, lorsque l'on change de langue,
+changer de moteur, sans vider la base&nbsp;;</p>
+
+<p class=MsoNormal>-&nbsp;Chargement des exemples et des mots ignorés via un
+fichier&nbsp;;</p>
+
+<p class=MsoNormal>-&nbsp;Sauvegarde et restauration de l'état (liste des
+assertions)&nbsp;;</p>
+
+<p class=MsoNormal>-&nbsp;Reconnaissance vocale.</p>
+
+<p class=MsoNormal><o:p>&nbsp;</o:p></p>
+
+<p class=MsoNormal><o:p>&nbsp;</o:p></p>
+
+<h1><a name="_Toc485543048">Composants requis pour la synthèse vocale avec
+MS-Agent</a></h1>
+
+<p class=MsoNormal><o:p>&nbsp;</o:p></p>
+
+<p class=MsoNormal>Si ces composants ne sont pas installés, alors IAVB
+fonctionne quand même en silence (lancer d'abord IAVB avant d'installer quoi
+que ce soit, car sur un Windows XP, je crois que la plupart des composants sont
+déjà présents, sauf &quot;Lernout &amp; Hauspie® TTS3000 TTS engine -
+French&quot; pour la synthèse vocale du personnage MSAgent en français)&nbsp;:</p>
+
+<p class=MsoNormal><o:p>&nbsp;</o:p></p>
+
+<h2><a name="_Toc485543049">Agents Microsoft</a></h2>
+
+<p class=MsoNormal>-&nbsp;Page principale : <a
+href="http://www.microsoft.com/msagent">www.microsoft.com/msagent</a></p>
+
+<p class=MsoNormal>-&nbsp;Installation : Microsoft Agent download page for
+end-users</p>
+
+<p class=MsoNormal>&nbsp;&nbsp;<a
+href="http://www.microsoft.com/msagent/downloads/user.aspx">www.microsoft.com/msagent/downloads/user.aspx</a></p>
+
+<p class=MsoNormal>-&nbsp;Configuration minimale pour les agents : minimal
+system requirements</p>
+
+<p class=MsoNormal>&nbsp;&nbsp;<a
+href="http://www.microsoft.com/msagent/prodinfo/sysreq.aspx">www.microsoft.com/msagent/prodinfo/sysreq.aspx</a></p>
+
+<p class=MsoNormal>-&nbsp;1/3 : Download the Microsoft Agent core components (392
+Ko exe)</p>
+
+<p class=MsoNormal>&nbsp;&nbsp;<a
+href="http://activex.microsoft.com/activex/controls/agent2/MSagent.exe">http://activex.microsoft.com/activex/controls/agent2/MSagent.exe</a></p>
+
+<p class=MsoNormal>-&nbsp;2/3 : Download selected language component : French</p>
+
+<p class=MsoNormal>&nbsp;&nbsp;<a
+href="http://www.microsoft.com/msagent/downloads/user.aspx#core">www.microsoft.com/msagent/downloads/user.aspx#core</a>
+: AgtX040C.exe (129 Ko)</p>
+
+<p class=MsoNormal>-&nbsp;3/3 : Download selected character : <span
+style='mso-bidi-font-size:10.0pt'>Choisissez le personnage Merlin</span></p>
+
+<p class=MsoNormal>&nbsp;&nbsp;<a
+href="http://www.microsoft.com/msagent/downloads/user.aspx#character">www.microsoft.com/msagent/downloads/user.aspx#character</a>
+: Merlin.exe (1.83 Mo)</p>
+
+<p class=MsoNormal><o:p>&nbsp;</o:p></p>
+
+<h2><a name="_Toc485543050">Synthèse vocale avec MS-Agent</a></h2>
+
+<p class=MsoNormal>-&nbsp;1/2 : Installer le composant &quot;Microsoft Speech
+Object Library&quot;</p>
+
+<p class=MsoNormal>&nbsp;&nbsp;SAPI 4.0 runtime support : sapi.dll</p>
+
+<p class=MsoNormal>&nbsp;&nbsp;&quot;Download the Microsoft SAPI 4.0a runtime
+binaries (824 KB exe)&quot;</p>
+
+<p class=MsoNormal>&nbsp;&nbsp;<a
+href="http://activex.microsoft.com/activex/controls/sapi/spchapi.exe">http://activex.microsoft.com/activex/controls/sapi/spchapi.exe</a>
+(825 Ko)</p>
+
+<p class=MsoNormal><o:p>&nbsp;</o:p></p>
+
+<p class=MsoNormal>-&nbsp;2/2 : Installer le composant : &quot;Lernout &amp;
+Hauspie® TTS3000 TTS engine - French (2.2 MB exe)&quot;</p>
+
+<p class=MsoNormal>&nbsp;&nbsp;(L&amp;H TTS3000 Text-To-Speech - French)</p>
+
+<p class=MsoNormal>&nbsp;&nbsp;<a
+href="http://www.microsoft.com/msagent/downloads/user.aspx#tts">www.microsoft.com/msagent/downloads/user.aspx#tts</a></p>
+
+<p class=MsoNormal><o:p>&nbsp;</o:p></p>
+
+<p class=MsoNormal><o:p>&nbsp;</o:p></p>
+
+<h1><a name="_Toc485543051">Composant IAVB ocx</a></h1>
+
+<p class=MsoNormal><o:p>&nbsp;</o:p></p>
+
+<p class=MsoNormal>Voir la documentation ici :</p>
+
+<p class=MsoNormal><a
+href="http://patrice.dargenton.free.fr/ia/iavb/IAVBOCX.html">http://patrice.dargenton.free.fr/ia/iavb/IAVBOCX.html</a></p>
+
+<p class=MsoNormal><o:p>&nbsp;</o:p></p>
+
+<p class=MsoNormal><o:p>&nbsp;</o:p></p>
+
+<h1><a name="_Toc485543052">Historique des versions</a></h1>
+
+<p class=MsoNormal><o:p>&nbsp;</o:p></p>
+
+<h2><a name="_Toc485543053">Version 3.12 du 18/06/2017</a></h2>
+
+<p class=MsoNormal>-&nbsp;IAVB&nbsp;: Intelligence Artificielle en Visual Basic
+<span style='font-family:"Courier New"'>-&gt;</span> Vraiment Basique (pour
+tenir compte des versions en C#)&nbsp;;</p>
+
+<p class=MsoNormal>-&nbsp;Synthèse vocale en français de Windows 10 (sous
+Windows 7 on n'a que l'anglais), en plus de MS-Agent&nbsp;;</p>
+
+<p class=MsoNormal>-&nbsp;Version VB.Net&nbsp;: mode automatique pour tester
+automatiquement tous les exemples, zone de liste pour la synthèse vocale&nbsp;;</p>
+
+<p class=MsoNormal>-&nbsp;Gestion des majuscules&nbsp;: ajout d'un booléen (bTraiterEnMinuscules)
+pour pouvoir comparer les résultats avec la version d'origine (si on active les
+accents, par exemple pour que la synthèse vocale fonctionne bien, alors il faut
+désactiver les majuscules, car les accents ne sont pas faciles à trouver au
+clavier sur les majuscules)&nbsp;;</p>
+
+<p class=MsoNormal>-&nbsp;Gestion des accents&nbsp;: ajout d'un booléen (bTraiterSansAccents)
+pour pouvoir comparer les résultats avec la version d'origine&nbsp;;</p>
+
+<p class=MsoNormal>-&nbsp;Normalisation des réponses&nbsp;: ajout d'un booléen
+(bNormalisationSortieTrimEtVbLf) pour rendre homogène les espaces et sauts de
+ligne dans les réponses, on avait parfois saut de ligne en trop, ou espace en
+trop, parfois il en manquait&nbsp;;<o:p></o:p></p>
+
+<p class=MsoNormal>-&nbsp;Version en VBA Word (code commun avec la version
+VB6), car il est devenu difficile de coder en VB6, l'<a
+href="http://patrice.dargenton.free.fr/wiki/index.php?title=Comment_installer_VB6_sous_Windows_10_?">IDE
+de VB6 ne s'installant pas sous Windows 10</a>&nbsp;;<o:p></o:p></p>
+
+<p class=MsoNormal>-&nbsp;Version VBA d'origine&nbsp;: fonctionnement identique
+à la version de 1984 (reprise des exemples pour pouvoir vérifier qu'on obtient
+bien les mêmes résultats)&nbsp;;</p>
+
+<p class=MsoNormal>-&nbsp;Versions VBA&nbsp;: correction de la copie dans le
+presse-papier sous Windows 64 bit (l'ancienne méthode ne fonctionnait que sous
+Windows 32 bits)&nbsp;;</p>
+
+<p class=MsoNormal>-&nbsp;Versions en C#&nbsp;: WinForm, WPF et <a
+href="http://www.cshtml5.com/">CSharpHtml</a> (tout juste <a
+href="http://patrice.dargenton.free.fr/ia/iavb/CSharp2Html/">fonctionnel</a>,
+mais à terminer, il manque notamment ListBox.ScrollIntoView)&nbsp;;</p>
+
+<p class=MsoNormal>-&nbsp;Tests unitaires pour vérifier les exemples
+fournis&nbsp;;<o:p></o:p></p>
+
+<p class=MsoNormal>-&nbsp;Respect des règles d'analyse du code selon Visual
+Studio 2017&nbsp;;</p>
+
+<p class=MsoNormal>-&nbsp;Mise au norme DotNet du code hérité de VB6
+(utilisation de Generic.List(Of String), du coup on part de l'index 0 et non
+plus 1, ...)&nbsp;;</p>
+
+<p class=MsoNormal>-&nbsp;Version sans Microsoft.VisualBasic.dll (pour pouvoir convertir
+plus facilement en C#)&nbsp;;<o:p></o:p></p>
+
+<p class=MsoNormal>-&nbsp;Passage en VB 2013 (les versions 2015 et 2017 ont
+toujours un <a href="https://github.com/dotnet/roslyn/issues/2509">bug</a>
+d'indentation, si on a utilisé l'indentation en mode bloc ou bien désactivé).</p>
+
+<p class=MsoNormal><o:p>&nbsp;</o:p></p>
+
+<h2><a name="_Toc485543054">Version 3.11 du 15/09/2013</a></h2>
+
+<p class=MsoNormal>-&nbsp;Passage en VB2010.<o:p></o:p></p>
+
+<p class=MsoNormal><o:p>&nbsp;</o:p></p>
+
+<h2><a name="_Toc485543055">Version 3.10 du 06/12/2009</a></h2>
+
+<p class=MsoNormal>-&nbsp;Allocation dynamique de mémoire pour la collection
+d'assertions (au lieu de : Public Const iNbAssertionsMax% = 100)&nbsp;;</p>
+
+<p class=MsoNormal>-&nbsp;Séparation du moteur IAVB de son interface de façon à
+pouvoir créer un composant facilement réutilisable (un Ocx : Contrôle ActiveX).</p>
+
+<p class=MsoNormal><o:p>&nbsp;</o:p></p>
+
+<h2><a name="_Toc485543056">Version 3.01 du 02/09/2007</a></h2>
+
+<p class=MsoNormal>-&nbsp;Compilation en mode Strict&nbsp;;</p>
+
+<p class=MsoNormal>-&nbsp;Utilisation systématique des constantes chaînes de
+caractères&nbsp;;</p>
+
+<p class=MsoNormal>-&nbsp;Amélioration de la prononciation en parlant avec des
+textes en minuscules au lieu de majuscule&nbsp;;</p>
+
+<p class=MsoNormal>-&nbsp;Vérification de l'installation des agents Microsoft
+(MSAgent), et assistance à l'installation&nbsp;;</p>
+
+<p class=MsoNormal>-&nbsp;Passage en DotNet sous VB 2005.</p>
+
+<p class=MsoNormal><o:p>&nbsp;</o:p></p>
+
+<h2><a name="_Toc485543057">Version 2.11 en VB6 et VBA du 18/06/2017</a></h2>
+
+<p class=MsoNormal>-&nbsp;Correction de la copie dans le presse-papier sous
+Windows 64 bit (l'ancienne méthode ne fonctionnait que sous Windows 32
+bits)&nbsp;;</p>
+
+<p class=MsoNormal>-&nbsp;Correction des exemples pour obtenir les mêmes
+résultats que la dernière version 3.12 en VB.Net et C#.</p>
+
+<p class=MsoNormal><o:p>&nbsp;</o:p></p>
+
+<h2><a name="_Toc485543058">Version 2.10 en VB6 du 02/09/2007</a></h2>
+
+<p class=MsoNormal>-&nbsp;MSAgent au lieu du contrôle TextToSpeech (Microsoft
+Speech : Vtext.dll - HTTS - version 4.0.4.2512, qui est trop instable, par
+exemple il plante avec les accents) : si les agents ne sont pas installés ou
+bien s'il manque un des composants de synthèse vocal, alors IAVB fonctionne en
+mode silencieux.</p>
+
+<p class=MsoNormal><o:p>&nbsp;</o:p></p>
+
+<h2><a name="_Toc485543059">Version 2 du 07/09/2001</a></h2>
+
+<p class=MsoNormal>La voix de l'IA : maintenant, ça parle&nbsp;:</p>
+
+<p class=MsoNormal>-&nbsp;Les accents font planter le contrôle
+TextToSpeech&nbsp;;</p>
+
+<p class=MsoNormal>-&nbsp;Certains exemples ont été légèrement modifiés pour
+améliorer la prononciation&nbsp;:</p>
+
+<p class=MsoNormal>&nbsp;&nbsp;HENRI.4 au lieu d'HENI_IV</p>
+
+<p class=MsoNormal>-&nbsp;Petit défaut corrigé dans les syllogismes :
+suppression du signe = à gauche&nbsp;:</p>
+
+<p class=MsoNormal>&nbsp;&nbsp;DONC = MANGEUR(HOMME) = ANIMAL<span
+style='mso-spacerun:yes'>  </span>&lt;TIGRE&gt;</p>
+
+<p class=MsoNormal><o:p>&nbsp;</o:p></p>
+
+<h2><a name="_Toc485543060">Version 1.01 du 23/08/2001</a></h2>
+
+<p class=MsoNormal>La version 1.1 est améliorée par rapport à l'originale par
+l'utilisation&nbsp;:</p>
+
+<p class=MsoNormal>-&nbsp;des constantes vb pour les chaînes ou entiers
+effectivement constants,</p>
+
+<p class=MsoNormal>-&nbsp;des noms de variables plus explicites,</p>
+
+<p class=MsoNormal>-&nbsp;de boucles lorsque les instructions Goto sont
+inutiles,</p>
+
+<p class=MsoNormal>-&nbsp;des fonctions pour chaque fonctionnalité isolée,</p>
+
+<p class=MsoNormal>-&nbsp;des commentaires et exemples issus de l'article
+original.</p>
+
+<p class=MsoNormal><o:p>&nbsp;</o:p></p>
+
+<p class=MsoNormal>De plus, il a été ajouté des modifications sur le
+fonctionnement cette fois&nbsp;:</p>
+
+<p class=MsoNormal><o:p>&nbsp;</o:p></p>
+
+<h2><a name="_Toc485543061">Liste des nouveautés par rapport à la version
+originale de 1984</a></h2>
+
+<p class=MsoNormal>-&nbsp;bVersionModifiee = True : Version modifiée (2017)
+sinon originale (1984)&nbsp;;</p>
+
+<p class=MsoNormal>-&nbsp;Recherche approfondie des syllogismes sur l'ensemble
+des assertions de la base. Pour l'activer, il suffit de répéter la question
+DONC ?</p>
+
+<p class=MsoNormal>-&nbsp;N° de l'assertion en cours&nbsp;: il est m.à.j. si
+une assertion est déjà connue ; pour pouvoir refaire une dernière conclusion,
+il faut maintenant utiliser la recherche approfondie, car ce n'est plus
+seulement la dernière conclusion qui est accessible, ou bien changer le n° de
+l'assertion en cours (pour cela trois possibilités : ajouter une nouvelle
+assertion, ajouter une assertion déjà connue, ou poser une question d'au moins
+deux mots sur un des mots d'une assertion déjà connue)&nbsp;;</p>
+
+<p class=MsoNormal>-&nbsp;Traitement de OR dans un terme à droite&nbsp;:</p>
+
+<p class=MsoNormal><span style='mso-spacerun:yes'>  </span>DONC EST HERBIVORE
+TOUT CHEVAL : DONC TOUT CHEVAL EST HERBIVORE : Mieux !</p>
+
+<p class=MsoNormal><span style='mso-spacerun:yes'>  </span>de plus, utilisation
+de EST COMME&nbsp;:</p>
+
+<p class=MsoNormal><span style='mso-spacerun:yes'>  </span>DONC ARISTOTE<span
+style='mso-spacerun:yes'>  </span>TOUT HOMME : ARISTOTE EST COMME TOUT HOMME</p>
+
+<p class=MsoNormal><span style='mso-spacerun:yes'>  </span>mais la syntaxe est
+un peu diminuée dans d'autres cas&nbsp;:</p>
+
+<p class=MsoNormal><span style='mso-spacerun:yes'>  </span>LE LOUVRE EST BEAU,
+OR J'AIME TOUT CE QUI EST BEAU</p>
+
+<p class=MsoNormal><span style='mso-spacerun:yes'>  </span>DONC J'AIME EST
+COMME LE LOUVRE<span style='mso-spacerun:yes'>  </span>&lt;BEAU&gt;</p>
+
+<p class=MsoNormal>-&nbsp;Composition de fonction incomplète améliorée (pour
+les phrases longues seulement)&nbsp;:</p>
+
+<p class=MsoNormal><span style='mso-spacerun:yes'>  </span>QUEL EST LE PRÉNOM
+DU MAIRE DE LA VILLE ORIGINAIRE D'UNE PROVINCE ?</p>
+
+<p class=MsoNormal><span style='mso-spacerun:yes'>  </span>IAVB affiche
+maintenant : **Je l'ignore !</p>
+
+<p class=MsoNormal><span style='mso-spacerun:yes'>  </span>mais le problème
+persiste pour : CHEVAL DU ROI ? : HENRI.4</p>
+
+<p class=MsoNormal>-&nbsp;Combinaison de la composition de fonction avec les
+syllogismes&nbsp;:</p>
+
+<p class=MsoNormal><span style='mso-spacerun:yes'>  </span>TIGRE =
+MANGEUR(HOMME)</p>
+
+<p class=MsoNormal><span style='mso-spacerun:yes'>  </span>OR SOCRATE EST UN
+HOMME</p>
+
+<p class=MsoNormal><span style='mso-spacerun:yes'>  </span>DONC ? TIGRE =
+MANGEUR(SOCRATE)</p>
+
+<p class=MsoNormal>-&nbsp;Syntaxe améliorée&nbsp;:</p>
+
+<p class=MsoNormal><span style='mso-spacerun:yes'>  </span>DONC QUELQUE UN
+HOMME EST BIPÈDE<span style='mso-spacerun:yes'>  </span>&lt;PAUL&gt; : DONC
+QUELQUE HOMME EST BIPÈDE<span style='mso-spacerun:yes'>  </span>&lt;PAUL&gt;</p>
+
+<p class=MsoNormal><o:p>&nbsp;</o:p></p>
+
+<p class=MsoNormal>-&nbsp;<u>Dans l'interface</u>&nbsp;:</p>
+
+<p class=MsoNormal><span style='mso-spacerun:yes'>  </span>* Exemples à tester
+: c'est pratique (déjà repris dans la version originale en VB)</p>
+
+<p class=MsoNormal><span style='mso-spacerun:yes'>  </span>* Bouton exemple
+suivant</p>
+
+<p class=MsoNormal><span style='mso-spacerun:yes'>  </span>* Traitement des
+commentaires avec le signe ' (en début ou sinon après une commande)</p>
+
+<p class=MsoNormal><span style='mso-spacerun:yes'>  </span>* Affichage du mot
+pivot dans les syllogismes : entre &lt;&gt; (cf. par exemple &lt;PAUL&gt;
+ci-dessus)</p>
+
+<p class=MsoNormal><span style='mso-spacerun:yes'>  </span>* /C : Copie de la
+discussion dans le presse papier</p>
+
+<p class=MsoNormal><o:p>&nbsp;</o:p></p>
+
+<h2><a name="_Toc485543062">Version 1.0b en VBA du 18/06/2017</a></h2>
+
+<p class=MsoNormal>-&nbsp;Correction de la copie dans le presse-papier sous
+Windows 64 bit (l'ancienne méthode ne fonctionnait que sous Windows 32
+bits)&nbsp;;</p>
+
+<p class=MsoNormal>-&nbsp;Correction des exemples pour obtenir les mêmes
+résultats que la dernière version 3.12 en VB.Net et C#, lorsque le booléen bVersionModifiee
+= False.</p>
+
+<p class=MsoNormal><o:p>&nbsp;</o:p></p>
+
+<h2><a name="_Toc485543063">Version originale 1.0 du 23/08/2001</a></h2>
+
+<p class=MsoNormal><o:p>&nbsp;</o:p></p>
+
+<p class=MsoNormal><o:p>&nbsp;</o:p></p>
+
+<h1><a name="_Toc485543064"></a><a name="_Toc175533970"><span style='mso-bookmark:
+_Toc485543064'>Liens</span></a></h1>
+
+<p class=MsoNormal><o:p>&nbsp;</o:p></p>
+
+<p class=MsoNormal>-&nbsp;C#Html&nbsp;: <a
+href="http://patrice.dargenton.free.fr/ia/iavb/CSharp2Html/">http://patrice.dargenton.free.fr/ia/iavb/CSharp2Html/</a></p>
+
+<p class=MsoNormal>-&nbsp;IAVB2 : <a
+href="http://www.vbfrance.com/code.aspx?id=1860">www.vbfrance.com/code.aspx?id=1860</a></p>
+
+<p class=MsoNormal>-&nbsp;Versions 1.1 et 1.0 d'IAVB : <a
+href="http://www.vbfrance.com/code.aspx?ID=1825">www.vbfrance.com/code.aspx?ID=1825</a></p>
+
+<p class=MsoNormal>-&nbsp;VBBrainBox : un système expert d'ordre 0+ en VB .NET</p>
+
+<p class=MsoNormal>&nbsp;&nbsp;<a
+href="http://www.vbfrance.com/code.aspx?ID=6949">www.vbfrance.com/code.aspx?ID=6949</a></p>
+
+<p class=MsoNormal>-&nbsp;IA : RN : VBPerceptron : le code le + simple possible
+en VB6 &amp; VB .Net</p>
+
+<p class=MsoNormal>&nbsp;&nbsp;<a
+href="http://patrice.dargenton.free.fr/ia/ialab/perceptron.html">http://patrice.dargenton.free.fr/ia/ialab/perceptron.html</a></p>
+
+<p class=MsoNormal><o:p>&nbsp;</o:p></p>
+
+<h2><a name="_Toc485543065">Chatbot (Robot de discussion)</a></h2>
+
+<p class=MsoNormal>-&nbsp;Developing AI chatbots - This guide helps you how to
+program your own chat bot</p>
+
+<p class=MsoNormal>&nbsp;&nbsp;<a
+href="http://www.codeproject.com/scrapbook/robomatic.asp">www.codeproject.com/scrapbook/robomatic.asp</a></p>
+
+<p class=MsoNormal><o:p>&nbsp;</o:p></p>
+
+<p class=MsoNormal>-&nbsp;ChatBot aiml : SophiaBot: creating a talking
+artificial personality with Vista Speech Recognition API</p>
+
+<p class=MsoNormal>&nbsp;&nbsp;<a
+href="http://www.codeproject.com/vista/SAPISophia.asp">www.codeproject.com/vista/SAPISophia.asp</a></p>
+
+<p class=MsoNormal><o:p>&nbsp;</o:p></p>
+
+<p class=MsoNormal>-&nbsp;<a href="http://www.alicebot.org/">www.alicebot.org</a></p>
+
+<p class=MsoNormal>-&nbsp;<a
+href="http://patrice.dargenton.free.fr/ia/alice/alicechatbot.html">http://patrice.dargenton.free.fr/ia/alice/alicechatbot.html</a></p>
+
+<p class=MsoNormal>-&nbsp;<a href="http://ia.jenny.free.fr/Botmaster.htm">http://ia.jenny.free.fr/Botmaster.htm</a></p>
+
+<p class=MsoNormal><o:p>&nbsp;</o:p></p>
+
+<h2><a name="_Toc485543066">MS-Agent</a></h2>
+
+<p class=MsoNormal>-&nbsp;Troubleshooting problems installing Microsoft Agent</p>
+
+<p class=MsoNormal>&nbsp;&nbsp;<a
+href="http://www.microsoft.com/msagent/support/user/install.aspx">www.microsoft.com/msagent/support/user/install.aspx</a></p>
+
+<p class=MsoNormal><o:p>&nbsp;</o:p></p>
+
+<p class=MsoNormal>-&nbsp;MSDN : Microsoft Agent Start Page (2.0)</p>
+
+<p class=MsoNormal>&nbsp;&nbsp;<a
+href="http://msdn2.microsoft.com/en-us/library/ms695784.aspx">http://msdn2.microsoft.com/en-us/library/ms695784.aspx</a></p>
+
+<p class=MsoNormal><o:p>&nbsp;</o:p></p>
+
+<p class=MsoNormal>-&nbsp;Les contrôles MS-Agent : liste des animations et verbes</p>
+
+<p class=MsoNormal>&nbsp;&nbsp;<a
+href="http://www.supinfo-projects.com/fr/2004/ms/2/">www.supinfo-projects.com/fr/2004/ms/2/</a></p>
+
+<p class=MsoNormal><o:p>&nbsp;</o:p></p>
+
+<p class=MsoNormal>-&nbsp;<a
+href="http://www.vbfrance.com/codes/CONTROLER-AGENTS-MICROSOFT_39035.aspx">www.vbfrance.com/codes/CONTROLER-AGENTS-MICROSOFT_39035.aspx</a></p>
+
+<p class=MsoNormal><o:p>&nbsp;</o:p></p>
+
+<p class=MsoNormal>-&nbsp;<a
+href="http://www.codeproject.com/vb/net/UseMSAgentControlVBNET.asp">www.codeproject.com/vb/net/UseMSAgentControlVBNET.asp</a></p>
+
+<p class=MsoNormal><o:p>&nbsp;</o:p></p>
+
+<p class=MsoNormal>-&nbsp;SAPI with MsAgent and Visemes to Explain TTS in C#</p>
+
+<p class=MsoNormal>&nbsp;&nbsp;<a
+href="http://www.codeproject.com/useritems/csharpSapiwithAgent.asp">www.codeproject.com/useritems/csharpSapiwithAgent.asp</a>
+: Text2Speech</p>
+
+<p class=MsoNormal><o:p>&nbsp;</o:p></p>
+
+<p class=MsoNormal>-&nbsp;Documentation MS-Agent : Installing a Speech Engine</p>
+
+<p class=MsoNormal>&nbsp;&nbsp;<a
+href="http://msdn2.microsoft.com/en-us/library/ms699235.aspx">http://msdn2.microsoft.com/en-us/library/ms699235.aspx</a></p>
+
+<p class=MsoNormal><o:p>&nbsp;</o:p></p>
+
+<h2><a name="_Toc485543067">Synthèse vocale</a></h2>
+
+<p class=MsoNormal>-&nbsp;Using the Speex speech codec with the .NET framework</p>
+
+<p class=MsoNormal>&nbsp;&nbsp;<a
+href="http://www.codeproject.com/useritems/speexincsharp.asp">www.codeproject.com/useritems/speexincsharp.asp</a></p>
+
+<p class=MsoNormal><o:p>&nbsp;</o:p></p>
+
+<p class=MsoNormal>-&nbsp;Synthèse musicale et vocale</p>
+
+<p class=MsoNormal>&nbsp;&nbsp;A toolkit for creating software synthesizers
+with C# and Managed DirectX</p>
+
+<p class=MsoNormal>&nbsp;&nbsp;<a
+href="http://www.codeproject.com/cs/media/synthtoolkitparti.asp">www.codeproject.com/cs/media/synthtoolkitparti.asp</a></p>
+
+<p class=MsoNormal>&nbsp;&nbsp;<a
+href="http://www.codeproject.com/cs/media/synthtoolkitpartii.asp">www.codeproject.com/cs/media/synthtoolkitpartii.asp</a></p>
+
+<p class=MsoNormal><o:p>&nbsp;</o:p></p>
+
+<p class=MsoNormal>-&nbsp;DotNet3 / Vista : <a
+href="http://webman.developpez.com/articles/dotnet/texttospeech/">http://webman.developpez.com/articles/dotnet/texttospeech/</a></p>
+
+<p class=MsoNormal><o:p>&nbsp;</o:p></p>
+
+<p class=MsoNormal>-&nbsp;<a
+href="http://www.codeproject.com/csharp/TextToSpeechWindowsSAPI.asp">www.codeproject.com/csharp/TextToSpeechWindowsSAPI.asp</a>
+C#</p>
+
+<p class=MsoNormal>-&nbsp;<a
+href="http://www.codeproject.com/cs/samples/TextEditorWithSpeech.asp">www.codeproject.com/cs/samples/TextEditorWithSpeech.asp</a></p>
+
+<p class=MsoNormal><o:p>&nbsp;</o:p></p>
+
+<p class=MsoNormal>-&nbsp;Text to Speech with the Microsoft Speech Library and
+SDK version 5.1</p>
+
+<p class=MsoNormal>&nbsp;&nbsp;<a
+href="http://www.codeproject.com/vb/net/TTSinVBpackage.asp">www.codeproject.com/vb/net/TTSinVBpackage.asp</a></p>
+
+<p class=MsoNormal><o:p>&nbsp;</o:p></p>
+
+<p class=MsoNormal>-&nbsp;Réglages Text2Speach</p>
+
+<p class=MsoNormal>&nbsp;&nbsp;Exploring the SpVoice Class of MS SAPI 5.1 to
+use different available features for TTS</p>
+
+<p class=MsoNormal>&nbsp;&nbsp;<a
+href="http://www.codeproject.com/useritems/TTSFeaturesOfSAPI.asp">www.codeproject.com/useritems/TTSFeaturesOfSAPI.asp</a></p>
+
+<p class=MsoNormal><o:p>&nbsp;</o:p></p>
+
+<p class=MsoNormal>-&nbsp;Texte to speech maison ou Alphi</p>
+
+<p class=MsoNormal>&nbsp;&nbsp;<a
+href="http://www.vbfrance.com/code.aspx?id=41988">www.vbfrance.com/code.aspx?id=41988</a></p>
+
+<p class=MsoNormal><o:p>&nbsp;</o:p></p>
+
+<p class=MsoNormal>-&nbsp;C# Voice and Tone Alert Generator</p>
+
+<p class=MsoNormal>&nbsp;&nbsp;<a
+href="http://www.codeproject.com/cs/media/CS_ToneGenerator.asp">www.codeproject.com/cs/media/CS_ToneGenerator.asp</a></p>
+
+<p class=MsoNormal><o:p>&nbsp;</o:p></p>
+
+<p class=MsoNormal>-&nbsp;Téléchargement du SpeachSDK 5.1</p>
+
+<p class=MsoNormal>&nbsp;&nbsp;<a
+href="http://www.microsoft.com/downloads/details.aspx?FamilyId=5E86EC97-40A7-453F-B0EE-6583171B4530&amp;displaylang=en">www.microsoft.com/downloads/details.aspx?FamilyId=5E86EC97-40A7-453F-B0EE-6583171B4530&amp;displaylang=en</a></p>
+
+<p class=MsoNormal><o:p>&nbsp;</o:p></p>
+
+<h2><a name="_Toc485543068">Divers</a></h2>
+
+<p class=MsoNormal>-&nbsp;<a
+href="http://groups.google.fr/group/fr.comp.ia/topics?hl=fr">groups.google.fr :
+fr.comp.ia</a></p>
+
+<p class=MsoNormal>-&nbsp;<a
+href="http://groups.google.fr/groups/dir?hl=fr&amp;sel=16823695,67188904,16823693">Annuaire
+Informatique : Intelligence artificielle</a></p>
+
+<p class=MsoNormal>-&nbsp;<a href="http://ai.about.com/">http://ai.about.com</a></p>
+
+<p class=MsoNormal>-&nbsp;Artificial Intelligence FAQ</p>
+
+<p class=MsoNormal>&nbsp;&nbsp;<a
+href="http://www.faqs.org/faqs/ai-faq/general/part1/index.html">www.faqs.org/faqs/ai-faq/general/part1/index.html</a></p>
+
+<p class=MsoNormal>-&nbsp;Modélisation complexe : <a
+href="http://www.true-world.com/htm/fr/index.html">www.true-world.com</a></p>
+
+<p class=MsoNormal><o:p>&nbsp;</o:p></p>
+
+<p class=MsoNormal><o:p>&nbsp;</o:p></p>
+
+<p class=MsoNormal><o:p>&nbsp;</o:p></p>
+
+<p class=MsoNormal><o:p>&nbsp;</o:p></p>
+
+<p class=MsoNormal><o:p>&nbsp;</o:p></p>
+
+<p class=MsoNormal><o:p>&nbsp;</o:p></p>
+
+<p class=MsoNormal><o:p>&nbsp;</o:p></p>
+
+<p class=MsoNormal><o:p>&nbsp;</o:p></p>
+
+<p class=MsoNormal><o:p>&nbsp;</o:p></p>
+
+<p class=MsoNormal><o:p>&nbsp;</o:p></p>
+
+<p class=MsoNormal><o:p>&nbsp;</o:p></p>
+
+<p class=MsoNormal><o:p>&nbsp;</o:p></p>
+
+<p class=MsoNormal><o:p>&nbsp;</o:p></p>
+
+<p class=MsoNormal><o:p>&nbsp;</o:p></p>
+
+<p class=MsoNormal><o:p>&nbsp;</o:p></p>
+
+<p class=MsoNormal><o:p>&nbsp;</o:p></p>
+
+<p class=MsoNormal><o:p>&nbsp;</o:p></p>
+
+<p class=MsoNormal><o:p>&nbsp;</o:p></p>
+
+<p class=MsoNormal><o:p>&nbsp;</o:p></p>
+
+<p class=MsoNormal><o:p>&nbsp;</o:p></p>
+
+<p class=MsoNormal><o:p>&nbsp;</o:p></p>
+
+<p class=MsoNormal><o:p>&nbsp;</o:p></p>
+
+<p class=MsoNormal><o:p>&nbsp;</o:p></p>
+
+<p class=MsoNormal><o:p>&nbsp;</o:p></p>
+
+<p class=MsoNormal><o:p>&nbsp;</o:p></p>
+
+<p class=MsoNormal><o:p>&nbsp;</o:p></p>
+
+<p class=MsoNormal><o:p>&nbsp;</o:p></p>
+
+<p class=MsoNormal><o:p>&nbsp;</o:p></p>
+
+<p class=MsoNormal><o:p>&nbsp;</o:p></p>
+
+<p class=MsoNormal><o:p>&nbsp;</o:p></p>
+
+<p class=MsoNormal><o:p>&nbsp;</o:p></p>
+
+<p class=MsoNormal><o:p>&nbsp;</o:p></p>
+
+<p class=MsoNormal><o:p>&nbsp;</o:p></p>
+
+<p class=MsoNormal><o:p>&nbsp;</o:p></p>
+
+</div>
+
+</body>
+
+</html>
